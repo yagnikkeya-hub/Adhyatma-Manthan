@@ -1,0 +1,390 @@
+[
+  {
+    "id": 1,
+    "key": "diwali",
+    "name": "Diwali (Deepavali)",
+    "sanskrit_name": "दीपावली",
+    "tagline": "The Festival of Lights: Finding Clarity, Hope, and Goodness",
+    "theme_color": "#D48B17",
+    "accent_bg": "rgba(212, 139, 23, 0.08)",
+    "border_accent": "#D48B17",
+    "hero_gradient": "linear-gradient(135deg, #1A130B 0%, #2D1E0F 50%, #45260A 100%)",
+    "icon": "🪔",
+    "timing_context": "Celebrated on the darkest new moon night (Amavasya) between October and November",
+    "significance": "Diwali teaches us that even a tiny flame can dispel a room full of darkness. In our personal life, it reminds us that knowledge beats confusion, kindness overcomes anger, and hope is always stronger than despair. It is a time to clean our homes, let go of past bitterness, and light up our minds with positive thoughts.",
+    "sacred_stories": [
+      {
+        "title": "Lord Rama Returns to Ayodhya",
+        "tradition": "Ramayana (North & Central India)",
+        "summary": "After 14 long years in the forest and defeating the cruel king Ravana, Lord Rama, Sita, and Lakshmana returned home to Ayodhya. It was a pitch-dark night, so the loving citizens lit rows of small clay lamps (diyas) all across the city to guide them home safely. It shows that truth and humility will always triumph in the end."
+      },
+      {
+        "title": "Welcoming Goddess Lakshmi",
+        "tradition": "Ancient Story of the Ocean",
+        "summary": "According to ancient stories, Goddess Lakshmi—who represents happiness, peace, and good health—blessed the world on this special day. People clean their homes thoroughly and perform Lakshmi Puja not just to pray for money, but to welcome honesty, harmony, and gratitude into their family."
+      },
+      {
+        "title": "Freedom from Cruelty (Narakasura)",
+        "tradition": "Krishna Tradition (South & West India)",
+        "summary": "In southern and western parts of India, Diwali marks Lord Krishna defeating the bully king Narakasura and freeing thousands of innocent people from prison. It reminds us that real strength is meant to help and protect others, never to scare or harm them."
+      }
+    ],
+    "ritual_symbolism": [
+      {
+        "symbol": "The Clay Diya (Mitti ka Deepak)",
+        "meaning": "The clay cup represents our physical body, the oil stands for our love and kindness, and the cotton wick represents our focused mind. When we learn something good and live honestly, our life shines bright and helps everyone around us."
+      },
+      {
+        "symbol": "Rangoli at the Front Door",
+        "meaning": "Colorful patterns drawn with flour and colors at the entrance are a warm welcome to guests. In older times, rice flour was used so that birds and ants could eat too—teaching us to care for every living being, big or small."
+      },
+      {
+        "symbol": "Cleaning Homes & Starting Fresh (Chopda Pujan)",
+        "meaning": "Cleaning every corner of the house teaches us to also clear our minds of jealousy, laziness, and grudges. Shopkeepers and families open fresh account books with a simple prayer: 'May all my earnings come from hard and honest work.'"
+      }
+    ],
+    "regional_traditions": [
+      {
+        "region": "North India (Ayodhya & Varanasi)",
+        "observance": "People light millions of lamps along river banks, gather with families for Lakshmi-Ganesh puja, share homemade sweets, and celebrate with friends."
+      },
+      {
+        "region": "Bengal & East India (Kali Puja)",
+        "observance": "Families worship Maa Kali on Diwali night. She represents fearless motherly protection, helping her children defeat fear, bad habits, and selfish desires."
+      },
+      {
+        "region": "South India (Tamil Nadu, Karnataka, Andhra, Telangana)",
+        "observance": "Celebrations start very early before sunrise on Naraka Chaturdashi. Families wake up, take a warm fragrant herbal oil bath, wear new clothes, and celebrate a fresh and healthy start to life."
+      },
+      {
+        "region": "Gujarat & Western India",
+        "observance": "Diwali marks the end of the year. The very next day is celebrated as the New Year (Bestu Varas), where people visit relatives to forgive past misunderstandings and start the new year with love."
+      }
+    ],
+    "contemporary_relevance": "When we feel stressed, lonely, or stuck in negative thoughts, Diwali gives us a simple message: don't waste energy complaining about the dark. Instead, light one small lamp of patience, do one small act of kindness, and the darkness will begin to disappear.",
+    "seva_initiative": {
+      "title": "Simple Ways to Share Joy (Seva)",
+      "practical_actions": [
+        "Buy your clay diyas and festive items directly from local roadside potters to support their hard work.",
+        "Share fresh festive snacks, warm clothes, or sweets with cleaning staff, security guards, and daily-wage workers around your neighborhood.",
+        "Gift stationery, storybooks, or study lamps to children who need them."
+      ]
+    },
+    "reflection_prompt": "What negative habit, doubt, or past anger would you like to let go of to bring more peace into your life?",
+    "quizzes": [
+      {
+        "question": "What is the simple meaning behind lighting clay diyas on Diwali?",
+        "options": [
+          "Showing off expensive decorations",
+          "Lighting up our own minds with good thoughts, kindness, and wisdom",
+          "A rule that has no real meaning",
+          "Just to see in the dark before electricity existed"
+        ],
+        "correct": 1,
+        "explanation": "A diya teaches us that simple acts of goodness and clear thinking can wipe away confusion and negativity from our lives."
+      },
+      {
+        "question": "In Bengal and eastern India, who is lovingly worshipped on Diwali night to overcome fear and bad habits?",
+        "options": [
+          "Maa Kali",
+          "Lord Indra",
+          "Lord Kubera",
+          "Lord Varuna"
+        ],
+        "correct": 0,
+        "explanation": "Maa Kali is worshipped as a protective mother who helps us conquer our fears, bad tempers, and inner weaknesses."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "key": "shivaratri",
+    "name": "Maha Shivaratri",
+    "sanskrit_name": "महाशिवरात्रि",
+    "tagline": "The Night of Lord Shiva: Finding Quiet Peace and Inner Calm",
+    "theme_color": "#2A5C7A",
+    "accent_bg": "rgba(42, 92, 122, 0.08)",
+    "border_accent": "#3D7A9E",
+    "hero_gradient": "linear-gradient(135deg, #0A131A 0%, #10212E 50%, #1A3448 100%)",
+    "icon": "🔱",
+    "timing_context": "Observed on the quiet night just before the new moon in late winter (February or March)",
+    "significance": "Most festivals are celebrated with loud music, firecrackers, and heavy feasting. Maha Shivaratri is special because it is celebrated with stillness, quiet meditation, and fasting. It teaches us how to pause our busy routines, calm our restless thoughts, and connect with our peaceful inner self.",
+    "sacred_stories": [
+      {
+        "title": "Neelakantha: Lord Shiva Saves the World",
+        "tradition": "The Story of the Churned Ocean",
+        "summary": "When the gods and demons churned the ocean, a deadly blue poison came out that could destroy the whole world. Everyone ran in fear. Lord Shiva stepped forward and held the poison in his throat out of pure love for all living beings. His throat turned blue, earning him the name 'Neelakantha'. It teaches us that truly great people quietly absorb difficulties so that others can live in peace."
+      },
+      {
+        "title": "The Infinite Pillar of Light",
+        "tradition": "Shiva Purana",
+        "summary": "When gods debated who was the biggest and most powerful, Shiva appeared as a vast column of pure light with no beginning and no end. Nobody could find where it started or ended. This taught everyone that reality is far bigger than our personal ego, and humility is the true mark of wisdom."
+      },
+      {
+        "title": "The Cosmic Dance of Life",
+        "tradition": "Ancient Spiritual Teachings",
+        "summary": "Shivaratri also honors Shiva's cosmic dance (Tandava), which represents the natural rhythm of life: things are created, they grow, they change, and they end so something new can be born. It reminds us not to fear change, because change is a natural part of living."
+      }
+    ],
+    "ritual_symbolism": [
+      {
+        "symbol": "Staying Awake at Night (Jagaran)",
+        "meaning": "Staying awake through the quiet night is a practice of awareness. While our body rests, our mind usually wanders unconsciously. Staying alert reminds us to be mindful of how we think, speak, and act instead of living on auto-pilot."
+      },
+      {
+        "symbol": "Offering the Three-Leaf Bel Patra",
+        "meaning": "The Bel leaf has three leaflets attached together. Offering it means giving up our three big weaknesses: anger, pride, and greed. It is a promise to live simply with an open and humble heart."
+      },
+      {
+        "symbol": "Fasting and Pouring Cool Water/Milk (Abhishekam)",
+        "meaning": "Pouring cool water over the Shiva Linga in a steady, gentle stream teaches us to keep our temper cool. Fasting for a day gives our stomach a healthy break and trains our mind to practice self-control."
+      }
+    ],
+    "regional_traditions": [
+      {
+        "region": "Kashmir (Herath Tradition)",
+        "observance": "Kashmiri families celebrate over several days. They soak walnuts in water pitchers symbolizing divine blessings, and then share the walnuts with neighbors and friends of all backgrounds."
+      },
+      {
+        "region": "Varanasi, Ujjain & Temple Towns",
+        "observance": "Devotees sit quietly in temples, chant 'Om Namah Shivaya', listen to the deep sound of the damru, and enjoy the calming atmosphere of evening prayers."
+      },
+      {
+        "region": "South India (Tamil Nadu & Karnataka)",
+        "observance": "Devotees walk peacefully around sacred hills (like Arunachala) barefoot, spending the night singing devotional songs and sitting in quiet contemplation."
+      },
+      {
+        "region": "Odisha & Eastern India",
+        "observance": "At the famous Lingaraj temple in Bhubaneswar, thousands wait patiently until midnight when a giant sacred lamp (Mahadipa) is carried to the very top of the temple, inspiring everyone to aim high in their spiritual life."
+      }
+    ],
+    "contemporary_relevance": "Today, our lives are filled with constant mobile notifications, work stress, and non-stop screen time. Maha Shivaratri is like an ancient detox day. Taking a few hours of quiet silence, eating simple food, and stepping away from screens recharges our mental energy and gives us genuine peace of mind.",
+    "seva_initiative": {
+      "title": "Simple Ways to Help (Seva)",
+      "practical_actions": [
+        "Place clean water bowls outside your home for birds and stray animals during warm afternoons.",
+        "Try practicing one full day of silence or 'No Complaining Day'—responding with patience instead of getting irritated.",
+        "Offer warm, healthy meals or fruit to people waiting outside public hospitals or shelters."
+      ]
+    },
+    "reflection_prompt": "What stressful thought or irritation can you quietly let go of today to feel peaceful inside?",
+    "quizzes": [
+      {
+        "question": "Why is Lord Shiva called 'Neelakantha' (the blue-throated one)?",
+        "options": [
+          "He wore blue jewelry",
+          "He held the deadly poison in his throat to protect all living beings",
+          "He painted his body blue",
+          "He lived near the blue sea"
+        ],
+        "correct": 1,
+        "explanation": "Out of pure compassion, Lord Shiva held the poison in his throat so nobody else would be harmed, turning his throat blue."
+      },
+      {
+        "question": "What is the main personal benefit of keeping a quiet vigil (Jagaran) on Shivaratri?",
+        "options": [
+          "Watching movies with friends all night",
+          "Learning to calm our busy thoughts and practice mindfulness",
+          "Skipping sleep for no reason",
+          "Proving who can stay awake the longest"
+        ],
+        "correct": 1,
+        "explanation": "Jagaran teaches us to step away from distractions, quiet our restless mind, and practice calm awareness."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "key": "janmashtami",
+    "name": "Krishna Janmashtami",
+    "sanskrit_name": "कृष्णजन्माष्टमी",
+    "tagline": "The Birth of Lord Krishna: Living with Joy, Courage, and Love",
+    "theme_color": "#1B4D7E",
+    "accent_bg": "rgba(27, 77, 126, 0.08)",
+    "border_accent": "#2B6EA8",
+    "hero_gradient": "linear-gradient(135deg, #091524 0%, #11263F 50%, #1A3E66 100%)",
+    "icon": "🦚",
+    "timing_context": "Celebrated at midnight during the monsoon season (August or September)",
+    "significance": "Lord Krishna teaches us how to live life completely and joyfully. Whether he was playing as a cheerful child in Gokul, standing as a faithful friend to the poor Sudama, or guiding Arjuna through tough questions in the Bhagavad Gita, Krishna lived with a smile on his face. Janmashtami reminds us that no matter how difficult our problems look, we can face them with courage and a positive heart.",
+    "sacred_stories": [
+      {
+        "title": "Birth in a Dark Prison Cell",
+        "tradition": "Srimad Bhagavatam",
+        "summary": "Krishna was born in the middle of a stormy, thunderous night inside a heavily guarded prison where his parents were locked up by the cruel king Kansa. But the moment he was born, the heavy chains fell open, the guards fell asleep, and the locked gates unlocked. It proves that no unfair situation or difficult circumstance can ever trap goodness and truth."
+      },
+      {
+        "title": "Lifting the Govardhan Mountain",
+        "tradition": "Stories of Gokul",
+        "summary": "When continuous storms threatened his village, young Krishna did not run away. He lifted the Govardhan hill on his little finger to shelter all the villagers, children, and cows. This story teaches us that true leadership means protecting the weak and caring for nature and animals."
+      },
+      {
+        "title": "The Wise Guide of the Bhagavad Gita",
+        "tradition": "Mahabharata",
+        "summary": "When the warrior Arjuna felt confused and heartbroken on the battlefield, Krishna did not scold him. He patiently explained the wisdom of the Bhagavad Gita: 'Do your best duty with honesty, and do not worry excessively about the results.' This advice remains a guiding light for students and working professionals even today."
+      }
+    ],
+    "ritual_symbolism": [
+      {
+        "symbol": "Tiny Baby Footprints on the Floor",
+        "meaning": "Families draw small footprints using rice paste from the front door to the prayer room. It represents welcoming pure childlike innocence, smiles, and positive energy into the home."
+      },
+      {
+        "symbol": "Rocking the Cradle (Jhula)",
+        "meaning": "Placing a small idol of baby Krishna in a cradle and gently swinging it reminds us to treat the divine with warm, tender affection—just like a loving parent cares for their child."
+      },
+      {
+        "symbol": "Fasting Until Midnight",
+        "meaning": "People fast through the day and break it at midnight when Krishna was born. It teaches us patience—reminding us that after every dark patch of waiting, joy and light will arrive."
+      }
+    ],
+    "regional_traditions": [
+      {
+        "region": "Maharashtra (Dahi Handi Pyramids)",
+        "observance": "Groups of energetic youth called 'Govindas' work together to build tall human pyramids to break a pot of curd hanging high in the air. It takes massive teamwork, trust, and balance—nobody wins alone!"
+      },
+      {
+        "region": "Mathura & Vrindavan (Braj Bhoomi)",
+        "observance": "Krishna's hometown is decorated with flowers. Temples ring bells at midnight, people sing joyous bhajans, and colorful folk plays show his childhood stories."
+      },
+      {
+        "region": "Gujarat (Dwarka)",
+        "observance": "The great Dwarkadhish temple celebrates Krishna as a fair and noble king. People prepare fresh butter and sweets (Makhan Bhog) and perform traditional Garba dances."
+      },
+      {
+        "region": "South & East India",
+        "observance": "In Tamil Nadu and Kerala, mothers prepare traditional snacks like Murukku and Seedai. In Manipur, classical dancers perform gentle, beautiful Raas Leela dances in Krishna's honor."
+      }
+    ],
+    "contemporary_relevance": "When exam pressure, work challenges, or personal setbacks feel heavy, Krishna's life teaches us two golden rules: never lose your warm smile, and always do your honest duty without panicking about what will happen next.",
+    "seva_initiative": {
+      "title": "Simple Ways to Help (Seva)",
+      "practical_actions": [
+        "Sponsor fresh milk, healthy breakfasts, or fruits for children in local daycare centers or schools.",
+        "Donate food and medicines to animal shelters that take care of injured stray cows and animals.",
+        "Be a true friend like Krishna: reach out to a classmate or coworker who is feeling stressed or left out."
+      ]
+    },
+    "reflection_prompt": "What challenge are you facing right now where you can replace worry with calm courage and a positive smile?",
+    "quizzes": [
+      {
+        "question": "What inspiring lesson do we learn from Krishna being born inside a locked prison cell?",
+        "options": [
+          "That we should give up when times are tough",
+          "That goodness, truth, and hope cannot be stopped by difficult circumstances",
+          "That problems are permanent",
+          "That only rich people can succeed"
+        ],
+        "correct": 1,
+        "explanation": "Even though he was born in chains and darkness, the gates opened. It shows that truth and hope will always find a way through hard times."
+      },
+      {
+        "question": "What big teamwork value does Maharashtra's Dahi Handi human pyramid teach us?",
+        "options": [
+          "Showing off that one person is better than others",
+          "Trusting your team, helping each other, and winning together",
+          "Fighting with other teams",
+          "Doing dangerous things for social media"
+        ],
+        "correct": 1,
+        "explanation": "A human pyramid only stands when teammates trust each other, stay humble, and work as one united family."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "key": "navratri",
+    "name": "Navratri & Dussehra",
+    "sanskrit_name": "नवरात्रि एवं विजयादशमी",
+    "tagline": "The Nine Nights of Strength: Honoring Courage, Unity, and Victory",
+    "theme_color": "#A83232",
+    "accent_bg": "rgba(168, 50, 50, 0.08)",
+    "border_accent": "#C44747",
+    "hero_gradient": "linear-gradient(135deg, #1C0A0A 0%, #301010 50%, #4D1A1A 100%)",
+    "icon": "🌺",
+    "timing_context": "Nine sacred nights in autumn followed by the tenth day of victory (September or October)",
+    "significance": "Navratri honors the power of Maa Durga and the divine feminine strength that protects, nurtures, and teaches. Over nine joyful nights and the tenth day (Vijayadashami/Dussehra), we celebrate that good will always defeat evil. In daily life, it reminds us to build self-discipline, respect women, and conquer our own bad habits like laziness and anger.",
+    "sacred_stories": [
+      {
+        "title": "Maa Durga Vanquishes Mahishasura",
+        "tradition": "Devi Mahatmya",
+        "summary": "A demon named Mahishasura caused chaos because he believed no woman could ever defeat him. To protect the universe, the pure positive energies of all deities combined to form Goddess Durga. Riding a lion and holding symbols of wisdom, she fought fearlessly for nine nights and defeated the demon on the tenth day. It proves that real strength has no gender, and courage will always prevail."
+      },
+      {
+        "title": "Lord Rama's Victory on Dussehra",
+        "tradition": "Ramayana Tradition",
+        "summary": "Before his final battle against Ravana, Lord Rama prayed with deep respect to Goddess Durga for inner strength. On the tenth day (Dussehra), Lord Rama defeated Ravana and restored goodness. This is why people burn effigies of Ravana—as a visual reminder that no matter how smart or strong someone is, arrogance will destroy them."
+      },
+      {
+        "title": "The Nine Forms of Strength (Navadurga)",
+        "tradition": "Ancient Teachings",
+        "summary": "Each of the nine nights celebrates a different quality of the Goddess: staying grounded, practicing self-discipline, staying alert, spreading warmth, showing brave determination, and gaining clear wisdom. It is a roadmap for our own personal growth."
+      }
+    ],
+    "ritual_symbolism": [
+      {
+        "symbol": "Dancing in Circles (Garba)",
+        "meaning": "In Gujarat, people dance together in big circles around a decorated lamp. Moving in circles reminds us that time and seasons keep changing, but the light of goodness in the center never changes."
+      },
+      {
+        "symbol": "Blessing Tools & Books (Ayudha Puja)",
+        "meaning": "On the ninth day, people clean their schoolbooks, musical instruments, computers, and work tools to show respect. It reminds us that every skill and talent we have is a precious gift meant to be used for good work."
+      },
+      {
+        "symbol": "Sowing Seeds in a Clay Pot (Ghatasthapana)",
+        "meaning": "Planting barley grains in a pot of moist soil on the first day and watching fresh green shoots sprout shows gratitude to Mother Earth for feeding us, teaching us to live in harmony with nature."
+      }
+    ],
+    "regional_traditions": [
+      {
+        "region": "Gujarat & West India (Garba & Dandiya)",
+        "observance": "People of all ages put on colorful traditional clothes and dance joyfully late into the night. It is a festival of community unity, music, and celebration."
+      },
+      {
+        "region": "Bengal & East India (Durga Puja)",
+        "observance": "Grand artistic pandals are built in every neighborhood. Maa Durga is welcomed with dhak drums and fragrant incense like a beloved daughter returning home with her children."
+      },
+      {
+        "region": "North India (Ramlila & Dussehra Mela)",
+        "observance": "Towns and villages organize outdoor theatre plays telling the story of the Ramayana. On Dussehra evening, giant effigies of Ravana are burned amidst cheering crowds to celebrate goodness."
+      },
+      {
+        "region": "South India (Kolu Dolls & Vidyarambham)",
+        "observance": "In Tamil Nadu and Karnataka, homes display steps of festive dolls (Golu). In Kerala, little children write their first letters in rice or sand on Vijayadashami to begin their journey of learning."
+      }
+    ],
+    "contemporary_relevance": "True celebration of Navratri means more than dancing and dressing up—it means ensuring every girl and woman in our society feels safe, respected, and supported in getting a great education and following her dreams.",
+    "seva_initiative": {
+      "title": "Simple Ways to Help (Seva)",
+      "practical_actions": [
+        "Support the education of young girls by donating school bags, notebooks, and pens to underprivileged students.",
+        "Donate books or old working smartphones/tablets to local study groups for women learning new skills.",
+        "Practice genuine respect in daily life: stand up against teasing, rude comments, or unfair treatment of women in your college or workplace."
+      ]
+    },
+    "reflection_prompt": "What bad habit—like procrastination, anger, or negative self-talk—would you like to conquer this week?",
+    "quizzes": [
+      {
+        "question": "What is the simple and beautiful meaning of dancing in circles during Garba?",
+        "options": [
+          "It is just a dance with no meaning",
+          "It shows that our lives change in cycles around the steady light of goodness",
+          "To see who gets dizzy first",
+          "It is only for professional dancers"
+        ],
+        "correct": 1,
+        "explanation": "Dancing in circles around a gentle flame reminds us that while daily life keeps spinning, goodness and truth remain constant at the center."
+      },
+      {
+        "question": "Why do people clean and bless their books and tools on Ayudha Puja during Navratri?",
+        "options": [
+          "To show gratitude for the skills, tools, and education that help us earn and live",
+          "Because they do not want to study that day",
+          "To buy new gadgets unnecessarily",
+          "To show off their possessions"
+        ],
+        "correct": 0,
+        "explanation": "Ayudha Puja teaches us to respect our tools, books, and laptops as instruments of learning and honest work."
+      }
+    ]
+  }
+]

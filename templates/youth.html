@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Corner - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --yc-gold: #C49000;
+            --yc-saffron: #E05A1B;
+            --yc-teal: #1E3D3D;
+            --yc-cream: #FAF8F5;
+            --yc-border: #E8E2D8;
+        }
+
+        
+        .yc-hero {
+            position: relative;
+            background: radial-gradient(circle at 50% 25%, #1F2D33 0%, #131E23 60%, #0A1114 100%);
+            color: #FFFFFF;
+            padding: 75px 24px 65px;
+            text-align: center;
+            border-bottom: 3px solid var(--yc-gold);
+            overflow: hidden;
+        }
+
+        .yc-hero-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .yc-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 2.5px;
+            color: #E2B961;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: rgba(226, 185, 97, 0.12);
+            padding: 6px 18px;
+            border-radius: 25px;
+            border: 1px solid rgba(226, 185, 97, 0.28);
+            margin-bottom: 18px;
+        }
+
+        .yc-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F5E8D0 75%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .yc-hero-p {
+            font-size: clamp(1rem, 2vw, 1.12rem);
+            color: #D6CEC1;
+            line-height: 1.8;
+            max-width: 740px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+
+        .yc-hero-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .yc-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: #1A1105;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+            transition: all 0.22s ease;
+            text-decoration: none;
+        }
+
+        .yc-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
+
+        .yc-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.28);
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 30px;
+            transition: all 0.22s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .yc-btn-outline:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: #E2B961;
+            color: #E2B961;
+        }
+
+        
+        .yc-section {
+            padding: 55px 20px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .yc-section-header {
+            text-align: center;
+            max-width: 740px;
+            margin: 0 auto 34px;
+        }
+
+        .yc-sub-tag {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            color: var(--saffron);
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .yc-section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.85rem, 3.4vw, 2.35rem);
+            color: var(--teal);
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .yc-section-header p {
+            color: var(--text-medium);
+            font-size: 0.96rem;
+            line-height: 1.6;
+        }
+
+        
+        .yc-guided-box {
+            background: #FFFFFF;
+            border: 1px solid var(--yc-border);
+            border-radius: 16px;
+            padding: 30px 26px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+            margin-bottom: 45px;
+        }
+
+        .yc-guided-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--teal);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .yc-guided-sub {
+            color: var(--text-medium);
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        .yc-path-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .yc-path-pill {
+            background: #F8F5F0;
+            border: 1.5px solid #DCD4C7;
+            padding: 9px 16px;
+            border-radius: 25px;
+            font-size: 0.86rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Poppins', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .yc-path-pill:hover {
+            border-color: var(--gold);
+            background: #FFF9EE;
+        }
+
+        .yc-path-pill.active {
+            background: var(--teal);
+            color: #FFFFFF;
+            border-color: var(--teal);
+            box-shadow: 0 4px 12px rgba(30, 61, 61, 0.2);
+        }
+
+        .yc-path-outcome {
+            background: var(--yc-cream);
+            border-radius: 12px;
+            padding: 18px 22px;
+            border-left: 4px solid var(--gold);
+            display: none;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .yc-path-outcome-title {
+            font-weight: 600;
+            color: var(--teal);
+            font-size: 0.98rem;
+            margin-bottom: 4px;
+        }
+
+        .yc-path-outcome-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .yc-path-cta-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .yc-path-cta-btn {
+            background: var(--teal);
+            color: #FFFFFF;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .yc-path-cta-btn:hover {
+            background: var(--dark-slate);
+        }
+
+        
+        .yc-search-bar-wrap {
+            position: relative;
+            max-width: 580px;
+            margin: 0 auto 28px;
+        }
+
+        .yc-search-input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 2px solid var(--yc-border);
+            border-radius: 30px;
+            padding: 13px 20px 13px 46px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .yc-search-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 4px 18px rgba(196, 144, 0, 0.15);
+        }
+
+        .yc-search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.05rem;
+            color: #9A8D7B;
+            pointer-events: none;
+        }
+
+        .yc-search-clear {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: #9A8D7B;
+            cursor: pointer;
+            display: none;
+        }
+
+        
+        .yc-category-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1050px) {
+            .yc-category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 560px) {
+            .yc-category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .yc-category-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--yc-border);
+            border-radius: 12px;
+            padding: 14px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 98px;
+        }
+
+        .yc-category-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .yc-category-card.active {
+            background: #FFFDF8;
+            border-color: var(--gold);
+            box-shadow: 0 6px 18px rgba(196, 144, 0, 0.16);
+            border-width: 2px;
+        }
+
+        .yc-category-icon {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .yc-category-name {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--teal);
+            line-height: 1.3;
+        }
+
+        .yc-category-count {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        
+        .yc-filter-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-light);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .yc-status-label {
+            font-size: 0.88rem;
+            color: var(--text-medium);
+        }
+
+        .yc-status-label strong {
+            color: var(--teal);
+        }
+
+        .yc-reset-btn {
+            background: #F4EFE6;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            color: #7B6A50;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .yc-reset-btn:hover {
+            background: #E8E0D2;
+            color: var(--teal);
+        }
+
+        
+        .yc-qa-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .yc-qa-item {
+            background: #FFFFFF;
+            border: 1px solid var(--yc-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s;
+        }
+
+        .yc-qa-item:hover {
+            border-color: #D2C5B3;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .yc-qa-header {
+            padding: 18px 22px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            background: #FFFFFF;
+        }
+
+        .yc-qa-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            color: var(--saffron);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .yc-qa-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.12rem;
+            color: var(--teal);
+            font-weight: 600;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .yc-qa-toggle-btn {
+            background: #F4EFE6;
+            color: var(--teal);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .yc-qa-item.expanded .yc-qa-toggle-btn {
+            background: var(--teal);
+            color: #FFFFFF;
+        }
+
+        
+        .yc-qa-quick-snippet {
+            padding: 0 22px 14px;
+            font-size: 0.91rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .yc-qa-quick-snippet strong {
+            color: var(--teal);
+        }
+
+        
+        .yc-qa-body {
+            display: none;
+            padding: 16px 22px 22px;
+            border-top: 1px solid var(--border-light);
+            background: #FDFCF9;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .yc-qa-item.expanded .yc-qa-body {
+            display: block;
+        }
+
+        .yc-qa-section-block {
+            margin-bottom: 14px;
+        }
+
+        .yc-qa-subheading {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+        }
+
+        .yc-qa-p {
+            font-size: 0.91rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .yc-qa-practice-box {
+            background: #E8F5E9;
+            border-left: 3px solid #2E7D32;
+            border-radius: 0 8px 8px 0;
+            padding: 12px 14px;
+            margin-top: 12px;
+            font-size: 0.88rem;
+            color: #1B5E20;
+            line-height: 1.6;
+        }
+
+        .yc-qa-scripture-box {
+            background: #FAF7F0;
+            border-left: 3px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 14px;
+            margin-top: 12px;
+            font-size: 0.87rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .yc-qa-link-row {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-light);
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .yc-context-link {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .yc-context-link:hover {
+            color: var(--saffron);
+        }
+
+        
+        .yc-reflection-box {
+            background: linear-gradient(135deg, #1C272C 0%, #10191D 100%);
+            color: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px 32px;
+            margin-top: 45px;
+        }
+
+        @media (max-width: 768px) {
+            .yc-reflection-box {
+                padding: 26px 20px;
+            }
+        }
+
+        .yc-reflection-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            color: #E2B961;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .yc-reflection-q {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.35rem, 2.7vw, 1.75rem);
+            color: #FFFFFF;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .yc-reflection-summary {
+            font-size: 0.96rem;
+            color: #D6CEC1;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .yc-reflection-insight {
+            background: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #E2B961;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            color: #F0EAE1;
+            line-height: 1.65;
+            margin-bottom: 20px;
+            display: none;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .yc-reflection-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .yc-btn-reflect {
+            background: rgba(226, 185, 97, 0.2);
+            border: 1px solid #E2B961;
+            color: #E2B961;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .yc-btn-reflect:hover {
+            background: #E2B961;
+            color: #10191D;
+        }
+
+        .yc-btn-shuffle {
+            background: none;
+            border: none;
+            color: #A3B5BC;
+            font-size: 0.82rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .yc-btn-shuffle:hover {
+            color: #FFFFFF;
+        }
+
+        
+        .yc-closing-banner {
+            background: radial-gradient(circle at 50% 50%, #FAF6EE 0%, #F1E9DA 100%);
+            border-top: 1px solid var(--yc-border);
+            border-bottom: 1px solid var(--yc-border);
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .yc-closing-container {
+            max-width: 740px;
+            margin: 0 auto;
+        }
+
+        .yc-closing-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.85rem, 3.6vw, 2.4rem);
+            color: var(--teal);
+            margin-bottom: 10px;
+        }
+
+        .yc-closing-banner p {
+            font-size: 1rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .yc-closing-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth" class="active">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    
+    <header class="yc-hero">
+        <div class="yc-hero-container">
+            <div class="yc-eyebrow">
+                <span>✦</span> SIMPLE ANSWERS FOR CURIOUS MINDS <span>✦</span>
+            </div>
+            <h1>Questions Are Welcome.<br>Your Journey Begins Here.</h1>
+            <p class="yc-hero-p">
+                Curious about God, why we pray, how Karma works, or how to handle stress and friendships? You don&rsquo;t need prior knowledge or complex Sanskrit. Read simple, practical explanations you can easily use in everyday life.
+            </p>
+            <div class="yc-hero-actions">
+                <a href="#discoveryPaths" class="yc-btn-primary">
+                    Browse Questions &darr;
+                </a>
+                <a href="#guidedStart" class="yc-btn-outline" onclick="focusGuided()">
+                    Not Sure Where to Start? ✦
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="yc-section">
+
+        
+        <section id="guidedStart" class="yc-guided-box">
+            <h3 class="yc-guided-heading">
+                <span>🌱</span> Not Sure Where to Begin?
+            </h3>
+            <p class="yc-guided-sub">Click whatever you feel curious about right now:</p>
+
+            <div class="yc-path-pills" role="tablist" aria-label="Guided Starting Points">
+                <button type="button" class="yc-path-pill" onclick="selectGuided('divine', this)">
+                    <span>✨</span> Why are there so many gods and goddesses?
+                </button>
+                <button type="button" class="yc-path-pill" onclick="selectGuided('dharma', this)">
+                    <span>🕉️</span> What do Dharma and Karma really mean?
+                </button>
+                <button type="button" class="yc-path-pill" onclick="selectGuided('prayer', this)">
+                    <span>🪔</span> How do I start praying if I don't know Sanskrit?
+                </button>
+                <button type="button" class="yc-path-pill" onclick="selectGuided('life', this)">
+                    <span>🌿</span> How do I handle anger and comparison with others?
+                </button>
+                <button type="button" class="yc-path-pill" onclick="selectGuided('mind', this)">
+                    <span>💡</span> Can I question beliefs &amp; balance phone screen time?
+                </button>
+                <button type="button" class="yc-path-pill" onclick="selectGuided('student', this)">
+                    <span>📚</span> How do I stay calm during exams and busy college life?
+                </button>
+            </div>
+
+            
+            <div id="guidedOutcome" class="yc-path-outcome">
+                <div class="yc-path-outcome-title" id="guidedTitle">Recommended Starting Point</div>
+                <div class="yc-path-outcome-desc" id="guidedDesc"></div>
+                <div class="yc-path-cta-row">
+                    <button type="button" class="yc-path-cta-btn" id="guidedFilterBtn" onclick="applyGuidedFilter()">
+                        Show These Questions &darr;
+                    </button>
+                    <a href="/scriptures" class="yc-context-link" id="guidedExternalLink">
+                        Explore Connected Guide &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="discoveryPaths">
+            <div class="yc-section-header">
+                <span class="yc-sub-tag">6 Easy Topics</span>
+                <h2>Explore by Topic or Search</h2>
+                <p>Click any topic below or search directly for keywords like <em>God</em>, <em>karma</em>, <em>prayer</em>, <em>anger</em>, or <em>exams</em>.</p>
+            </div>
+
+            
+            <div class="yc-search-bar-wrap">
+                <span class="yc-search-icon">🔍</span>
+                <input type="text" 
+                       id="ycSearchInput" 
+                       class="yc-search-input" 
+                       placeholder="Search any question (e.g. God, karma, anger, exams, prayer)..."
+                       aria-label="Search questions"
+                       oninput="handleSearch()">
+                <button type="button" id="ycSearchClear" class="yc-search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+            </div>
+
+            
+            <div class="yc-category-grid" role="tablist" aria-label="Spiritual Topic Paths">
+                {% for cat in categories %}
+                <button type="button" 
+                        class="yc-category-card" 
+                        data-category="{{ cat.id }}"
+                        role="tab"
+                        id="tab-{{ cat.id }}"
+                        aria-selected="false"
+                        onclick="toggleCategory('{{ cat.id }}')">
+                    <div class="yc-category-icon">{{ cat.icon }}</div>
+                    <div class="yc-category-name">{{ cat.name }}</div>
+                    <div class="yc-category-count" id="count-{{ cat.id }}">Questions</div>
+                </button>
+                {% endfor %}
+            </div>
+
+            
+            <div class="yc-filter-status">
+                <div class="yc-status-label" id="filterStatusText">
+                    Showing <strong>all questions</strong> (click any question to read more details)
+                </div>
+                <button type="button" class="yc-reset-btn" id="resetFiltersBtn" onclick="resetAllFilters()">
+                    Reset Filters ✕
+                </button>
+            </div>
+
+            
+            <div class="yc-qa-list" id="questionsContainer">
+                {% for q in questions %}
+                <div class="yc-qa-item" 
+                     data-id="{{ q.id }}" 
+                     data-category="{{ q.category }}"
+                     data-text="{{ q.question }} {{ q.short_answer }} {{ q.meaning }}">
+                    
+                    
+                    <div class="yc-qa-header" onclick="toggleAccordion(this)">
+                        <div>
+                            <span class="yc-qa-badge">
+                                {% for c in categories %}{% if c.id == q.category %}{{ c.name }}{% endif %}{% endfor %}
+                            </span>
+                            <h3 class="yc-qa-question">{{ q.question }}</h3>
+                        </div>
+                        <button type="button" class="yc-qa-toggle-btn">Read More &darr;</button>
+                    </div>
+
+                    
+                    <div class="yc-qa-quick-snippet">
+                        <strong>In Simple Words:</strong> {{ q.short_answer }}
+                    </div>
+
+                    
+                    <div class="yc-qa-body">
+                        
+                        <div class="yc-qa-section-block">
+                            <div class="yc-qa-subheading">
+                                <span>📖</span> How to Understand This (Easy Explanation)
+                            </div>
+                            <p class="yc-qa-p">{{ q.meaning }}</p>
+                        </div>
+
+                        
+                        {% if q.everyday_practice %}
+                        <div class="yc-qa-practice-box">
+                            <strong>✦ Try this in your daily life:</strong> {{ q.everyday_practice }}
+                        </div>
+                        {% endif %}
+
+                        
+                        {% if q.scripture_quote %}
+                        <div class="yc-qa-scripture-box">
+                            <strong>Timeless Quote:</strong> &ldquo;{{ q.scripture_quote }}&rdquo;
+                        </div>
+                        {% endif %}
+
+                        
+                        {% if q.related_link %}
+                        <div class="yc-qa-link-row">
+                            <a href="{{ q.related_link }}" class="yc-context-link">
+                                {{ q.related_link_text }} &rarr;
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+
+                
+                <div class="yc-no-results" id="noResultsBox" style="display: none; text-align: center; padding: 35px 20px; background: #FFF; border-radius: 12px; border: 1px dashed var(--yc-border);">
+                    <p style="color: var(--text-medium); margin-bottom: 10px;">No questions matched your search query. Try simple words like <em>God</em>, <em>karma</em>, <em>prayer</em>, or <em>study</em>.</p>
+                    <button type="button" class="yc-reset-btn" onclick="resetAllFilters()">Reset Search</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="yc-reflection-box">
+            <span class="yc-reflection-badge">A Thought Worth Remembering</span>
+            <h3 class="yc-reflection-q" id="dailyReflectionQ">Can true faith exist alongside doubts and questions?</h3>
+            <p class="yc-reflection-summary" id="dailyReflectionSummary">Yes, absolutely! Sincere questions are not a sin; they are the doorway to real understanding.</p>
+            
+            
+            <div class="yc-reflection-insight" id="dailyReflectionInsight">
+                In Indian philosophy, asking questions is encouraged. When you ask with genuine curiosity, your doubts help you remove blind superstitions and discover real peace. Arjuna questioned Krishna through 18 chapters of the Gita before feeling confident.
+            </div>
+
+            <div class="yc-reflection-actions">
+                <button type="button" class="yc-btn-reflect" id="toggleInsightBtn" onclick="toggleReflectionInsight()">
+                    Read Quick Thought &darr;
+                </button>
+                <button type="button" class="yc-btn-shuffle" onclick="shuffleReflection()">
+                    See Another Thought &circlearrowright;
+                </button>
+            </div>
+        </section>
+
+        
+        <section class="yc-closing-banner">
+            <div class="yc-closing-container">
+                <span class="yc-sub-tag">The Eternal Path</span>
+                <h2>You Don&rsquo;t Need to Know Everything to Begin.</h2>
+                <p>
+                    &ldquo;Every journey of understanding begins with a simple question. Explore at your own pace, understand the meaning behind our traditions, and see how peaceful values can make your daily life happier and calmer.&rdquo;
+                </p>
+                <div class="yc-closing-links">
+                    <a href="#discoveryPaths" class="yc-btn-primary">Browse All Questions &uarr;</a>
+                    <a href="/scriptures" class="yc-btn-outline" style="color: var(--teal); border-color: var(--teal);">Explore the Bhagavad Gita &rarr;</a>
+                    <a href="/chat" class="yc-btn-outline" style="color: var(--saffron); border-color: var(--saffron);">Chat with Spiritual Guide &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="/static/js/main.js"></script>
+    <script>
+        let activeCategory = null;
+        let searchQuery = "";
+        
+        const guidedOptions = {
+            divine: {
+                title: "Understanding God & Deities",
+                desc: "God is one supreme energy, worshipped in different loving forms like Krishna, Shiva, Saraswati, and Durga so everyone can connect in their own way.",
+                catId: "divine",
+                link: "/festivals",
+                linkText: "Read Stories in Festival Companion →"
+            },
+            dharma: {
+                title: "Dharma & Karma Made Simple",
+                desc: "Dharma is doing what is right and fair. Karma is simply cause and effect: what you give to the world comes back to you, which means you have the power to create a better future.",
+                catId: "dharma",
+                link: "/scriptures",
+                linkText: "Explore Bhagavad Gita Teachings →"
+            },
+            prayer: {
+                title: "How to Pray with Ease",
+                desc: "You don't need Sanskrit or complex rituals. A simple 2-minute conversation from your heart in your own language is completely heard and loved.",
+                catId: "prayer",
+                link: "/audio",
+                linkText: "Try 2-Minute Calming Audio →"
+            },
+            life: {
+                title: "Friendships, Anger & Self-Respect",
+                desc: "Learn why holding onto anger burns you first, how to stop social media comparison, and how to calmly say 'No' to peer pressure without losing self-respect.",
+                catId: "life",
+                link: "/library",
+                linkText: "Browse Verses on Courage & Peace →"
+            },
+            mind: {
+                title: "Questioning & Modern Balance",
+                desc: "Asking questions is encouraged in Sanatan Dharma! Learn how to protect your mental focus from screen distraction with the simple 30-30 rule.",
+                catId: "mind",
+                link: "/scriptures",
+                linkText: "Read Gita's Logical Answers →"
+            },
+            student: {
+                title: "Studies, Exams & Overcoming Fear",
+                desc: "Honest studying is itself a pure form of worship (Karma Yoga). Learn how to stop worrying about exam marks and focus on what you can control today.",
+                catId: "student",
+                link: "/dashboard",
+                linkText: "Track Daily Habits on Dashboard →"
+            }
+        };
+
+        const reflectionBank = [
+            {
+                q: "Can true faith exist alongside doubts and questions?",
+                summary: "Yes, absolutely! Sincere questions are not a sin; they are the doorway to real understanding.",
+                insight: "In Indian philosophy, asking questions is encouraged. When you ask with genuine curiosity, your doubts help you remove blind superstitions and discover real peace. Arjuna questioned Krishna through 18 chapters of the Gita before feeling confident."
+            },
+            {
+                q: "What is the difference between doing something out of fear vs understanding?",
+                summary: "Fear makes you feel guilty and tense; understanding makes you free, joyful, and peaceful.",
+                insight: "If you pray only because you are afraid of getting bad marks or falling sick, your mind stays anxious. But when you understand that prayer calms your thoughts and lighting a diya reminds you to be kind, the exact same practice fills you with joy."
+            },
+            {
+                q: "What does 'surrendering to God' mean? Does it mean being lazy?",
+                summary: "Never! Surrender means giving your 100% honest effort, and then letting go of the panic about results.",
+                insight: "Surrendering to God (Sharanagati) doesn't mean you stop studying for exams. It means you work hard with honesty, and surrender the nervous overthinking about what might happen next. You control your sincere effort; you trust God with the outcome."
+            },
+            {
+                q: "How do I know if a decision is coming from my ego or from Dharma?",
+                summary: "Ego is loud, selfish, and desperate to prove others wrong. Dharma is calm, fair, and thinks of everyone's well-being.",
+                insight: "When a choice comes from ego, you feel rushed, proud, and defensive. When a choice is rooted in Dharma, your heart feels quiet, honest, and clean, even if the decision requires patience."
+            }
+        ];
+        let currentReflectionIdx = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCategoryCounts();
+        });
+
+        function updateCategoryCounts() {
+            const items = document.querySelectorAll('.yc-qa-item');
+            const counts = {};
+            items.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                counts[cat] = (counts[cat] || 0) + 1;
+            });
+
+            for (const cat in counts) {
+                const badge = document.getElementById('count-' + cat);
+                if (badge) badge.innerText = counts[cat] + " topics";
+            }
+        }
+
+        function toggleAccordion(headerEl) {
+            const item = headerEl.closest('.yc-qa-item');
+            const isExpanded = item.classList.contains('expanded');
+            item.classList.toggle('expanded', !isExpanded);
+            const btn = item.querySelector('.yc-qa-toggle-btn');
+            if (btn) {
+                btn.innerHTML = isExpanded ? 'Read More &darr;' : 'Close &uarr;';
+            }
+        }
+
+        function toggleCategory(catId) {
+            if (activeCategory === catId) {
+                activeCategory = null;
+            } else {
+                activeCategory = catId;
+            }
+
+            const cards = document.querySelectorAll('.yc-category-card');
+            cards.forEach(c => {
+                const isSelected = c.getAttribute('data-category') === activeCategory;
+                c.classList.toggle('active', isSelected);
+                c.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+            });
+
+            filterQuestions();
+        }
+
+        function handleSearch() {
+            const input = document.getElementById('ycSearchInput');
+            searchQuery = input.value.trim().toLowerCase();
+            document.getElementById('ycSearchClear').style.display = searchQuery ? 'block' : 'none';
+            filterQuestions();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('ycSearchInput');
+            input.value = '';
+            searchQuery = '';
+            document.getElementById('ycSearchClear').style.display = 'none';
+            filterQuestions();
+        }
+
+        function filterQuestions() {
+            const items = document.querySelectorAll('.yc-qa-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const itemCat = item.getAttribute('data-category');
+                const itemText = item.getAttribute('data-text').toLowerCase();
+
+                const matchesCat = !activeCategory || itemCat === activeCategory;
+                const matchesSearch = !searchQuery || itemText.includes(searchQuery);
+
+                if (matchesCat && matchesSearch) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            const statusText = document.getElementById('filterStatusText');
+            const noResults = document.getElementById('noResultsBox');
+
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+
+            let statusMsg = `Showing <strong>${visibleCount} question${visibleCount === 1 ? '' : 's'}</strong>`;
+            if (activeCategory) {
+                const activeCard = document.querySelector(`.yc-category-card[data-category="${activeCategory}"] .yc-category-name`);
+                const name = activeCard ? activeCard.innerText : activeCategory;
+                statusMsg += ` under <em>${name}</em>`;
+            }
+            if (searchQuery) {
+                statusMsg += ` matching &ldquo;${searchQuery}&rdquo;`;
+            }
+            statusText.innerHTML = statusMsg;
+        }
+
+        function resetAllFilters() {
+            activeCategory = null;
+            searchQuery = "";
+            document.getElementById('ycSearchInput').value = "";
+            document.getElementById('ycSearchClear').style.display = 'none';
+
+            const cards = document.querySelectorAll('.yc-category-card');
+            cards.forEach(c => {
+                c.classList.remove('active');
+                c.setAttribute('aria-selected', 'false');
+            });
+
+            filterQuestions();
+        }
+
+        let currentGuidedCat = null;
+
+        function focusGuided() {
+            const guided = document.getElementById('guidedStart');
+            if (guided) {
+                guided.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function selectGuided(optKey, btn) {
+            const pills = document.querySelectorAll('.yc-path-pill');
+            pills.forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+
+            const opt = guidedOptions[optKey];
+            if (!opt) return;
+
+            currentGuidedCat = opt.catId;
+
+            const outcome = document.getElementById('guidedOutcome');
+            document.getElementById('guidedTitle').innerText = opt.title;
+            document.getElementById('guidedDesc').innerText = opt.desc;
+            
+            const extLink = document.getElementById('guidedExternalLink');
+            extLink.href = opt.link;
+            extLink.innerText = opt.linkText;
+
+            outcome.style.display = 'block';
+        }
+
+        function applyGuidedFilter() {
+            if (!currentGuidedCat) return;
+            toggleCategory(currentGuidedCat);
+            const discovery = document.getElementById('discoveryPaths');
+            if (discovery) {
+                discovery.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleReflectionInsight() {
+            const insight = document.getElementById('dailyReflectionInsight');
+            const btn = document.getElementById('toggleInsightBtn');
+            const isVisible = insight.style.display === 'block';
+
+            if (isVisible) {
+                insight.style.display = 'none';
+                btn.innerHTML = 'Read Quick Thought &darr;';
+            } else {
+                insight.style.display = 'block';
+                btn.innerHTML = 'Hide Thought &uarr;';
+            }
+        }
+
+        function shuffleReflection() {
+            currentReflectionIdx = (currentReflectionIdx + 1) % reflectionBank.length;
+            const r = reflectionBank[currentReflectionIdx];
+
+            document.getElementById('dailyReflectionQ').innerText = r.q;
+            document.getElementById('dailyReflectionSummary').innerText = r.summary;
+            document.getElementById('dailyReflectionInsight').innerText = r.insight;
+
+            document.getElementById('dailyReflectionInsight').style.display = 'none';
+            document.getElementById('toggleInsightBtn').innerHTML = 'Read Quick Thought &darr;';
+        }
+    </script>
+</body>
+</html>

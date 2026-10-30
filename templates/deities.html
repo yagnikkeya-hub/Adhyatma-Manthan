@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gods and Goddesses - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .deity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .deity-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--saffron);
+            border-left: 1px solid var(--border-light);
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            transition: transform 0.25s;
+        }
+        .deity-card:hover {
+            transform: translateY(-4px);
+        }
+        .quality-pill {
+            display: inline-block;
+            background: #FFF2EB;
+            color: var(--saffron);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/deities" class="active">Gods &amp; Goddesses</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Learn About Gods and Goddesses</h1>
+            <p>Understand divine qualities, sacred symbolism, and their practical application in modern life</p>
+        </div>
+    </div>
+
+    <div class="container" style="padding: 40px 20px 60px;">
+        <div class="deity-grid">
+            {% for deity in deities %}
+            <div class="deity-card">
+                <h3 style="color: var(--teal); font-size: 1.3rem; margin-bottom: 4px;">{{ deity.name }}</h3>
+                <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 15px; font-weight: 500;">{{ deity.title }}</p>
+
+                <div style="margin-bottom: 15px;">
+                    {% for q in deity.qualities %}
+                    <span class="quality-pill">{{ q }}</span>
+                    {% endfor %}
+                </div>
+
+                <div style="background: #F8F6F2; padding: 12px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 12px; border: 1px solid var(--border-light);">
+                    <strong style="color: var(--teal);">Symbolism:</strong>
+                    <p style="margin: 4px 0 0;">{{ deity.symbolism }}</p>
+                </div>
+
+                <div style="background: #F0FFF4; padding: 12px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 12px;">
+                    <strong style="color: #2E7D32;">Core Teaching:</strong>
+                    <p style="margin: 4px 0 0;">{{ deity.teachings }}</p>
+                </div>
+
+                <div style="background: #FFF8E7; padding: 12px; border-radius: 6px; font-size: 0.85rem;">
+                    <strong style="color: var(--gold);">Modern Life Application:</strong>
+                    <p style="margin: 4px 0 0;">{{ deity.modern_application }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Sarve Bhavantu Sukhinah &mdash; May all beings be happy</p>
+                <p>5th Semester IT Project | Institute of Advanced Research (IAR), Gandhinagar</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

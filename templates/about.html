@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-glow: #e89138;
+            --cream-bg: #fdfaf5;
+            --card-border: rgba(232, 145, 56, 0.2);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--cream-bg);
+            color: #2c2523;
+        }
+
+        .about-hero {
+            background: radial-gradient(circle at 50% 20%, #234e52 0%, #132e31 100%);
+            color: white;
+            padding: 70px 20px 85px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-tag {
+            display: inline-block;
+            background: rgba(232, 145, 56, 0.2);
+            border: 1px solid var(--gold-glow);
+            color: #fbd38d;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .about-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin: 0 0 16px 0;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .about-hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #e6fffa;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .story-container {
+            max-width: 900px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .etymology-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+            border: 1px solid var(--card-border);
+            margin-bottom: 35px;
+        }
+        .section-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--saffron);
+            margin-bottom: 8px;
+        }
+        .etymology-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--teal);
+            margin: 0 0 25px 0;
+        }
+        
+        .sanskrit-split {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .word-pill {
+            background: #fff8f0;
+            border: 2px dashed #fbd38d;
+            border-radius: 16px;
+            padding: 22px 28px;
+            text-align: center;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 4px 15px rgba(232, 145, 56, 0.08);
+            transition: transform 0.2s ease;
+        }
+        .word-pill:hover {
+            transform: translateY(-4px);
+        }
+        .word-pill .devanagari {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--saffron);
+            margin-bottom: 6px;
+            display: block;
+        }
+        .word-pill .translit {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        .word-pill .meaning {
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .plus-sign, .equals-sign {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-glow);
+        }
+
+        .synthesis-banner {
+            background: linear-gradient(135deg, #145a5c 0%, #0d3839 100%);
+            color: white;
+            border-radius: 14px;
+            padding: 25px 30px;
+            margin-top: 25px;
+            position: relative;
+        }
+        .synthesis-banner h3 {
+            margin: 0 0 8px 0;
+            color: #fbd38d;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+        }
+        .synthesis-banner p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #e6fffa;
+        }
+
+        .clarity-badge {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 22px;
+            font-size: 0.92rem;
+            color: #166534;
+            line-height: 1.6;
+        }
+
+        .story-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .story-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--teal);
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .story-text {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: #4a4543;
+            margin-bottom: 20px;
+        }
+
+        .narrative-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 25px 0 10px;
+        }
+        .narrative-col {
+            border-radius: 14px;
+            padding: 24px;
+        }
+        .col-conflict {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+        }
+        .col-conflict h4 {
+            color: #c53030;
+            margin: 0 0 12px 0;
+            font-size: 1.1rem;
+        }
+        .col-conflict ul {
+            padding-left: 18px;
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: #742a2a;
+        }
+        .col-resolution {
+            background: #f0fdfa;
+            border-left: 4px solid var(--teal);
+        }
+        .col-resolution h4 {
+            color: var(--teal);
+            margin: 0 0 12px 0;
+            font-size: 1.1rem;
+        }
+        .col-resolution ul {
+            padding-left: 18px;
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: #134e4a;
+        }
+
+        .golden-quote {
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            border-left: 5px solid var(--gold-glow);
+            border-radius: 14px;
+            padding: 26px 32px;
+            margin: 30px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 1.75;
+            color: #7b341e;
+            font-style: italic;
+            box-shadow: 0 4px 15px rgba(232, 145, 56, 0.1);
+        }
+        .golden-quote span {
+            display: block;
+            margin-top: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-style: normal;
+            color: #9c4221;
+        }
+
+        .academic-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .academic-card h4 {
+            margin: 0 0 6px 0;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+        .academic-card p {
+            margin: 4px 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .explore-btn {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 18px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(20, 90, 92, 0.25);
+        }
+        .explore-btn:hover {
+            background: #0f4446;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .narrative-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-hero h1 {
+                font-size: 2.1rem;
+            }
+            .etymology-card, .story-section {
+                padding: 24px;
+            }
+            .plus-sign, .equals-sign {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about" class="active">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <span class="hero-tag">The Story &amp; Philosophy</span>
+        <h1>Adhyatma Manthan</h1>
+        <p>The journey from knowing about God to living with divine wisdom in every aspect of life.</p>
+    </section>
+
+    <div class="story-container">
+
+        <div class="etymology-card">
+            <span class="section-eyebrow">Etymology &amp; Sacred Origins</span>
+            <h2>What Does Adhyatma (अध्यात्म) Mean?</h2>
+            <p style="color: #666; font-size: 1.02rem; line-height: 1.7; margin: 0;">
+                The foundation of our platform lies in the deep linguistic and spiritual harmony of two timeless Sanskrit words:
+            </p>
+
+            <div class="sanskrit-split">
+                <div class="word-pill">
+                    <span class="devanagari">अधि</span>
+                    <div class="translit">Adhi</div>
+                    <div class="meaning">
+                        <strong>"Towards", "Related to", "Concerning"</strong><br>
+                        Directing attention inward away from external chaos towards our highest nature.
+                    </div>
+                </div>
+
+                <div class="plus-sign">+</div>
+
+                <div class="word-pill">
+                    <span class="devanagari">आत्मा</span>
+                    <div class="translit">Atma</div>
+                    <div class="meaning">
+                        <strong>"The Eternal Soul"</strong><br>
+                        Pure, divine, unborn, and untouched by physical decay — our true identity in Paramatma.
+                    </div>
+                </div>
+
+                <div class="equals-sign">=</div>
+
+                <div class="word-pill" style="border-style: solid; border-color: var(--teal); background: #f0fdfa;">
+                    <span class="devanagari" style="color: var(--teal);">अध्यात्म</span>
+                    <div class="translit">Adhyatma</div>
+                    <div class="meaning">
+                        <strong>"Related to the Soul"</strong><br>
+                        The study and living realization of who we truly are in relationship with the Divine.
+                    </div>
+                </div>
+            </div>
+
+            <div class="synthesis-banner">
+                <h3>The Churning of Inner Wisdom: Manthan (मन्थन)</h3>
+                <p>
+                    While <em>Adhyatma</em> is turning inward toward the soul, <strong>Manthan</strong> is the thoughtful churning of thoughts, emotions, and scriptures. Just as churning cream yields butter, introspective <em>Manthan</em> extracts clarity, peace, and resilience from ancient wisdom.
+                </p>
+            </div>
+
+            <div class="clarity-badge">
+                <span style="font-size: 1.3rem;">💡</span>
+                <div>
+                    <strong>Linguistic Precision:</strong> The prefix <em>Adhi</em> does not itself mean "higher self" — its authentic grammatical role means <em>"concerning"</em> or <em>"directed towards."</em> The profound depth comes alive in the synthesis: <strong>Adhyatma</strong> — that which concerns the soul.
+                </div>
+            </div>
+        </div>
+
+        <div class="golden-quote">
+            "Adhyatma is not merely a word or ritual; it is a way of life and an inner journey of self-discovery. It is the process of connecting the Atma with Paramatma, transforming every joy, sorrow, success, and failure into a stepping stone for spiritual growth."
+            <span>— The Guiding Spirit of Adhyatma Manthan</span>
+        </div>
+
+        <div class="story-section">
+            <span class="section-eyebrow">Our Purpose</span>
+            <h3>Bridging Ancient Roots With Modern Minds</h3>
+            <p class="story-text">
+                In today's fast-paced digital world, we find ourselves hyper-connected to devices and social feeds yet increasingly disconnected from our own hearts. Teenagers and young adults regularly battle academic anxiety, career comparison, emotional burnout, and loneliness.
+            </p>
+            <p class="story-text">
+                Sanatan Dharma already holds the answers through the timeless insights of the <em>Bhagavad Gita, Ramayana, Mahabharata, and Upanishads</em>. However, accessing this wisdom has often felt intimidating due to archaic language and a lack of relatable, modern contexts.
+            </p>
+
+            <div class="narrative-grid">
+                <div class="narrative-col col-conflict">
+                    <h4>The Challenge We Face</h4>
+                    <ul>
+                        <li>Not knowing where to start in vast scriptures</li>
+                        <li>Intimidating language and complex interpretations</li>
+                        <li>Spiritual content that is static or ritual-only</li>
+                        <li>Struggling to find peace in high-pressure daily life</li>
+                    </ul>
+                </div>
+                <div class="narrative-col col-resolution">
+                    <h4>How Adhyatma Manthan Helps</h4>
+                    <ul>
+                        <li>Turning timeless verses into actionable life skills</li>
+                        <li>A conversational space to share real emotions and doubts</li>
+                        <li>Simple, practical explanations designed for youth</li>
+                        <li>Daily micro-habits for calm, focus, and inner growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-card">
+            <h4>An Academic Innovation for Daily Peace</h4>
+            <p>5th Semester B.Tech Information Technology Project</p>
+            <p><strong>Institute of Advanced Research (IAR), Gandhinagar</strong></p>
+            <a href="/chat" class="explore-btn">Start Your Inner Journey &rarr;</a>
+        </div>
+
+    </div>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

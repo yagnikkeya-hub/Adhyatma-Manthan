@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Bhagavad Gita — Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/scriptures.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="scripture-experience">
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures" class="active">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    
+    
+    
+    <header class="gita-hero">
+        <div class="gita-hero-container">
+            <div class="gita-eyebrow">
+                <span>✦</span> THE WISDOM OF THE BHAGAVAD GITA <span>✦</span>
+            </div>
+            <h1 class="gita-hero-title">Explore the Bhagavad Gita</h1>
+            <p class="gita-hero-subtitle">"Timeless wisdom for navigating life’s choices, duty, devotion, and inner peace."</p>
+
+            <div class="gita-hero-focus-pill">
+                <span>🪷 Dedicated Study:</span> <strong>Chapter 12 &mdash; Bhakti Yoga (The Yoga of Devotion)</strong>
+            </div>
+
+            <div class="gita-hero-actions">
+                <a href="#chapter-portal" class="gita-cta-btn">
+                    <span>Begin Reading Chapter 12</span>
+                    <span>↓</span>
+                </a>
+                <a href="#about-scripture" class="gita-cta-secondary">
+                    <span>About the Scripture</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+    
+    
+    <main class="gita-layout">
+
+        
+        
+        
+        <section class="sacred-manuscript-card" id="about-scripture">
+            <div class="sacred-card-tag">Sacred Scripture Heritage</div>
+            <h2 class="sacred-card-title">{{ data.title }}</h2>
+            <div class="sacred-card-subtitle">{{ data.subtitle }}</div>
+
+            
+            <div class="scripture-overview-dual">
+                <div class="overview-box">
+                    <div class="overview-box-header">
+                        <span class="icon">📖</span>
+                        <span>Introduction</span>
+                    </div>
+                    <p>{{ data.about.introduction }}</p>
+                </div>
+
+                <div class="overview-box">
+                    <div class="overview-box-header">
+                        <span class="icon">📜</span>
+                        <span>Historical Background</span>
+                    </div>
+                    <p>{{ data.about.historical_background }}</p>
+                </div>
+            </div>
+
+            
+            <div class="core-teachings-container">
+                <h3 class="teachings-section-title">
+                    <span>🪷</span>
+                    <span>Seven Pillars of Gita Wisdom</span>
+                </h3>
+                <div class="core-teachings-grid">
+                    {% for item in data.about.core_teachings %}
+                    <div class="core-teaching-card {% if item.concept == 'Bhakti Yoga' %}featured-teaching{% endif %}">
+                        <div class="teaching-name">
+                            <span>{{ item.concept }}</span>
+                            {% if item.concept == 'Bhakti Yoga' %}
+                            <span class="teaching-badge">Chapter 12 Focus</span>
+                            {% endif %}
+                        </div>
+                        <p class="teaching-desc">{{ item.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        
+        
+        
+        <section class="chapter-portal" id="chapter-portal">
+            <div class="chapter-badge-wrap">
+                <span class="chapter-number-pill">Chapter {{ data.chapter.number }} of {{ data.chapter.total_chapters }}</span>
+            </div>
+            <h2 class="chapter-title-sanskrit">{{ data.chapter.name }}</h2>
+            <div class="chapter-title-en">{{ data.chapter.translation }}</div>
+
+            
+            <div class="chapter-explanations-grid">
+                <div class="chapter-exp-card">
+                    <div class="chapter-exp-header">
+                        <span>🌿</span>
+                        <span>Discover the Path</span>
+                    </div>
+                    <p>{{ data.chapter.discover_path }}</p>
+                </div>
+
+                <div class="chapter-exp-card">
+                    <div class="chapter-exp-header">
+                        <span>🕊️</span>
+                        <span>Understanding Bhakti Yoga</span>
+                    </div>
+                    <p>{{ data.chapter.understanding }}</p>
+                </div>
+
+                <div class="chapter-exp-card">
+                    <div class="chapter-exp-header">
+                        <span>💎</span>
+                        <span>The Essence of Devotion</span>
+                    </div>
+                    <p>{{ data.chapter.essence }}</p>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        
+        <div class="reader-toolbar-container" id="reader-toolbar">
+            <div class="reader-toolbar-top">
+                <div class="reader-stats">
+                    <span>Reading: <strong>20 Sacred Verses</strong></span>
+                    <span class="reader-progress-bar-bg">
+                        <span class="reader-progress-bar-fill" id="progressBar"></span>
+                    </span>
+                    <span id="activeVerseIndicator" style="font-size: 0.85rem; color: var(--gita-text-muted);">Verse 12.1</span>
+                </div>
+
+                <div class="reader-actions">
+                    <button class="reader-btn reader-btn-primary" type="button" onclick="toggleAllShlokas(this)">
+                        <span id="toggleAllIcon">▾</span>
+                        <span id="toggleAllText">Expand All Verses</span>
+                    </button>
+                    <a href="#chapter-portal" class="reader-btn reader-btn-secondary">
+                        <span>↑ Chapter Intro</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="shloka-jump-strip">
+                <span class="shloka-jump-label">Verses:</span>
+                {% for s in data.chapter.shlokas %}
+                <a href="#shloka-{{ loop.index }}" 
+                   class="shloka-chip {% if loop.index == 1 %}active{% endif %}" 
+                   id="chip-{{ loop.index }}"
+                   data-index="{{ loop.index }}" onclick="jumpToShloka(this.dataset.index)">
+                    {{ s.number }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        
+        
+        
+        <div class="shlokas-reader-feed">
+            {% for s in data.chapter.shlokas %}
+            <article class="shloka-card {% if loop.index == 1 %}open{% endif %}" id="shloka-{{ loop.index }}">
+                
+                
+                <div class="shloka-header" data-index="{{ loop.index }}" onclick="toggleSingleShloka(this.dataset.index)">
+                    <div class="shloka-header-left">
+                        <div class="shloka-badge">Shloka {{ s.number }}</div>
+                        <div class="shloka-header-titles">
+                            <h3 class="shloka-title">
+                                <span>{{ s.title }}</span>
+                            </h3>
+                            <div class="shloka-preview-sanskrit">{{ s.sanskrit.split('\n')[0] }}</div>
+                        </div>
+                    </div>
+                    <div class="shloka-toggle-indicator" id="arrow-{{ loop.index }}">▼</div>
+                </div>
+
+                
+                <div class="shloka-body">
+                    
+                    
+                    <div class="sacred-verse-altar">
+                        <div class="altar-corner-ornament">ॐ</div>
+                        <div class="altar-corner-ornament-right">ॐ</div>
+                        <div class="altar-verse-sanskrit" id="sanskrit-text-{{ loop.index }}">{{ s.sanskrit }}</div>
+                        <div class="altar-divider"></div>
+                        <div class="altar-verse-transliteration">{{ s.pronunciation }}</div>
+                        
+                        <div class="altar-actions">
+                            <button class="altar-btn" type="button" data-index="{{ loop.index }}" onclick="copyVerse(this.dataset.index, this)">
+                                <span>📋 Copy Verse</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="meaning-dual-grid">
+                        <div class="meaning-block">
+                            <div class="meaning-block-title">
+                                <span>🇬🇧</span>
+                                <span>English Translation</span>
+                            </div>
+                            <p>{{ s.meaning_en }}</p>
+                        </div>
+
+                        <div class="meaning-block">
+                            <div class="meaning-block-title">
+                                <span>🇮🇳</span>
+                                <span>हिन्दी भावार्थ</span>
+                            </div>
+                            <p class="hindi-meaning-text">{{ s.meaning_hi }}</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="depth-dual-grid">
+                        <div class="depth-block">
+                            <div class="depth-block-title">
+                                <span>💡</span>
+                                <span>Understanding the Shloka</span>
+                            </div>
+                            <p>{{ s.explanation }}</p>
+                        </div>
+
+                        <div class="depth-block application-block">
+                            <div class="depth-block-title">
+                                <span>🌱</span>
+                                <span>Bringing It Into Daily Life</span>
+                            </div>
+                            <p>{{ s.application }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        
+        
+        
+        <section class="chapter-summary-card">
+            <div class="summary-lotus-icon">🪷</div>
+            <h3 class="summary-heading">The Message of Chapter 12</h3>
+            <div class="summary-subheading">A Life Centered in Pure Devotion and Compassion</div>
+            
+            <p class="summary-text">
+                Chapter 12 teaches that spirituality is not confined to formal ceremonies or secluded retreats. Lord Krishna shows that whether one connects with God through personal devotion or quiet contemplation of the formless reality, the truest proof of spiritual attainment is revealed in character.
+            </p>
+            <p class="summary-text">
+                A true devotee radiates warmth, harbors no malice, remains calm in praise or blame, accepts life with equanimity, and treats all beings with kindness. Devotion becomes genuine when love for the Divine transforms into universal goodwill.
+            </p>
+
+            <div class="summary-gita-takeaway">
+                <div class="takeaway-pill">🕊️ <strong>Compassion:</strong> Free from malice toward any being</div>
+                <div class="takeaway-pill">⚖️ <strong>Equanimity:</strong> Balanced in joy and sorrow</div>
+                <div class="takeaway-pill">🧘 <strong>Devotion:</strong> Practiced in every daily thought & action</div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <a href="#reader-toolbar" class="back-to-chapter-btn" id="floatingTopBtn" style="display: none;">
+        <span>↑</span>
+        <span>Back to Top</span>
+    </a>
+
+    
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        
+        function toggleSingleShloka(index) {
+            const card = document.getElementById('shloka-' + index);
+            if (!card) return;
+            const isOpen = card.classList.contains('open');
+            card.classList.toggle('open');
+            updateActiveChip(index);
+        }
+
+        
+        function jumpToShloka(index) {
+            const card = document.getElementById('shloka-' + index);
+            if (!card) return;
+            if (!card.classList.contains('open')) {
+                card.classList.add('open');
+            }
+            updateActiveChip(index);
+            updateProgressBar(index);
+        }
+
+        
+        function updateActiveChip(index) {
+            document.querySelectorAll('.shloka-chip').forEach(c => c.classList.remove('active'));
+            const activeChip = document.getElementById('chip-' + index);
+            if (activeChip) activeChip.classList.add('active');
+
+            const indicator = document.getElementById('activeVerseIndicator');
+            if (indicator) indicator.textContent = 'Verse 12.' + index;
+            updateProgressBar(index);
+        }
+
+        function updateProgressBar(index) {
+            const total = 20;
+            const pct = Math.min(100, Math.round((index / total) * 100));
+            const bar = document.getElementById('progressBar');
+            if (bar) bar.style.width = pct + '%';
+        }
+
+        
+        let allExpanded = false;
+        function toggleAllShlokas(btn) {
+            allExpanded = !allExpanded;
+            const cards = document.querySelectorAll('.shloka-card');
+            cards.forEach(card => {
+                if (allExpanded) {
+                    card.classList.add('open');
+                } else {
+                    card.classList.remove('open');
+                }
+            });
+
+            const textElem = document.getElementById('toggleAllText');
+            const iconElem = document.getElementById('toggleAllIcon');
+            if (allExpanded) {
+                if (textElem) textElem.textContent = 'Collapse All Verses';
+                if (iconElem) iconElem.textContent = '▴';
+            } else {
+                if (textElem) textElem.textContent = 'Expand All Verses';
+                if (iconElem) iconElem.textContent = '▾';
+            }
+        }
+
+        
+        function copyVerse(index, btn) {
+            const textElem = document.getElementById('sanskrit-text-' + index);
+            if (!textElem) return;
+            navigator.clipboard.writeText(textElem.innerText).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span>✓ Copied!</span>';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy verse:', err);
+            });
+        }
+
+        
+        window.addEventListener('scroll', function() {
+            const floatBtn = document.getElementById('floatingTopBtn');
+            if (!floatBtn) return;
+            if (window.scrollY > 800) {
+                floatBtn.style.display = 'flex';
+            } else {
+                floatBtn.style.display = 'none';
+            }
+        });
+
+        
+        function toggleDropdown(btn) {
+            const menu = btn.nextElementSibling;
+            if (menu) {
+                menu.classList.toggle('show');
+            }
+        }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+            }
+        }
+
+        
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+            }
+        });
+    </script>
+</body>
+</html>

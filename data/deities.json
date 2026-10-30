@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Lord Krishna",
+    "title": "The Supreme Guide & Teacher of Bhagavad Gita",
+    "qualities": ["Wisdom", "Leadership", "Dharma", "Detached Action"],
+    "symbolism": "Flute represents divine music that attracts souls; Peacock feather represents purity and divine beauty.",
+    "teachings": "Focus on your duty without attachment to the result. When confusion strikes, seek wisdom and take righteous action.",
+    "modern_application": "In college and work, give your 100% effort in studying or working rather than burning out stressing over the results.",
+    "icon": "🦚"
+  },
+  {
+    "id": 2,
+    "name": "Lord Shiva",
+    "title": "The Embodiment of Meditation, Inner Peace & Transformation",
+    "qualities": ["Meditation", "Inner Peace", "Detachment", "Simplicity"],
+    "symbolism": "Third eye represents spiritual knowledge destroying ignorance; Crescent moon represents mastery over time and mind; Trishula represents control over mind, ego, and intellect.",
+    "teachings": "True power lies in self-mastery, calmness of mind, and the ability to let go of material obsessions.",
+    "modern_application": "When overloaded with digital distractions and stress, pause, disconnect, and practice silent mindfulness for mental peace.",
+    "icon": "🔱"
+  },
+  {
+    "id": 3,
+    "name": "Lord Ganesha",
+    "title": "Lord of Wisdom, Intellect & Remover of Obstacles",
+    "qualities": ["Intelligence", "Removing Obstacles", "Humility", "New Beginnings"],
+    "symbolism": "Large head signifies broad thinking; Small mouth means talk less; Large ears mean listen more; Mouse vehicle means controlling desires.",
+    "teachings": "Always seek intellect and wisdom before starting new endeavors. Listen attentively and analyze before speaking.",
+    "modern_application": "Before starting an exam or a major project, clear mental blocks, stay humble, and listen carefully to learn effectively.",
+    "icon": "🐘"
+  },
+  {
+    "id": 4,
+    "name": "Goddess Saraswati",
+    "title": "Goddess of Knowledge, Arts, Music & Learning",
+    "qualities": ["Knowledge", "Creativity", "Purity", "Concentration"],
+    "symbolism": "Veena represents harmony of intellect and mind; White saree represents purity of true knowledge; Swan represents discerning good from bad.",
+    "teachings": "True learning is not just memorization for grades, but understanding truth and developing creative intelligence.",
+    "modern_application": "Approach your college education with dedication and curiosity, using digital tools to gain real skill, not shortcuts.",
+    "icon": "🪷"
+  },
+  {
+    "id": 5,
+    "name": "Lord Hanuman",
+    "title": "The Embodiment of Devotion, Strength & Courage",
+    "qualities": ["Devotion", "Selfless Service", "Strength", "Humility"],
+    "symbolism": "Mace represents moral strength; Flying represents transcending worldly limitations through faith and dedication.",
+    "teachings": "True strength is always accompanied by humility and service to the noble cause. Dedicate yourself completely to what is right.",
+    "modern_application": "Stand up bravely against negative peer pressure and support your friends selflessly with loyalty and courage.",
+    "icon": "🚩"
+  },
+  {
+    "id": 6,
+    "name": "Goddess Durga",
+    "title": "The Protective Mother & Destroyer of Fear",
+    "qualities": ["Fearlessness", "Protection", "Confidence", "Justice"],
+    "symbolism": "Riding a lion shows mastery over wild animal instincts; Multiple arms with weapons show multi-dimensional capability and readiness.",
+    "teachings": "Defeat inner enemies like anger, laziness, doubt, and fear. Stand firm against injustice and cherish self-respect.",
+    "modern_application": "Develop inner confidence to face career fears, self-doubt, and stand up against injustice or bullying.",
+    "icon": "⚔️"
+  },
+  {
+    "id": 7,
+    "name": "Goddess Lakshmi",
+    "title": "Goddess of Prosperity, Wealth & Righteous Abundance",
+    "qualities": ["Prosperity", "Gratitude", "Responsibility", "Generosity"],
+    "symbolism": "Lotus represents remaining pure even amidst murky worldly desires; Gold coins signify righteous, clean wealth.",
+    "teachings": "Wealth gained through honesty and used for charity and well-being brings lasting peace and respect.",
+    "modern_application": "Practice financial discipline early, respect resources, and share with those in need through charity.",
+    "icon": "🪙"
+  },
+  {
+    "id": 8,
+    "name": "Lord Rama",
+    "title": "Maryada Purushottama - The Ideal Person of Truth & Duty",
+    "qualities": ["Truthfulness", "Duty (Maryada)", "Character", "Steadfastness"],
+    "symbolism": "Bow and arrow represent single-minded focus on righteousness and protection of truth.",
+    "teachings": "Never sacrifice moral values or personal integrity for temporary comfort or shortcuts.",
+    "modern_application": "Fulfill your responsibilities toward parents, teachers, and society with honesty, integrity, and discipline.",
+    "icon": "🏹"
+  }
+]

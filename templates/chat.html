@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Guide - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat" class="active">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <div class="chat-page">
+
+        <aside class="chat-sidebar">
+            <h3>Suggested Questions</h3>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 12px;">Click to ask the guide:</p>
+            <ul class="topic-list">
+                <li onclick="fillMessage('Why am I always afraid?')">Why am I always afraid?</li>
+                <li onclick="fillMessage('How do I control my anger?')">How do I control my anger?</li>
+                <li onclick="fillMessage('Why am I losing motivation?')">Why am I losing motivation?</li>
+                <li onclick="fillMessage('How do I become disciplined?')">How do I become disciplined?</li>
+                <li onclick="fillMessage('Why do bad things happen?')">Why do bad things happen?</li>
+                <li onclick="fillMessage('I am scared of failing my exams')">Scared of failing exams</li>
+                <li onclick="fillMessage('I feel lonely and sad')">Feeling lonely and sad</li>
+                <li onclick="fillMessage('How can I connect with God?')">How can I connect with God?</li>
+            </ul>
+
+            <div class="sidebar-quote">
+                <p>"Every response provides: Shloka, Scripture Source, Meaning, Explanation, Real-life Application, and Today's Action."</p>
+            </div>
+        </aside>
+
+        
+        <main class="chat-main">
+            <div class="chat-header">
+                <div class="chat-avatar">Guide</div>
+                <div class="chat-header-info">
+                    <h2>Adhyatma Spiritual Guide</h2>
+                    <p class="chat-status">Mentor inspired by authentic Hindu scriptures</p>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">Guide</div>
+                    <div class="message-content">
+                        <p><strong>Namaste! Welcome to your AI Spiritual Guide.</strong></p>
+                        <p>You can ask questions naturally, just like speaking to a mentor or sharing what is on your heart.</p>
+                        <p>Whether you feel stressed, confused about studies, struggling with anger or fear, I will share wisdom from the <em>Bhagavad Gita</em> and ancient scriptures with clear real-life action steps.</p>
+                        <p>What would you like to discuss today?</p>
+                        <span class="message-time" id="welcomeTime"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator" style="display:none;">
+                <div class="message-avatar">Guide</div>
+                <div class="typing-dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <textarea 
+                    id="userInput" 
+                    class="chat-input" 
+                    placeholder="Ask naturally (e.g. 'How do I control my anger?' or 'Why do bad things happen?')..."
+                    rows="2"
+                    onkeydown="handleKeyDown(event)"
+                ></textarea>
+                <button class="send-btn" onclick="sendMessage()">
+                    Send Message
+                </button>
+            </div>
+            <p class="chat-disclaimer">
+                Authentic scriptural teachings meant for spiritual reflection, peace, and practical student guidance.
+            </p>
+        </main>
+
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

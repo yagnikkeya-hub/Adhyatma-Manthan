@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="contact-body">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <div class="contact-hero-container">
+            <div class="contact-eyebrow">
+                <span>✦</span> CONNECT &bull; SHARE &bull; LEARN <span>✦</span>
+            </div>
+            <h1>Contact Us</h1>
+            <p>
+                Have reflections on scriptures, suggestions for Youth Corner topics, or thoughts on your spiritual experience? We would love to hear from you.
+            </p>
+        </div>
+    </header>
+
+    <main class="contact-main-wrap">
+        
+        
+        <section class="contact-card-surface">
+            <h2 class="contact-card-title">Send a Message</h2>
+            <p class="contact-card-subtitle">
+                Fill in your details below and your thoughts will be saved directly into our secure platform records.
+            </p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="contact-form-group">
+                    <label class="contact-form-label" for="cName">
+                        <span>👤</span>
+                        <span>Your Full Name</span>
+                    </label>
+                    <input type="text" id="cName" class="contact-input" placeholder="e.g. Keya Yagnik" required>
+                </div>
+
+                <div class="contact-form-group">
+                    <label class="contact-form-label" for="cEmail">
+                        <span>✉️</span>
+                        <span>Email Address</span>
+                    </label>
+                    <input type="email" id="cEmail" class="contact-input" placeholder="e.g. yourname@example.com" required>
+                </div>
+
+                <div class="contact-form-group">
+                    <label class="contact-form-label" for="cSubject">
+                        <span>📌</span>
+                        <span>Topic / Subject</span>
+                    </label>
+                    <input type="text" id="cSubject" class="contact-input" placeholder="e.g. Suggestion for Youth Corner, Feedback on Gita Shlokas" required>
+                </div>
+
+                <div class="contact-form-group">
+                    <label class="contact-form-label" for="cMessage">
+                        <span>✍️</span>
+                        <span>Your Message or Reflection</span>
+                    </label>
+                    <textarea id="cMessage" class="contact-textarea" rows="5" placeholder="Share your feedback, spiritual query, or idea..." required></textarea>
+                </div>
+
+                <button type="submit" class="contact-btn-submit" id="contactSubmitBtn">
+                    <span>Send Message</span>
+                    <span>&rarr;</span>
+                </button>
+            </form>
+
+            <div id="contactSuccess" class="contact-success-box">
+                <strong>✓ Thank you for reaching out!</strong> Your reflection has been saved successfully to our platform records. May peace and clarity guide your journey.
+            </div>
+        </section>
+
+        <aside class="contact-side-column">
+            
+            <div class="contact-info-card">
+                <div class="info-card-header">
+                    <span class="icon">🪷</span>
+                    <span>Adhyatma Manthan</span>
+                </div>
+                <p>
+                    A digital spiritual companion bridging timeless Sanatan Dharma wisdom with modern student and everyday life.
+                </p>
+                <div class="contact-info-highlight">
+                    <strong>✦ Core Values:</strong> Truth (Satya), Righteous Duty (Dharma), and Universal Goodwill (Lokasangraha).
+                </div>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="info-card-header">
+                    <span class="icon">💬</span>
+                    <span>Community &amp; Inquiries</span>
+                </div>
+                <p>
+                    Whether you are a student, teacher, or seeker, we welcome your thoughts on how we can make sacred wisdom more accessible.
+                </p>
+                <div class="contact-info-highlight" style="border-left-color: var(--contact-saffron);">
+                    <strong>✦ Response Time:</strong> Messages are reviewed regularly by our editorial and development team.
+                </div>
+            </div>
+
+            <div class="contact-info-card" style="background: radial-gradient(ellipse at 50% 20%, #251329 0%, #150917 100%); color: #FFFFFF; border-color: rgba(196,144,0,0.35);">
+                <div class="info-card-header" style="color: #F7D070;">
+                    <span class="icon">🕊️</span>
+                    <span>Need Immediate Guidance?</span>
+                </div>
+                <p style="color: #E2CFB4;">
+                    Our AI Spiritual Guide is available 24/7 to provide authentic Vedic and Gita perspectives on fear, courage, grief, and exams.
+                </p>
+                <a href="/chat" style="display: inline-flex; align-items: center; gap: 8px; color: #F7D070; font-weight: 600; font-size: 0.88rem; margin-top: 10px; text-decoration: none;">
+                    <span>Converse with Spiritual Guide</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const name = document.getElementById('cName').value.trim();
+            const email = document.getElementById('cEmail').value.trim();
+            const subject = document.getElementById('cSubject').value.trim();
+            const message = document.getElementById('cMessage').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span>Saving...</span>';
+
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, subject, message })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('contactForm').reset();
+                    document.getElementById('contactSuccess').style.display = 'block';
+                    btn.innerHTML = '<span>✓ Sent</span>';
+                } else {
+                    alert('Error saving message. Please try again.');
+                    btn.disabled = false;
+                    btn.innerHTML = '<span>Send Message &rarr;</span>';
+                }
+            })
+            .catch(err => {
+                console.error('Contact submit error:', err);
+                alert('Network error while saving message.');
+                btn.disabled = false;
+                btn.innerHTML = '<span>Send Message &rarr;</span>';
+            });
+        }
+
+        function toggleDropdown(btn) {
+            const menu = btn.nextElementSibling;
+            if (menu) menu.classList.toggle('show');
+        }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+            }
+        });
+    </script>
+</body>
+</html>

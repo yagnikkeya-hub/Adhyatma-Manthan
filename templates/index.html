@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhyatma Manthan — The Eternal Path | AI-Powered Spiritual Guidance Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="homepage-body">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="home-hero">
+        <div class="hero-sacred-aura"></div>
+        <div class="home-hero-container">
+            <div class="hero-emblem-wrap">
+                <img src="/static/images/emblem_transparent.png" alt="Sacred Emblem" class="hero-emblem-img">
+            </div>
+
+            <div class="hero-eyebrow-pill">
+                <span>✦</span> ADHYATMA MANTHAN &bull; THE ETERNAL PATH <span>✦</span>
+            </div>
+
+            <h1 class="hero-headline">Ancient Wisdom.<br>Meaningful Living.</h1>
+            <p class="hero-subheadline">The Eternal Path for Everyday Clarity</p>
+
+            <p class="hero-supporting-text">
+                Discover timeless teachings from Sanatan Dharma and explore practical spiritual guidance 
+                for the questions, challenges, and choices of everyday life.
+            </p>
+
+            <div class="hero-cta-actions">
+                <a href="/scriptures" class="hero-btn-primary">
+                    <span>Explore Spiritual Wisdom</span>
+                    <span>→</span>
+                </a>
+                <a href="/chat" class="hero-btn-secondary">
+                    <span>Talk to Spiritual Guide</span>
+                    <span>🕊️</span>
+                </a>
+            </div>
+
+            <div class="hero-pills-row">
+                <div class="hero-pill-item">
+                    <span>📖 Today's Verse:</span>
+                    <a href="#featured-shloka">Bhagavad Gita 2.48</a>
+                </div>
+                <div class="hero-pill-item">
+                    <span>🎯 Daily Mission:</span>
+                    <a href="#featured-challenge">Nishkama Seva</a>
+                </div>
+                <div class="hero-pill-item">
+                    <span>🌱 Personal Tracker:</span>
+                    <a href="/dashboard">Spiritual Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="home-section-shloka" id="featured-shloka">
+        <div class="featured-scripture-manuscript">
+            <div class="manuscript-header">
+                <div class="manuscript-badge">
+                    <span>🪷</span>
+                    <span>Today's Sacred Verse</span>
+                </div>
+                <div class="manuscript-meta">
+                    <span class="manuscript-source">{{ shloka.source }}</span>
+                    {% if shloka.theme %}
+                    <span class="manuscript-theme-tag">{{ shloka.theme }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="manuscript-sanskrit-altar">
+                <div class="altar-verse">{{ shloka.sanskrit }}</div>
+                <div class="altar-divider-line"></div>
+                <div class="altar-transliteration">{{ shloka.pronunciation }}</div>
+            </div>
+
+            <div class="manuscript-details-grid">
+                <div class="manuscript-meaning-card">
+                    <div class="details-label">
+                        <span>📖</span>
+                        <span>English Translation</span>
+                    </div>
+                    <p class="details-content">"{{ shloka.english_translation }}"</p>
+                </div>
+
+                <div class="manuscript-app-card">
+                    <div class="details-label">
+                        <span>🌱</span>
+                        <span>Today's Practical Application</span>
+                    </div>
+                    <p class="details-content">{{ shloka.practical_application }}</p>
+                </div>
+            </div>
+
+            <div class="manuscript-footer">
+                <div class="manuscript-tip">
+                    <span>💡 <strong>When to remember:</strong> {{ shloka.life_situation }}</span>
+                </div>
+                <a href="/daily-shloka" class="manuscript-cta-link">
+                    <span>Complete Daily Shloka Experience</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-story-section">
+        <div class="story-card">
+            <div class="story-eyebrow">A Sanctuary for Spiritual Living</div>
+            <h2 class="story-headline">Ancient Wisdom for the Life You Live Today</h2>
+            <p class="story-lead">
+                Explore spiritual teachings, discover practical guidance, and build a deeper understanding 
+                of yourself through timeless wisdom and thoughtful daily practices. Adhyatma Manthan bridges 
+                revered scriptural depth with modern questions &mdash; helping you live with purpose, resilience, 
+                and inner stillness.
+            </p>
+
+            <div class="story-pillars-grid">
+                <div class="story-pillar-item">
+                    <span class="pillar-icon">🪷</span>
+                    <h3 class="pillar-title">Authentic Scriptures</h3>
+                    <p class="pillar-desc">Explore the Gita, Upanishads, and Vedic verses with word-by-word pronunciation and authentic context.</p>
+                </div>
+                <div class="story-pillar-item">
+                    <span class="pillar-icon">🕊️</span>
+                    <h3 class="pillar-title">Compassionate Guidance</h3>
+                    <p class="pillar-desc">Find answers to modern dilemmas, stress, relationships, and duty through AI grounded in Dharma.</p>
+                </div>
+                <div class="story-pillar-item">
+                    <span class="pillar-icon">🧘</span>
+                    <h3 class="pillar-title">Conscious Habits</h3>
+                    <p class="pillar-desc">Nurture self-awareness through gentle daily check-ins, ambient meditation, and selfless challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modules-journey-section">
+        <div class="journey-section-header">
+            <span class="journey-tag">Spiritual Framework</span>
+            <h2 class="journey-title">Explore Your Spiritual Journey</h2>
+            <p class="journey-subtitle">A curated path of authentic knowledge, daily reflection, and intentional growth.</p>
+        </div>
+
+        <div class="journey-group">
+            <div class="group-header">
+                <h3>Explore Wisdom</h3>
+                <span class="group-tagline">— Sacred scriptures &amp; eternal verses</span>
+            </div>
+
+            <div class="wisdom-trio-grid">
+                <div class="wisdom-featured-card">
+                    <div>
+                        <span class="featured-top-badge">Featured Scripture</span>
+                        <h4>Explore the Bhagavad Gita</h4>
+                        <p>
+                            Delve deep into the timeless dialogue between Lord Krishna and Arjuna. 
+                            Experience Chapter 12 (Bhakti Yoga) verse-by-verse with Devanagari Sanskrit, 
+                            English &amp; Hindi meanings, and real-life applications.
+                        </p>
+                    </div>
+                    <a href="/scriptures" class="wisdom-featured-link">
+                        <span>Read Chapter 12 (Bhakti Yoga)</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="wisdom-sub-column">
+                    <div class="wisdom-sub-card">
+                        <div>
+                            <div class="card-icon-title">
+                                <span>📚</span>
+                                <h4>Shloka Library</h4>
+                            </div>
+                            <p>Discover verses organized by life situations and emotions: courage, anger, fear, discipline, and peace.</p>
+                        </div>
+                        <a href="/library" class="card-arrow-link">
+                            <span>Browse 50+ Verses</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="wisdom-sub-card">
+                        <div>
+                            <div class="card-icon-title">
+                                <span>☀️</span>
+                                <h4>Daily Shloka</h4>
+                            </div>
+                            <p>Start each morning with a rotating compulsory shloka featuring Devanagari, audio, and reflective questions.</p>
+                        </div>
+                        <a href="/daily-shloka" class="card-arrow-link">
+                            <span>Today's Daily Verse</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="journey-group">
+            <div class="group-header">
+                <h3>Connect &amp; Reflect</h3>
+                <span class="group-tagline">— AI guidance &amp; mindful self-observation</span>
+            </div>
+
+            <div class="connect-layout-grid">
+                <div class="guide-spotlight-card">
+                    <div>
+                        <span class="featured-top-badge" style="background: rgba(255, 255, 255, 0.12); color: #F7D070;">AI Spiritual Mentor</span>
+                        <h4>AI Spiritual Guide</h4>
+                        <p>
+                            Receive compassionate, authentic answers to your inner questions. 
+                            Our mentor draws directly from the Bhagavad Gita and Vedic philosophy 
+                            to offer gentle perspective on duty, grief, anger, and decision-making.
+                        </p>
+                    </div>
+                    <a href="/chat" class="hero-btn-primary" style="padding: 11px 26px; font-size: 0.94rem; width: fit-content;">
+                        <span>Converse with Guide</span>
+                        <span>🕊️</span>
+                    </a>
+                </div>
+
+                <div class="connect-sub-column">
+                    <div class="wisdom-sub-card">
+                        <div>
+                            <div class="card-icon-title">
+                                <span>🌅</span>
+                                <h4>Daily Spiritual Check-in</h4>
+                            </div>
+                            <p>Morning intention setting and evening review. Track emotional state, gratitude, and receive AI spiritual recommendations.</p>
+                        </div>
+                        <a href="/dashboard#checkinSection" class="card-arrow-link">
+                            <span>Begin Today's Check-in</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="wisdom-sub-card">
+                        <div>
+                            <div class="card-icon-title">
+                                <span>🌱</span>
+                                <h4>Spiritual Growth Dashboard</h4>
+                            </div>
+                            <p>A serene personal sanctuary to monitor streaks, meditation minutes, and practice history without pressure or competition.</p>
+                        </div>
+                        <a href="/dashboard" class="card-arrow-link">
+                            <span>Open Dashboard</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="journey-group">
+            <div class="group-header">
+                <h3>Practise &amp; Grow</h3>
+                <span class="group-tagline">— Meditation, culture, youth wisdom &amp; daily action</span>
+            </div>
+
+            <div class="grow-quad-grid">
+                <div class="grow-card">
+                    <div>
+                        <div class="grow-card-icon">🎧</div>
+                        <h4>Audio &amp; Meditation</h4>
+                        <p>Calming 432Hz Om vibrations, tanpura drones, temple bells, and guided Vedic pranayama breathing.</p>
+                    </div>
+                    <a href="/audio" class="card-arrow-link">Listen Now &rarr;</a>
+                </div>
+
+                <div class="grow-card">
+                    <div>
+                        <div class="grow-card-icon">🧭</div>
+                        <h4>Youth Corner</h4>
+                        <p>Honest answers to modern questions: exam stress, peer pressure, identity, and balancing science with faith.</p>
+                    </div>
+                    <a href="/youth" class="card-arrow-link">Explore Topics &rarr;</a>
+                </div>
+
+                <div class="grow-card">
+                    <div>
+                        <div class="grow-card-icon">🪔</div>
+                        <h4>Festival Companion</h4>
+                        <p>Discover the inner spiritual significance, regional rituals, charity traditions, and quizzes for major sacred festivals.</p>
+                    </div>
+                    <a href="/festivals" class="card-arrow-link">Learn Traditions &rarr;</a>
+                </div>
+
+                <div class="grow-card">
+                    <div>
+                        <div class="grow-card-icon">🤝</div>
+                        <h4>Daily Dharma Challenge</h4>
+                        <p>Turn spiritual philosophy into daily reality through conscious acts of kindness, truthful speech, and humility.</p>
+                    </div>
+                    <a href="/dashboard" class="card-arrow-link">Join Mission &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dharma-challenge-section" id="featured-challenge">
+        <div class="challenge-banner-card">
+            <div class="challenge-content-left">
+                <div class="challenge-eyebrow">
+                    <span>✦</span>
+                    <span>Daily Dharma Mission &bull; Put Wisdom Into Action</span>
+                </div>
+                <h3 class="challenge-title">{{ challenge.title }}</h3>
+                <p class="challenge-task">{{ challenge.task }}</p>
+                {% if challenge.scripture_link %}
+                <p class="challenge-scripture-hint">"{{ challenge.scripture_link }}"</p>
+                {% endif %}
+            </div>
+            <div>
+                <a href="/dashboard" class="challenge-cta-btn">
+                    <span>Take Today's Challenge</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="closing-reflection-section">
+        <div class="closing-reflection-container">
+            <div class="reflection-ornament">🪷</div>
+            <blockquote class="reflection-quote">
+                "The soul is never born nor dies at any time. It has not come into being, 
+                does not come into being, and will not come into being. It is unborn, eternal, 
+                ever-existing, and primeval."
+            </blockquote>
+            <cite class="reflection-cite">&mdash; Bhagavad Gita 2.20</cite>
+            <p class="reflection-note">A timeless reminder of our eternal nature amidst the changing tides of life.</p>
+        </div>
+    </section>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div style="color: #F7D070; font-size: 0.85rem; font-weight: 500;">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(btn) {
+            const menu = btn.nextElementSibling;
+            if (menu) {
+                menu.classList.toggle('show');
+            }
+        }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+            }
+        });
+    </script>
+</body>
+</html>

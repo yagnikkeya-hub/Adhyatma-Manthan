@@ -1,0 +1,257 @@
+{
+  "title": "The Bhagavad Gita",
+  "subtitle": "Timeless Wisdom for Everyday Life",
+  "about": {
+    "introduction": "The Bhagavad Gita is a sacred text of Hindu tradition that presents a conversation between Lord Krishna and Arjuna on the battlefield of Kurukshetra.\n\nThrough Krishna's guidance, the Gita explores duty, devotion, wisdom, self-control, and the nature of the self. Its teachings help us reflect on difficult decisions, understand our responsibilities, and find clarity during challenging moments.",
+    "historical_background": "The Bhagavad Gita forms part of the Bhishma Parva of the Mahabharata, the great Sanskrit epic traditionally attributed to Sage Ved Vyasa.\n\nIt contains 18 chapters and 705 shlokas. Set before the Mahabharata war, it begins with Arjuna struggling with grief and moral conflict as he faces his relatives, teachers, and friends on the battlefield. Lord Krishna, his charioteer and spiritual guide, responds with teachings that form the foundation of the Gita.",
+    "core_teachings": [
+      {
+        "concept": "Dharma",
+        "description": "Understand your responsibilities and strive to do what is right."
+      },
+      {
+        "concept": "Karma Yoga",
+        "description": "Perform your duties sincerely without becoming attached to the results."
+      },
+      {
+        "concept": "Bhakti Yoga",
+        "description": "Cultivate love, faith, and devotion towards the Divine."
+      },
+      {
+        "concept": "Jnana Yoga",
+        "description": "Seek wisdom and understand the deeper nature of existence."
+      },
+      {
+        "concept": "Self-Control",
+        "description": "Learn to guide your thoughts, senses, and emotions."
+      },
+      {
+        "concept": "Equanimity",
+        "description": "Develop balance through success and failure, pleasure and pain."
+      },
+      {
+        "concept": "Self-Realisation",
+        "description": "Explore the nature of the self and its relationship with ultimate reality."
+      }
+    ],
+    "what_gita_teaches_us": [
+      "Confusion can be the beginning of wisdom.",
+      "Doing what is right often requires courage.",
+      "We can control our efforts, but not every outcome.",
+      "Wisdom, devotion, and disciplined action support spiritual growth.",
+      "Inner peace develops through self-understanding and a balanced approach to life."
+    ]
+  },
+  "chapter": {
+    "number": 12,
+    "total_chapters": 18,
+    "name": "Bhakti Yoga",
+    "translation": "The Yoga of Devotion",
+    "discover_path": "Bhakti Yoga explores the path of connecting with the Divine through sincere devotion, faith, and love.\n\nArjuna asks Lord Krishna whether the personal form of God or the formless, imperishable Divine is the better focus for spiritual practice. Krishna explains both paths and guides Arjuna towards understanding the true nature of devotion.",
+    "understanding": "Krishna explains that devotion is not limited to prayer or worship. It is also reflected in our everyday actions, our treatment of others, and the way we respond to life's challenges.\n\nThe chapter explores different approaches to spiritual practice, recognising that each person may begin according to their own capacity. It also describes the qualities of a true devotee, including compassion, humility, patience, forgiveness, and self-control.",
+    "essence": "Bhakti Yoga reminds us that spiritual growth begins with sincerity and deepens through consistent practice. As devotion grows, it can help us become more compassionate, let go of excessive attachment, and find greater balance within ourselves.\n\nTrue devotion is not only about how we worship, but also about how we live.",
+    "shlokas": [
+      {
+        "number": "12.1",
+        "title": "Arjuna's Question",
+        "sanskrit": "अर्जुन उवाच ।\nएवं सततयुक्ता ये भक्तास्त्वां पर्युपासते ।\nये चाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः ॥ १२.१ ॥",
+        "pronunciation": "Arjuna Uvacha.\nEvam Satata-Yukta Ye Bhaktas Tvam Paryupasate,\nYe Chapyaksharam Avyaktam Tesham Ke Yoga-Vittamah.",
+        "meaning_en": "Arjuna asks Lord Krishna which devotees are more spiritually advanced: those who worship Him with love and devotion, or those who worship the imperishable, formless Divine. He wants to understand which of these two paths leads a person closer to the ultimate truth.",
+        "meaning_hi": "अर्जुन भगवान श्रीकृष्ण से पूछते हैं कि कौन-से भक्त अधिक श्रेष्ठ हैं—वे जो भगवान के साकार स्वरूप की प्रेम और श्रद्धा से उपासना करते हैं, या वे जो अविनाशी और निराकार परमात्मा की उपासना करते हैं। अर्जुन जानना चाहते हैं कि इन दोनों मार्गों में से कौन-सा मार्ग मनुष्य को परम सत्य के अधिक निकट ले जाता है।",
+        "explanation": "People connect with the Divine in different ways. Some feel close to God through prayer, worship, and love for a particular divine form. Others seek the Divine through meditation and contemplation of the formless, eternal reality. Arjuna asks Krishna to clarify these two approaches so that he can better understand the nature of spiritual devotion.",
+        "application": "Recognise that people may follow different sincere spiritual paths. Instead of judging others for how they pray or understand God, approach their beliefs with respect and seek to deepen your own understanding."
+      },
+      {
+        "number": "12.2",
+        "title": "The Power of Devotion",
+        "sanskrit": "श्रीभगवानुवाच ।\nमय्यावेश्य मनो ये मां नित्ययुक्ता उपासते ।\nश्रद्धया परयोपेतास्ते मे युक्ततमा मताः ॥ १२.२ ॥",
+        "pronunciation": "Shri Bhagavan Uvacha.\nMayy Aveshya Mano Ye Mam Nitya-Yukta Upasate,\nShraddhaya Parayopetas Te Me Yuktatama Matah.",
+        "meaning_en": "Lord Krishna explains that those who focus their minds on Him and worship Him with deep, unwavering faith are especially devoted. True devotion extends beyond rituals and includes remembering the Divine in everyday life, trusting Him during difficult times, and allowing that faith to guide our thoughts and actions.",
+        "meaning_hi": "भगवान श्रीकृष्ण कहते हैं कि जो भक्त अपने मन को भगवान में लगाकर गहरी और अटूट श्रद्धा से उनकी उपासना करते हैं, वे अत्यंत श्रेष्ठ भक्त हैं। सच्ची भक्ति केवल पूजा-पाठ तक सीमित नहीं है। इसका अर्थ है जीवन के हर कार्य में भगवान को याद रखना, कठिन समय में भी उन पर विश्वास बनाए रखना और अपने विचारों तथा कर्मों को उस विश्वास के अनुसार दिशा देना।",
+        "explanation": "Krishna highlights the importance of a sincere and steady connection with the Divine. Faith is not simply something expressed during prayer; it can also influence how we respond to difficulties, treat other people, and make decisions. Devotion becomes meaningful when it shapes our inner attitude and everyday behaviour.",
+        "application": "Make time for prayer, reflection, or gratitude. During difficult moments, remember the values that guide you, and let your faith encourage you to act with patience, honesty, and kindness."
+      },
+      {
+        "number": "12.3",
+        "title": "The Formless and Eternal Divine",
+        "sanskrit": "ये त्वक्षरमनिर्देश्यमव्यक्तं पर्युपासते ।\nसर्वत्रगमचिन्त्यं च कूटस्थमचलंध्रुवम् ॥ १२.३ ॥",
+        "pronunciation": "Ye Tv Aksharam Anirdeshyam Avyaktam Paryupasate,\nSarvatragam Achintyam Cha Kutastham Achalam Dhruvam.",
+        "meaning_en": "Krishna describes those who worship the imperishable, unmanifest Divine, which cannot be fully expressed through words or perceived through the senses. They seek to understand the eternal reality beyond names and forms. This path involves deep contemplation, concentration, and recognising that the ultimate truth is not limited to the temporary physical world.",
+        "meaning_hi": "भगवान श्रीकृष्ण उन लोगों का वर्णन करते हैं जो अविनाशी, निराकार और शाश्वत परमात्मा की उपासना करते हैं, जिसे शब्दों में पूरी तरह व्यक्त नहीं किया जा सकता और न ही इंद्रियों से देखा जा सकता है। ऐसे साधक नाम और रूप से परे परम सत्य को समझने का प्रयास करते हैं। इस मार्ग पर चलने के लिए गहरा चिंतन, एकाग्रता और संसार के अस्थायी परिवर्तनों से परे सत्य को जानने की आवश्यकता होती है।",
+        "explanation": "The formless Divine refers to a reality that cannot be confined to a particular physical appearance. Contemplating this reality requires the seeker to look beyond what the senses can directly experience. Krishna introduces this path to show that spiritual understanding can involve both personal devotion and contemplation of the eternal, unmanifest truth.",
+        "application": "Practise quiet reflection and learn to look beyond outward appearances. Remember that possessions, circumstances, and social status change over time, and develop a deeper understanding of the values and truths that give your life lasting meaning."
+      },
+      {
+        "number": "12.4",
+        "title": "Self-Control and Compassion",
+        "sanskrit": "सन्नियम्येन्द्रियग्रामं सर्वत्र समबुद्धयः ।\nते प्राप्नुवन्ति मामेव सर्वभूतहिते रताः ॥ १२.४ ॥",
+        "pronunciation": "Sanniyamyendriya-Gramam Sarvatra Sama-Buddhayah,\nTe Prapnuvanti Mam Eva Sarva-Bhuta-Hite Ratah.",
+        "meaning_en": "Krishna explains that those who control their senses, remain balanced in different situations, and work for the welfare of all living beings can also attain Him. Spiritual growth is reflected not only in prayer or meditation but also in everyday behaviour. Self-control, fairness, kindness, and concern for others help a person grow spiritually.",
+        "meaning_hi": "भगवान श्रीकृष्ण कहते हैं कि जो लोग अपनी इंद्रियों पर संयम रखते हैं, हर परिस्थिति में संतुलित बुद्धि बनाए रखते हैं और सभी प्राणियों के कल्याण के लिए कार्य करते हैं, वे भी परमात्मा को प्राप्त कर सकते हैं। आध्यात्मिक उन्नति केवल पूजा या ध्यान करने से ही नहीं, बल्कि हमारे व्यवहार से भी दिखाई देती है। आत्मसंयम, निष्पक्षता, दया और दूसरों के प्रति संवेदनशीलता मनुष्य को आध्यात्मिक रूप से विकसित होने में सहायता करती हैं।",
+        "explanation": "Krishna connects spiritual practice with the way a person lives. Controlling the senses means learning not to act impulsively, while maintaining an even mind means trying to respond thoughtfully to both favourable and unfavourable circumstances. Working for the welfare of others shows that spiritual understanding extends beyond personal interests.",
+        "application": "Pause before reacting in anger, treat people fairly regardless of their status, and help others when you can. Practise self-control in your habits and try to remain thoughtful when facing success, failure, praise, or criticism."
+      },
+      {
+        "number": "12.5",
+        "title": "The Challenge of the Formless Path",
+        "sanskrit": "क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम् ।\nअव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते ॥ १२.५ ॥",
+        "pronunciation": "Klesho Adhikataras Tesham Avyaktasakta-Chetasam,\nAvyakta Hi Gatir Duhkham Dehavadbhir Avapyate.",
+        "meaning_en": "Krishna explains that worshipping the formless Divine can be more difficult for people who are accustomed to understanding the world through their senses and physical experiences. It is often easier to connect with a personal form of God than to contemplate a reality beyond all forms. The formless path is meaningful, but it requires sustained concentration, discipline, and spiritual understanding.",
+        "meaning_hi": "भगवान श्रीकृष्ण समझाते हैं कि निराकार परमात्मा की उपासना उन लोगों के लिए अधिक कठिन हो सकती है, जो संसार को अपनी इंद्रियों और शारीरिक अनुभवों के माध्यम से समझते हैं। भगवान के किसी साकार स्वरूप से जुड़ना अक्सर उस परम सत्य का ध्यान करने से आसान होता है, जिसका कोई रूप नहीं है। निराकार उपासना भी एक महत्वपूर्ण आध्यात्मिक मार्ग है, लेकिन इसके लिए निरंतर एकाग्रता, अनुशासन और गहरी समझ की आवश्यकता होती है।",
+        "explanation": "Human beings naturally find it easier to focus on things they can see, imagine, or experience. Devotion to a personal form of God can provide a familiar focus for prayer and love, while contemplating the formless Divine requires a different kind of concentration. Krishna acknowledges this difficulty without dismissing the formless path.",
+        "application": "Understand your own spiritual needs instead of forcing yourself to follow a practice you do not yet understand. Begin with sincere prayer, reflection, or meditation, and gradually deepen your understanding through consistent practice and learning."
+      },
+      {
+        "number": "12.6",
+        "title": "Dedication of All Actions",
+        "sanskrit": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः ।\nअनन्येनैव योगेन मां ध्यायन्त उपासते ॥ १२.६ ॥",
+        "pronunciation": "Ye Tu Sarvani Karmani Mayi Sannyasya Mat-Parah,\nAnanyenaiva Yogena Mam Dhyayanta Upasate.",
+        "meaning_en": "Those who dedicate all their actions to Me, consider Me their highest goal, and worship Me with complete devotion and an undivided mind.",
+        "meaning_hi": "जो लोग अपने सभी कर्म मुझे समर्पित कर देते हैं, मुझे अपना परम लक्ष्य मानते हैं और अनन्य भक्ति के साथ मेरा ध्यान करते हुए मेरी उपासना करते हैं।",
+        "explanation": "Krishna explains that true devotion is not limited to praying or visiting a temple. It also means dedicating our actions, efforts, and intentions to the Divine. When we consider God our highest goal, even ordinary activities can become a form of devotion. This teaching encourages us to perform our responsibilities sincerely, with faith and a mind that remains connected to a higher purpose.",
+        "application": "Whatever work you do, whether studying, working, helping your family, or serving others, try to do it with honesty and dedication. Instead of thinking only about rewards, recognition, or personal gain, focus on doing what is right. You can begin your day with a simple prayer, offering your efforts to God and asking for the strength to act with sincerity. This helps turn everyday responsibilities into meaningful actions."
+      },
+      {
+        "number": "12.7",
+        "title": "Deliverance from the Ocean of Suffering",
+        "sanskrit": "तेषामहं समुद्धर्ता मृत्युसंसारसागरात् ।\nभवामि नचिरात्पार्थ मय्यावेशितचेतसाम् ॥ १२.७ ॥",
+        "pronunciation": "Tesham Aham Samuddharta Mrityu-Samsara-Sagarat,\nBhavami Na-Chirat Partha Mayy Aveshita-Chetasam.",
+        "meaning_en": "O Arjuna, for those whose minds are devoted to Me, I soon become the one who helps them cross the ocean of worldly suffering and repeated birth and death.",
+        "meaning_hi": "हे अर्जुन! जिनका मन मुझमें लगा रहता है, उन्हें मैं शीघ्र ही जन्म-मृत्यु रूपी संसार-सागर से पार कराने वाला बनता हूँ।",
+        "explanation": "Krishna assures Arjuna that He supports those who keep their minds devoted to Him. The expression “ocean of worldly suffering” represents the difficulties, attachments, fears, and repeated struggles associated with worldly existence. This verse teaches that sincere devotion can become a source of strength when life feels uncertain or overwhelming. It also expresses the spiritual belief that the Divine guides devoted souls towards liberation from the cycle of birth and death.",
+        "application": "When you face failure, uncertainty, disappointment, or difficult decisions, try not to lose hope. Take time to pray, reflect, and reconnect with your faith. At the same time, continue making thoughtful decisions and taking practical steps to improve your situation. For example, if you fail an examination, trust that a difficult moment does not define your future, learn from your mistakes, and prepare again with determination. Let faith give you courage rather than become a reason to avoid action."
+      },
+      {
+        "number": "12.8",
+        "title": "Fixing the Mind and Intellect",
+        "sanskrit": "मय्येव मन आधत्स्व मयि बुद्धिं निवेशय ।\nनिवसिष्यसि मय्येव अत ऊर्ध्वं न संशयः ॥ १२.८ ॥",
+        "pronunciation": "Mayy Eva Mana Adhatsva Mayi Buddhim Niveshaya,\nNivashishyasi Mayy Eva Ata Urdhvam Na Samshayah.",
+        "meaning_en": "Fix your mind on Me and place your understanding in Me. Then you will live in Me alone; of this, there is no doubt.",
+        "meaning_hi": "अपने मन को मुझमें लगाओ और अपनी बुद्धि को भी मुझमें स्थिर करो। इसके बाद तुम निश्चित रूप से मुझमें ही निवास करोगे, इसमें कोई संदेह नहीं है।",
+        "explanation": "Krishna asks Arjuna to focus both his mind and his intellect on the Divine. The mind influences our thoughts, emotions, and desires, while the intellect helps us understand, reason, and make decisions. By directing both towards God, a person gradually learns to live according to spiritual wisdom rather than being controlled by temporary emotions or distractions. This verse teaches that devotion involves not only feelings of love and faith but also the way we think, understand, and choose to act.",
+        "application": "In everyday life, our minds are often distracted by worries, comparisons, social media, and the desire for approval. Make time to pause, pray, meditate, or reflect on spiritual teachings. Before making an important decision, ask yourself whether your choice reflects honesty, compassion, self-control, and responsibility. For example, when you feel angry, take a moment before responding instead of saying something hurtful. By allowing spiritual values to guide both your thoughts and actions, you can gradually develop greater clarity and inner stability."
+      },
+      {
+        "number": "12.9",
+        "title": "The Path of Constant Practice (Abhyasa Yoga)",
+        "sanskrit": "अथ चित्तं समाधातुं न शक्नोषि मयि स्थिरम् ।\nअभ्यासयोगेन ततो मामिच्छाप्तुं धनञ्जय ॥ १२.९ ॥",
+        "pronunciation": "Atha Chittam Samadhatum Na Shaknoshi Mayi Sthiram,\nAbhyasa-Yogena Tato Mam Ichchhaptum Dhananjaya.",
+        "meaning_en": "If you are unable to keep your mind steadily focused on Me, then seek to reach Me through the regular practice of spiritual discipline, O Arjuna.",
+        "meaning_hi": "हे धनंजय! यदि तुम अपने मन को मुझमें स्थिर नहीं कर सकते, तो निरंतर अभ्यास और साधना के द्वारा मुझे प्राप्त करने का प्रयास करो।",
+        "explanation": "Krishna recognises that keeping the mind constantly focused on the Divine may not be easy for everyone. Therefore, He advises Arjuna to practise regularly if steady concentration is difficult. The term Abhyasa Yoga refers to repeated and disciplined practice. The mind naturally wanders, but each sincere attempt to bring it back strengthens concentration over time. This verse reminds us that spiritual progress does not require immediate perfection; it requires patience, consistency, and a willingness to continue learning.",
+        "application": "If you find meditation difficult or struggle to concentrate during prayer, do not assume that you are failing spiritually. Start with a small, manageable routine, such as spending five minutes each morning in prayer, repeating a mantra, or reading a few lines from a sacred text. Whenever your attention wanders, gently bring it back without becoming frustrated. The same principle applies to studying, developing a new skill, or building a healthy habit. Progress comes through repeated effort, not through expecting yourself to succeed perfectly from the beginning."
+      },
+      {
+        "number": "12.10",
+        "title": "Dedication Through Action and Service",
+        "sanskrit": "अभ्यासेऽप्यसमर्थोऽसि मत्कर्मपरमो भव ।\nमदर्थमपि कर्माणि कुर्वन्सिद्धिमवाप्स्यसि ॥ १२.१० ॥",
+        "pronunciation": "Abhyase Api Asamartho Asi Mat-Karma-Paramo Bhava,\nMad-Artham Api Karmani Kurvan Siddhim Avapsyasi.",
+        "meaning_en": "If you are unable to practise steadily, dedicate yourself to actions performed for Me. By doing your work for My sake, you can attain spiritual fulfilment.",
+        "meaning_hi": "यदि तुम अभ्यास करने में भी असमर्थ हो, तो मेरे लिए कर्म करने में तत्पर हो जाओ। मेरे निमित्त कर्म करते हुए भी तुम आध्यात्मिक सिद्धि प्राप्त कर सकते हो।",
+        "explanation": "Krishna offers another path for those who find regular spiritual practice difficult. He advises them to dedicate their actions to Him. This means that devotion can be expressed through the work we perform, the responsibilities we fulfil, and the service we offer to others. Spiritual growth is not restricted to meditation or religious rituals; sincere action can also become a means of connecting with the Divine. When our work is guided by good intentions, humility, and a willingness to serve, even ordinary duties can acquire spiritual meaning.",
+        "application": "You do not need to perform extraordinary acts to express devotion. You can begin by helping someone who needs support, treating people respectfully, completing your responsibilities honestly, or contributing to your community. For example, a student can dedicate their efforts to learning sincerely and use their knowledge to help others. A person working in an organisation can perform their duties fairly rather than seeking recognition at every opportunity. Focus on the sincerity of your actions instead of expecting praise or immediate rewards. In this way, everyday work becomes an opportunity to practise service, responsibility, and devotion."
+      },
+      {
+        "number": "12.11",
+        "title": "Renouncing Attachment to Results",
+        "sanskrit": "अथैतदप्यशक्तोऽसि कर्तुं मद्योगमाश्रितः ।\nसर्वकर्मफलत्यागं ततः कुरु यतात्मवान् ॥ १२.११ ॥",
+        "pronunciation": "Athaitad Apy Ashakto Asi Kartum Mad-Yogam Ashritah,\nSarva-Karma-Phala-Tyagam Tatah Kuru Yatatmavan.",
+        "meaning_en": "If you are unable to do even this, then take refuge in My path and practise self-control by giving up attachment to the results of all your actions.",
+        "meaning_hi": "यदि तुम मेरे लिए कर्म करने में भी असमर्थ हो, तो मेरे योग का आश्रय लेकर अपने मन और इंद्रियों पर नियंत्रण रखते हुए सभी कर्मों के फलों के प्रति आसक्ति का त्याग करो।",
+        "explanation": "Krishna offers Arjuna another way to progress spiritually. If a person finds it difficult to meditate or dedicate every action to God, they can begin by giving up attachment to the results of their efforts. This does not mean abandoning responsibilities or becoming careless about outcomes. Instead, it means performing one's duties sincerely without allowing success, failure, praise, or disappointment to control one's peace of mind. Krishna teaches that self-discipline and freedom from excessive attachment can help a person develop inner stability.",
+        "application": "When studying for an examination, working towards a goal, or learning a new skill, focus on the effort you can control rather than worrying constantly about the final result. Prepare sincerely, manage your time well, and learn from your mistakes. If things do not happen as expected, accept the outcome and consider what you can improve. For example, after an examination, instead of repeatedly worrying about your marks, reflect on your preparation and plan your next steps. This approach helps you remain responsible and motivated without allowing anxiety about results to overwhelm you."
+      },
+      {
+        "number": "12.12",
+        "title": "Knowledge, Meditation, and Renunciation",
+        "sanskrit": "श्रेयो हि ज्ञानमभ्यासाज्ज्ञानाद्ध्यानं विशिष्यते ।\nध्यानात्कर्मफलत्यागस्त्यागाच्छान्तिरनन्तरम् ॥ १२.१२ ॥",
+        "pronunciation": "Shreyo Hi Jnanam Abhyasaj, Jnanad Dhyanam Vishishyate,\nDhyanat Karma-Phala-Tyagas, Tyagach Chantir Anantaram.",
+        "meaning_en": "Knowledge is better than mere practice without understanding; meditation is superior to knowledge alone, and renouncing attachment to the fruits of action leads to peace.",
+        "meaning_hi": "केवल अभ्यास से ज्ञान श्रेष्ठ है, ज्ञान से ध्यान श्रेष्ठ माना गया है, और ध्यान से कर्मफल का त्याग श्रेष्ठ है। कर्मों के फल के प्रति आसक्ति त्यागने से तुरंत शांति प्राप्त होती है।",
+        "explanation": "Krishna describes different stages of spiritual development, emphasising the importance of understanding, meditation, and freedom from attachment. Practice becomes more meaningful when supported by knowledge, while meditation helps a person reflect deeply on that knowledge. Letting go of attachment to results brings a deeper sense of peace because the mind is no longer constantly disturbed by expectations and fears. The verse encourages us to move beyond simply knowing spiritual teachings and gradually bring them into our thoughts, actions, and daily lives.",
+        "application": "When you learn something valuable, do not stop at memorising the information. Try to understand its meaning, reflect on it, and practise it in your life. For example, knowing that patience is important is different from practising patience when someone disagrees with you. Similarly, work towards your goals without making your happiness entirely dependent on success. Give your best effort, reflect on what you learn, and accept what lies beyond your control. This helps transform knowledge into wisdom and encourages a calmer, more balanced outlook."
+      },
+      {
+        "number": "12.13",
+        "title": "Compassion, Equanimity, and Forgiveness",
+        "sanskrit": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च ।\nनिर्ममो निरहङ्कारः समदुःखसुखः क्षमी ॥ १२.१३ ॥",
+        "pronunciation": "Adveshta Sarva-Bhutanam Maitrah Karuna Eva Cha,\nNirmamo Nirahankarah Sama-Duhkha-Sukhah Kshami.",
+        "meaning_en": "One who bears hatred towards no living being, is friendly and compassionate, free from possessiveness and ego, balanced in happiness and sorrow, and forgiving is dear to Me.",
+        "meaning_hi": "जो किसी भी प्राणी से द्वेष नहीं करता, सबके प्रति मैत्री और करुणा रखता है, ममता और अहंकार से मुक्त है, सुख-दुःख में समान रहता है और क्षमाशील है, वह मुझे प्रिय है।",
+        "explanation": "Krishna begins describing the qualities of a person who is dear to Him. Such a person does not nurture hatred towards others but approaches living beings with friendliness and compassion. Being free from possessiveness means understanding that people and possessions should not become sources of excessive attachment. Being free from ego means not considering oneself superior to others. This verse also highlights emotional balance and forgiveness, teaching that true devotion is reflected not only in prayer but also in how we treat others and respond to life's challenges.",
+        "application": "Practise treating people with respect, even when you disagree with them. If someone makes a mistake, try to understand the situation before judging them. Avoid allowing jealousy, pride, or the desire to always be right to damage your relationships. When someone hurts you, forgiveness can help you release resentment, although it does not mean accepting repeated harmful behaviour or abandoning healthy boundaries. During both happy and difficult moments, remind yourself that circumstances change. By developing kindness, humility, patience, and emotional balance, you can put this teaching into practice in your everyday relationships."
+      },
+      {
+        "number": "12.14",
+        "title": "Contentment and Steadfast Devotion",
+        "sanskrit": "सन्तुष्टः सततं योगी यतात्मा दृढनिश्चयः ।\nमय्यर्पितमनोबुद्धिर्यो मद्भक्तः स मे प्रियः ॥ १२.१४ ॥",
+        "pronunciation": "Santushtah Satatam Yogi Yatatma Dridha-Nishchayah,\nMayy-Arpita-Mano-Buddhir Yo Mad-Bhaktah Sa Me Priyah.",
+        "meaning_en": "One who is always content, disciplined, firm in determination, and whose mind and intellect are dedicated to Me is a devoted person who is dear to Me.",
+        "meaning_hi": "जो सदा संतुष्ट रहता है, मन और इंद्रियों को संयमित रखता है, दृढ़ निश्चय वाला है तथा अपने मन और बुद्धि को मुझे समर्पित करता है, ऐसा भक्त मुझे प्रिय है।",
+        "explanation": "Krishna describes a devoted person as someone who develops contentment, self-discipline, determination, and a steady connection with the Divine. Contentment does not mean giving up on improvement or refusing to work towards meaningful goals. It means appreciating what one has while continuing to make sincere efforts. Self-discipline helps a person manage desires and distractions, while determination provides the strength to continue during difficult times. By keeping the mind and intellect directed towards spiritual values, a person can develop a more purposeful and balanced life.",
+        "application": "Build habits that support your growth, such as maintaining a routine, completing responsibilities on time, and setting realistic goals. Practise gratitude by noticing the good things in your life instead of constantly comparing yourself with others. When you face setbacks, remind yourself why your goal matters and continue taking small, consistent steps. You can also set aside time for prayer or reflection to reconnect with your values. For example, rather than feeling discouraged by someone else's achievements, appreciate their progress and focus on improving yourself. Contentment and determination can exist together: you can be grateful for the present while working towards a better future."
+      },
+      {
+        "number": "12.15",
+        "title": "Inner Calm and Non-Agitation",
+        "sanskrit": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः ।\nहर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः ॥ १२.१५ ॥",
+        "pronunciation": "Yasman Nodvijate Loko Lokan Nodvijate Cha Yah,\nHarsha-Amarsha-Bhayodvegair Mukto Yah Sa Cha Me Priyah.",
+        "meaning_en": "One who does not disturb the world and is not disturbed by the world, and who is free from excessive excitement, resentment, fear, and agitation, is dear to Me.",
+        "meaning_hi": "जिससे किसी को कष्ट या अशांति नहीं होती और जो स्वयं भी दूसरों से विचलित नहीं होता, तथा जो अत्यधिक हर्ष, ईर्ष्या, भय और मानसिक उद्वेग से मुक्त रहता है, वह मुझे प्रिय है।",
+        "explanation": "Krishna teaches that a spiritually mature person brings peace to others and does not allow every external situation to disturb their inner balance. Such a person avoids deliberately hurting, intimidating, or upsetting others and learns to respond to difficult situations thoughtfully. The verse also highlights freedom from excessive excitement, resentment, fear, and agitation. It does not mean that a person never experiences emotions. Rather, they learn to understand their feelings without allowing them to control their words and actions. This quality of steadiness helps create more peaceful relationships and a calmer mind.",
+        "application": "Be mindful of how your words and behaviour affect the people around you. Avoid reacting aggressively when you are angry, spreading rumours, or deliberately embarrassing someone to gain attention. If a disagreement occurs, listen carefully and express your thoughts respectfully. When other people's criticism, success, or behaviour makes you anxious or resentful, pause before responding and consider what is actually within your control. For example, if someone speaks rudely to you, you can respond calmly or step away instead of escalating the conflict. Being peaceful does not mean remaining silent about injustice; it means addressing problems firmly without unnecessary hostility."
+      },
+      {
+        "number": "12.16",
+        "title": "Purity, Impartiality, and Selfless Action",
+        "sanskrit": "अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः ।\nसर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः ॥ १२.१६ ॥",
+        "pronunciation": "Anapekshah Shuchir Daksha Udasino Gatavyathah,\nSarvarambha-Parityagi Yo Mad-Bhaktah Sa Me Priyah.",
+        "meaning_en": "One who is free from selfish expectations, pure, capable, impartial, free from anxiety, and not driven by personal desires is a devotee who is dear to Me.",
+        "meaning_hi": "जो किसी स्वार्थपूर्ण अपेक्षा से मुक्त, पवित्र, कुशल, निष्पक्ष और चिंता से मुक्त है तथा स्वार्थपूर्ण इच्छाओं से प्रेरित होकर कर्मों का आरंभ नहीं करता, ऐसा भक्त मुझे प्रिय है।",
+        "explanation": "Krishna describes the qualities of a person who lives with sincerity and inner stability. Being free from expectations does not mean having no goals; it means not depending entirely on rewards or recognition for happiness. Purity includes honesty in thoughts and actions, while being capable means fulfilling responsibilities with care and understanding. Remaining impartial helps a person avoid unnecessary bias, and being free from anxiety means not allowing every difficulty to disturb their peace. The phrase about giving up all undertakings refers to renouncing selfish, ego-driven pursuits rather than abandoning necessary duties.",
+        "application": "Perform your responsibilities honestly without expecting constant praise or special treatment. For example, help someone because they need support, not simply because you expect something in return. Keep your thoughts and actions honest, complete your work carefully, and avoid judging people unfairly. When plans do not go as expected, focus on what you can improve instead of becoming overwhelmed by worry. Before beginning an important task, reflect on your intention: are you acting out of responsibility and care, or only for personal recognition? This awareness can help you develop greater sincerity and emotional balance."
+      },
+      {
+        "number": "12.17",
+        "title": "Equanimity Beyond Likes and Dislikes",
+        "sanskrit": "यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति ।\nशुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः ॥ १२.१७ ॥",
+        "pronunciation": "Yo Na Hrishyati Na Dveshti Na Shochati Na Kankshati,\nShubhashubha-Parityagi Bhaktiman Yah Sa Me Priyah.",
+        "meaning_en": "One who neither becomes excessively excited nor hates, neither grieves excessively nor desires selfishly, and who lets go of attachment to favourable and unfavourable outcomes is a devoted person who is dear to Me.",
+        "meaning_hi": "जो न अत्यधिक प्रसन्न होता है, न द्वेष करता है, न शोक में डूबता है और न ही इच्छाओं में आसक्त रहता है, तथा शुभ-अशुभ फलों के प्रति आसक्ति त्याग देता है, ऐसा भक्त मुझे प्रिय है।",
+        "explanation": "Krishna teaches the importance of remaining balanced through life's changing experiences. People often become overwhelmed by happiness when things go well and deeply disturbed when they face disappointment. This verse encourages us to experience emotions without becoming controlled by them. Giving up attachment to favourable and unfavourable outcomes means accepting that life will bring both pleasant and difficult experiences. It does not mean abandoning moral judgement or treating right and wrong as identical. Rather, it means acting wisely without becoming emotionally dependent on every result.",
+        "application": "When something good happens, appreciate it without becoming arrogant or assuming that everything will always go your way. When you face disappointment, give yourself time to process your feelings and then consider what you can learn from the experience. Avoid allowing jealousy or resentment to grow when someone else succeeds. For example, if a friend achieves something you hoped to achieve, congratulate them while continuing to work towards your own goals. Practise focusing on your efforts and choices rather than comparing your life constantly with others. This helps you develop a more stable and peaceful outlook."
+      },
+      {
+        "number": "12.18",
+        "title": "Balance in Praise, Blame, Pleasure, and Pain",
+        "sanskrit": "समः शत्रौ च मित्रे च तथा मानापमानयोः ।\nशीतोष्णसुखदुःखेषु समः सङ्गविवर्जितः ॥ १२.१८ ॥",
+        "pronunciation": "Samah Shatrau Cha Mitre Cha Tatha Mana-Apamanayoh,\nShitoshna-Sukha-Duhkheshu Samah Sanga-Vivarjitah.",
+        "meaning_en": "One who remains balanced towards enemies and friends, in honour and dishonour, and in heat and cold, happiness and sorrow, and who is free from excessive attachment, is dear to Me.",
+        "meaning_hi": "जो शत्रु और मित्र, मान और अपमान, सर्दी और गर्मी, सुख और दुःख में समान भाव रखता है तथा आसक्ति से मुक्त रहता है, वह मुझे प्रिय है।",
+        "explanation": "Krishna explains that inner steadiness should not depend entirely on how others treat us or whether our circumstances are comfortable. Praise and criticism, friendship and hostility, pleasure and discomfort are all parts of life. A spiritually balanced person tries to respond to these experiences with clarity instead of allowing them to determine their behaviour. Remaining equal towards friends and enemies does not mean ignoring harmful actions or treating everyone identically in every situation. It means avoiding hatred and prejudice while responding to people fairly and wisely. Freedom from attachment helps us maintain this balance even when circumstances change.",
+        "application": "Do not allow praise to make you arrogant or criticism to destroy your confidence. Listen to feedback carefully and use it to improve when it is helpful. Treat people fairly rather than favouring someone only because they agree with you or dislike someone because they disagree with you. When circumstances become uncomfortable, such as facing a difficult task or an unexpected change, try to remain patient and focus on what needs to be done. If someone treats you unfairly, protect your boundaries and address the situation appropriately without allowing hatred to control your response. This practice helps build emotional strength and fairness."
+      },
+      {
+        "number": "12.19",
+        "title": "Thoughtful Speech, Contentment, and Steady Mind",
+        "sanskrit": "तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित् ।\nअनिकेतः स्थिरमतिर्भक्तिमान्मे प्रियो नरः ॥ १२.१९ ॥",
+        "pronunciation": "Tulya-Ninda-Stutir Mauni Santushto Yena Kenachit,\nAniketah Sthira-Matir Bhaktiman Me Priyo Narah.",
+        "meaning_en": "One who remains balanced in criticism and praise, speaks thoughtfully, is content with what is available, is free from possessiveness towards a particular dwelling, and has a steady mind is a devoted person who is dear to Me.",
+        "meaning_hi": "जो निंदा और स्तुति में समान रहता है, संयमित वाणी वाला है, जो कुछ भी प्राप्त हो उसमें संतुष्ट रहता है, घर और संपत्ति के प्रति अत्यधिक आसक्ति से मुक्त है तथा जिसकी बुद्धि स्थिर है, ऐसा भक्त मुझे प्रिय है।",
+        "explanation": "Krishna describes a person whose peace does not depend on public approval, material possessions, or changing circumstances. Remaining balanced in praise and criticism means not becoming proud when admired or losing one's sense of worth when criticised. The word Mauni suggests restraint and thoughtfulness in speech, not necessarily complete silence. Being content with what is available encourages gratitude, while being free from possessiveness means recognising that material things are temporary and should not control our lives. A steady mind helps a person remain connected to their values even when circumstances change.",
+        "application": "Learn to value yourself through your character and actions rather than depending entirely on other people's opinions. Accept genuine appreciation with humility and consider criticism thoughtfully without reacting immediately. Before speaking in anger, pause and ask whether your words will help or hurt the situation. Practise gratitude for the things you already have instead of constantly feeling that you need more to be happy. You can work towards financial stability and a comfortable home while remembering that possessions do not determine your inner worth. These habits help you develop contentment, thoughtful speech, and a steadier mind."
+      },
+      {
+        "number": "12.20",
+        "title": "The Immortal Path of Righteousness",
+        "sanskrit": "ये तु धर्म्यामृतमिदं यथोक्तं पर्युपासते ।\nश्रद्दधाना मत्परमा भक्तास्तेऽतीव मे प्रियाः ॥ १२.२० ॥",
+        "pronunciation": "Ye Tu Dharmyamritam Idam Yathoktam Paryupasate,\nShraddadhana Mat-Paramah Bhaktas Te Ativa Me Priyah.",
+        "meaning_en": "Those who follow this immortal path of righteousness as described here, with faith and devotion, taking Me as their supreme goal, are exceedingly dear to Me.",
+        "meaning_hi": "जो श्रद्धापूर्वक इस धर्ममय अमृतमय मार्ग का पालन करते हैं, जैसा कि यहाँ बताया गया है, मुझे ही अपना परम लक्ष्य मानते हैं और भक्ति में लगे रहते हैं, वे भक्त मुझे अत्यंत प्रिय हैं।",
+        "explanation": "Krishna concludes this section by affirming the value of the qualities He has described throughout the chapter. These teachings include compassion, forgiveness, self-control, contentment, freedom from excessive attachment, and steadiness in both happiness and sorrow. The phrase “immortal path of righteousness” refers to these enduring spiritual principles, which guide a person towards a deeper relationship with the Divine. Krishna emphasises that understanding these teachings is not enough by itself; they should be followed with faith, sincerity, and consistent effort. Devotion becomes meaningful when spiritual values gradually shape the way a person lives.",
+        "application": "Choose one quality from this chapter to practise each day. You might begin by speaking more kindly, controlling an impulsive reaction, forgiving someone, or completing your responsibilities without constantly seeking praise. When you make a mistake, acknowledge it and try again instead of giving up. You can also revisit these verses regularly and reflect on how their teachings apply to your relationships, decisions, and habits. Spiritual growth does not happen all at once; it develops through repeated efforts to live with compassion, honesty, humility, and faith."
+      }
+    ],
+    "summary": "Bhakti Yoga teaches us that devotion is not limited to worship; it is reflected in the way we live, act, and treat others. Through faith, compassion, humility, and self-control, we learn to face life's ups and downs with a steadier mind.\n\nLord Krishna reminds us that the path to the Divine begins with sincere effort and grows through everyday actions. True devotion transforms not only our relationship with God, but also the way we understand ourselves and the world around us."
+  }
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio &amp; Meditation — Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/audio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="audio-body">
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)" aria-expanded="false">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio" class="active">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)" aria-expanded="false">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation">&#9776;</div>
+        </div>
+    </nav>
+
+    
+    
+    
+    <header class="aud-hero">
+        <div class="aud-hero-container">
+            <div class="aud-eyebrow">
+                <span>&#10022;</span> SACRED SANCTUARY &bull; INNER PEACE <span>&#10022;</span>
+            </div>
+            <h1>Audio &amp; Meditation</h1>
+            <p class="aud-hero-p">
+                Sacred sounds. Conscious breathing. A quieter mind. Take a peaceful break from study stress, chant sacred mantras, and return to a calmer state of awareness.
+            </p>
+            <div class="aud-hero-actions">
+                <a href="#audioPlayerDock" class="aud-btn-hero" onclick="scrollToPlayer()">
+                    <span>Begin Meditation</span>
+                    <span>&darr;</span>
+                </a>
+            </div>
+
+            
+            <div class="aud-ambient-wave" aria-hidden="true">
+                <div class="aud-wave-bar"></div>
+                <div class="aud-wave-bar"></div>
+                <div class="aud-wave-bar"></div>
+                <div class="aud-wave-bar"></div>
+                <div class="aud-wave-bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="aud-main-content" id="meditationWorkspace">
+
+        
+        
+        
+        <section class="aud-player-dock" id="audioPlayerDock" aria-label="Spiritual Audio Player">
+            <div class="aud-player-top">
+                <div class="aud-player-meta">
+                    <div class="aud-player-disc" id="playerDisc" aria-hidden="true">
+                        <span>&#2384;</span>
+                    </div>
+                    <div>
+                        <h2 class="aud-player-title" id="playerTitle">Maha Mrityunjaya Mantra</h2>
+                        <div class="aud-player-sub" id="playerSub">Lord Shiva &bull; Sacred Cosmic Hum (136.1 Hz Om vibration)</div>
+                    </div>
+                </div>
+
+                <div class="aud-player-controls">
+                    
+                    <button type="button" class="aud-btn-master-play" id="masterPlayBtn" onclick="toggleMasterPlayback()" aria-label="Play or Pause Meditation Audio">
+                        &#9654;
+                    </button>
+
+                    
+                    <button type="button" class="aud-btn-repeat" id="repeatBtn" onclick="toggleRepeatTrack()" title="Repeat practice continuously">
+                        &#128257; Repeat Off
+                    </button>
+
+                    
+                    <div class="aud-volume-wrap">
+                        <button type="button" class="aud-btn-mute" id="muteBtn" onclick="toggleMute()" title="Mute or Unmute Audio" aria-label="Mute Audio">
+                            &#128266;
+                        </button>
+                        <input type="range" 
+                               class="aud-vol-slider" 
+                               id="volumeSlider" 
+                               min="0" 
+                               max="1" 
+                               step="0.05" 
+                               value="0.65" 
+                               oninput="handleVolumeChange(this.value)" 
+                               aria-label="Meditation Volume">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="aud-progress-row">
+                <span class="aud-time-text" id="timeElapsed">00:00</span>
+                <div class="aud-progress-track" id="progressTrack" onclick="handleSeek(event)">
+                    <div class="aud-progress-fill" id="trackProgressFill"></div>
+                </div>
+                <span class="aud-time-text" id="timeRemaining">05:30</span>
+            </div>
+        </section>
+
+        
+        
+        
+        <section class="aud-breath-section" id="pranayamaSection">
+            <div class="aud-eyebrow" style="margin-bottom: 8px;">
+                <span>&#10022;</span> MINDFUL PRANAYAMA &bull; 4-2-4 BREATH <span>&#10022;</span>
+            </div>
+            <h2 class="aud-breath-title">Conscious Breathing Guide</h2>
+            <p class="aud-breath-subtitle">
+                Sit comfortably with an upright, relaxed posture. Inhale gently for 4 seconds, pause comfortably for 2 seconds, and exhale slowly for 4 seconds without forcing your breath.
+            </p>
+
+            <div class="aud-breath-bubble-wrap">
+                <div class="aud-breath-circle" id="breathCircle">
+                    <span class="aud-breath-action-text" id="breathPhaseText">Ready</span>
+                    <span class="aud-breath-sec-count" id="breathSecText">Click Start</span>
+                </div>
+            </div>
+
+            <div class="aud-breath-controls-row">
+                <button type="button" class="aud-btn-breath-action" onclick="toggleBreathworkLoop()" id="btnToggleBreath">
+                    Start Breathing Circle
+                </button>
+                <button type="button" class="aud-btn-breath-close" onclick="closeBreathSection()">
+                    Close Guide &times;
+                </button>
+            </div>
+        </section>
+
+        
+        
+        
+        <div class="aud-controls-header">
+            
+            <div class="aud-filter-tabs" role="tablist">
+                <button type="button" class="aud-tab-btn active" onclick="setCategoryFilter('all', this)" role="tab">All Practices (5)</button>
+                <button type="button" class="aud-tab-btn" onclick="setCategoryFilter('mantras', this)" role="tab">Sacred Mantras</button>
+                <button type="button" class="aud-tab-btn" onclick="setCategoryFilter('breathwork', this)" role="tab">Pranayama</button>
+                <button type="button" class="aud-tab-btn" onclick="setCategoryFilter('peace', this)" role="tab">Universal Peace</button>
+                <button type="button" class="aud-tab-btn" onclick="setCategoryFilter('evening', this)" role="tab">Evening Calm</button>
+            </div>
+
+            
+            <div class="aud-mood-quickselect">
+                <span>Feel:</span>
+                <button type="button" class="aud-mood-btn" onclick="setMoodFilter('Calm', this)">Calm</button>
+                <button type="button" class="aud-mood-btn" onclick="setMoodFilter('Focus', this)">Focus</button>
+                <button type="button" class="aud-mood-btn" onclick="setMoodFilter('Courage', this)">Courage</button>
+                <button type="button" class="aud-mood-btn" onclick="setMoodFilter('Gratitude', this)">Gratitude</button>
+                <button type="button" class="aud-mood-btn" onclick="setMoodFilter('Sleep', this)">Sleep</button>
+                <button type="button" class="aud-btn-clear-filters" id="clearFiltersBtn" onclick="clearAllFilters()" style="display: none;">
+                    Clear Mood Filter &times;
+                </button>
+            </div>
+        </div>
+
+        
+        
+        
+        <section class="aud-cards-grid" id="audioCardsGrid">
+            {% for a in audio_list %}
+            <article class="aud-card" id="card-{{ a.id }}" data-id="{{ a.id }}" data-cat="{{ a.category }}" data-mood="{{ a.mood }}">
+                <div>
+                    <div class="aud-card-header">
+                        <span class="aud-card-deity">{{ a.deity }}</span>
+                        <span class="aud-card-duration-badge">&#9201; {{ a.duration }}</span>
+                    </div>
+
+                    <h3 class="aud-card-title">{{ a.title }}</h3>
+
+                    
+                    <div class="aud-card-sanskrit">
+                        {{ a.sanskrit }}
+                    </div>
+
+                    
+                    <div class="aud-card-translit">
+                        <em>{{ a.transliteration }}</em>
+                    </div>
+
+                    
+                    <div class="aud-card-meaning">
+                        <strong>Meaning:</strong> &ldquo;{{ a.meaning }}&rdquo;
+                    </div>
+
+                    
+                    <div class="aud-card-setting-tag">
+                        <span>&#127925;</span> <em>{{ a.sound_setting }}</em>
+                    </div>
+
+                    
+                    <div id="guide-box-{{ a.id }}" class="aud-card-guide-box">
+                        <div style="margin-bottom: 8px;">
+                            <strong>&#129496; Practice Guidance:</strong> {{ a.practice_guide }}
+                        </div>
+                        <div style="color: #2E7D32;">
+                            <strong>&#127793; Spiritual Benefit:</strong> {{ a.peace_benefit }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aud-card-footer">
+                    <button type="button" 
+                            class="aud-btn-play-card" 
+                            id="card-btn-{{ a.id }}" 
+                            onclick="selectAndPlay('{{ a.id }}')">
+                        <span>&#9654;</span> Play Sound
+                    </button>
+                    
+                    <div>
+                        {% if a.category == 'breathwork' %}
+                        <button type="button" class="aud-btn-read-guide" onclick="openBreathSection()">
+                            Open Breath Guide &#127788;
+                        </button>
+                        {% else %}
+                        <button type="button" class="aud-btn-read-guide" onclick="toggleCardGuide('{{ a.id }}', this)">
+                            View Practice Guide &darr;
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+
+        
+        
+        
+        <section class="aud-log-banner">
+            <span class="aud-eyebrow" style="margin-bottom: 6px; padding: 4px 14px; font-size: 0.76rem;">
+                HABIT CONTINUITY
+            </span>
+            <h3>Honor Your Practice Today</h3>
+            <p>
+                Taking even five minutes for quiet reflection calms the mind and centers your attention. Record today&rsquo;s session to synchronize with your Spiritual Growth Dashboard.
+            </p>
+            <button type="button" class="aud-btn-log-done" id="logMeditationBtn" onclick="logMeditationCompletion()">
+                &check; Log Completed Meditation in Dashboard
+            </button>
+        </section>
+
+    </main>
+
+    
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>&#10022; Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script type="application/json" id="audioDataPayload">
+        {{ (audio_list if audio_list is defined else []) | tojson | safe }}
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/meditation_synth.js"></script>
+    <script>
+        
+        
+        
+        let EMBEDDED_AUDIO = [];
+        try {
+            const rawPayload = document.getElementById('audioDataPayload');
+            EMBEDDED_AUDIO = rawPayload ? JSON.parse(rawPayload.textContent || '[]') : [];
+        } catch (e) {
+            console.error('Failed to parse audio data:', e);
+        }
+
+        let currentTrackData = EMBEDDED_AUDIO && EMBEDDED_AUDIO.length > 0 ? EMBEDDED_AUDIO[0] : null;
+        let synth = window.SpiritualSynth || {};
+        let activeCategory = 'all';
+        let activeMood = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (currentTrackData) {
+                updatePlayerHeader(currentTrackData);
+            }
+
+            
+            if (synth) {
+                synth.onNotice = function(msg) {
+                    showAudToast(msg);
+                };
+                synth.onStateChange = function(isPlaying, track) {
+                    const masterBtn = document.getElementById('masterPlayBtn');
+                    const disc = document.getElementById('playerDisc');
+
+                    if (masterBtn) {
+                        masterBtn.innerHTML = isPlaying ? "&#9208;" : "&#9654;";
+                        masterBtn.setAttribute('aria-label', isPlaying ? 'Pause Meditation' : 'Play Meditation');
+                    }
+                    if (disc) {
+                        if (isPlaying) disc.classList.add('spinning');
+                        else disc.classList.remove('spinning');
+                    }
+
+                    
+                    document.querySelectorAll('.aud-btn-play-card').forEach(b => {
+                        b.classList.remove('is-playing');
+                        b.innerHTML = "<span>&#9654;</span> Play Sound";
+                    });
+                    document.querySelectorAll('.aud-card').forEach(c => c.classList.remove('active-playing'));
+
+                    
+                    if (isPlaying && track) {
+                        const cardBtn = document.getElementById('card-btn-' + track.id);
+                        if (cardBtn) {
+                            cardBtn.classList.add('is-playing');
+                            cardBtn.innerHTML = "<span>&#9208;</span> Playing...";
+                        }
+                        const activeCard = document.getElementById('card-' + track.id);
+                        if (activeCard) activeCard.classList.add('active-playing');
+                    }
+                };
+
+                
+                synth.onProgressUpdate = function(elapsed, total) {
+                    const fill = document.getElementById('trackProgressFill');
+                    const elapsedEl = document.getElementById('timeElapsed');
+                    const remEl = document.getElementById('timeRemaining');
+
+                    const percent = Math.min(100, (elapsed / total) * 100);
+                    if (fill) fill.style.width = percent + '%';
+
+                    if (elapsedEl) elapsedEl.innerText = formatTime(elapsed);
+                    if (remEl) remEl.innerText = formatTime(Math.max(0, total - elapsed));
+                };
+            }
+        });
+
+        function formatTime(secs) {
+            const m = Math.floor(secs / 60);
+            const s = Math.floor(secs % 60);
+            return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function scrollToPlayer() {
+            const dock = document.getElementById('audioPlayerDock');
+            if (dock) dock.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updatePlayerHeader(track) {
+            if (!track) return;
+            const tEl = document.getElementById('playerTitle');
+            const sEl = document.getElementById('playerSub');
+            if (tEl) tEl.innerText = track.title;
+            if (sEl) sEl.innerText = `${track.deity} • ${track.sound_setting}`;
+        }
+
+        function selectAndPlay(trackId) {
+            const track = EMBEDDED_AUDIO.find(a => String(a.id) === String(trackId));
+            if (!track) return;
+
+            currentTrackData = track;
+            updatePlayerHeader(track);
+
+            if (synth.isPlaying && synth.currentTrackId === track.id) {
+                synth.pauseTrack();
+            } else if (typeof synth.playTrack === 'function') {
+                synth.playTrack(track);
+                scrollToPlayer();
+            }
+        }
+
+        function toggleMasterPlayback() {
+            if (!currentTrackData || !synth) return;
+            if (synth.isPlaying) {
+                synth.pauseTrack();
+            } else if (typeof synth.playTrack === 'function') {
+                synth.playTrack(currentTrackData);
+            }
+        }
+
+        function toggleRepeatTrack() {
+            if (!synth || typeof synth.toggleRepeat !== 'function') return;
+            const isRep = synth.toggleRepeat();
+            const btn = document.getElementById('repeatBtn');
+            if (btn) {
+                btn.classList.toggle('active', isRep);
+                btn.innerHTML = isRep ? '&#128257; Repeat On' : '&#128257; Repeat Off';
+            }
+        }
+
+        function handleVolumeChange(val) {
+            if (synth && typeof synth.setVolume === 'function') {
+                synth.setVolume(val);
+            }
+        }
+
+        function toggleMute() {
+            if (!synth || typeof synth.toggleMute !== 'function') return;
+            const isMuted = synth.toggleMute();
+            const btn = document.getElementById('muteBtn');
+            if (btn) btn.innerHTML = isMuted ? '&#128263;' : '&#128266;';
+        }
+
+        function handleSeek(e) {
+            if (!synth || !synth.totalDuration) return;
+            const track = document.getElementById('progressTrack');
+            const rect = track.getBoundingClientRect();
+            const clickPos = (e.clientX - rect.left) / rect.width;
+            const seekTime = Math.floor(clickPos * synth.totalDuration);
+            synth.seek(seekTime);
+        }
+
+        
+        
+        
+        function setCategoryFilter(cat, btn) {
+            activeCategory = cat;
+            document.querySelectorAll('.aud-tab-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            applyActiveFilters();
+        }
+
+        function setMoodFilter(mood, btn) {
+            if (activeMood === mood) {
+                activeMood = null;
+                btn.classList.remove('active');
+            } else {
+                activeMood = mood;
+                document.querySelectorAll('.aud-mood-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            applyActiveFilters();
+        }
+
+        function clearAllFilters() {
+            activeMood = null;
+            document.querySelectorAll('.aud-mood-btn').forEach(b => b.classList.remove('active'));
+            applyActiveFilters();
+        }
+
+        function applyActiveFilters() {
+            const clearBtn = document.getElementById('clearFiltersBtn');
+            if (clearBtn) clearBtn.style.display = activeMood ? 'inline-block' : 'none';
+
+            document.querySelectorAll('.aud-card').forEach(card => {
+                const cardCat = card.getAttribute('data-cat');
+                const cardMood = card.getAttribute('data-mood');
+
+                const matchesCat = (activeCategory === 'all' || cardCat === activeCategory);
+                const matchesMood = (!activeMood || cardMood === activeMood);
+
+                if (matchesCat && matchesMood) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleCardGuide(id, btn) {
+            const box = document.getElementById('guide-box-' + id);
+            if (!box) return;
+            const isVisible = box.style.display === 'block';
+            box.style.display = isVisible ? 'none' : 'block';
+            btn.innerHTML = isVisible ? 'View Practice Guide &darr;' : 'Hide Practice Guide &uarr;';
+        }
+
+        
+        
+        
+        let breathTimer = null;
+        let isBreathingActive = false;
+
+        function openBreathSection() {
+            const sec = document.getElementById('pranayamaSection');
+            if (sec) {
+                sec.style.display = 'block';
+                sec.scrollIntoView({ behavior: 'smooth' });
+            }
+            if (!isBreathingActive) {
+                startBreathingCycle();
+            }
+        }
+
+        function closeBreathSection() {
+            const sec = document.getElementById('pranayamaSection');
+            if (sec) sec.style.display = 'none';
+            stopBreathingCycle();
+        }
+
+        function toggleBreathworkLoop() {
+            if (isBreathingActive) {
+                stopBreathingCycle();
+            } else {
+                startBreathingCycle();
+            }
+        }
+
+        function startBreathingCycle() {
+            isBreathingActive = true;
+            const btn = document.getElementById('btnToggleBreath');
+            if (btn) btn.innerText = 'Pause Breathing Circle';
+
+            const circle = document.getElementById('breathCircle');
+            const phaseText = document.getElementById('breathPhaseText');
+            const secText = document.getElementById('breathSecText');
+
+            let phase = 0; 
+
+            function runCycle() {
+                if (!isBreathingActive) return;
+
+                if (phase === 0) {
+                    if (circle) circle.className = 'aud-breath-circle inhale';
+                    if (phaseText) phaseText.innerText = 'Inhale Gently';
+                    if (secText) secText.innerText = '4 seconds';
+                    phase = 1;
+                    breathTimer = setTimeout(runCycle, 4000);
+                } else if (phase === 1) {
+                    if (circle) circle.className = 'aud-breath-circle hold';
+                    if (phaseText) phaseText.innerText = 'Hold Comfortably';
+                    if (secText) secText.innerText = '2 seconds';
+                    phase = 2;
+                    breathTimer = setTimeout(runCycle, 2000);
+                } else {
+                    if (circle) circle.className = 'aud-breath-circle exhale';
+                    if (phaseText) phaseText.innerText = 'Exhale Slowly';
+                    if (secText) secText.innerText = '4 seconds';
+                    phase = 0;
+                    breathTimer = setTimeout(runCycle, 4000);
+                }
+            }
+            runCycle();
+        }
+
+        function stopBreathingCycle() {
+            isBreathingActive = false;
+            clearTimeout(breathTimer);
+            const btn = document.getElementById('btnToggleBreath');
+            const circle = document.getElementById('breathCircle');
+            const phaseText = document.getElementById('breathPhaseText');
+            const secText = document.getElementById('breathSecText');
+
+            if (btn) btn.innerText = 'Start Breathing Circle';
+            if (circle) circle.className = 'aud-breath-circle';
+            if (phaseText) phaseText.innerText = 'Ready';
+            if (secText) secText.innerText = 'Click Start';
+        }
+
+        
+        
+        
+        function logMeditationCompletion() {
+            const btn = document.getElementById('logMeditationBtn');
+            if (btn && btn.classList.contains('logged')) {
+                showAudToast("✓ Today's practice is already logged in your Dashboard.");
+                return;
+            }
+
+            fetch('/api/activity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ activity: 'meditation' })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    if (btn) {
+                        btn.classList.add('logged');
+                        btn.innerText = '✓ Recorded in Spiritual Growth Dashboard';
+                    }
+                    showAudToast('✓ Meditation practice saved to your Dashboard! 🙏');
+                } else {
+                    showAudToast('⚠️ Could not save meditation record.');
+                }
+            })
+            .catch(err => {
+                console.error('Meditation log error:', err);
+                showAudToast('⚠️ Network error while saving meditation log.');
+            });
+        }
+
+        function showAudToast(msg) {
+            const existing = document.getElementById('audToast');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'audToast';
+            toast.innerText = msg;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #140916;
+                color: #FAF4EB;
+                border: 1px solid rgba(196, 144, 0, 0.4);
+                padding: 12px 26px;
+                border-radius: 25px;
+                font-size: 0.88rem;
+                font-family: 'Poppins', sans-serif;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+                z-index: 10000;
+                animation: fadeInAud 0.25s ease;
+            `;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.4s ease';
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        
+        function toggleDropdown(btn) {
+            const menu = btn.nextElementSibling;
+            if (menu) menu.classList.toggle('show');
+        }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+            }
+        });
+    </script>
+</body>
+</html>

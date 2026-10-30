@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Speak Kindly to Everyone",
+    "theme": "Speech & Compassion",
+    "task": "Do not speak harshly or mock anyone today. Use gentle, uplifting words with family, classmates, and staff.",
+    "scripture_link": "Speech that does not cause distress, is truthful, pleasant, and beneficial is the austerity of speech. (Gita 17.15)",
+    "reflection_prompt": "How did speaking gently change how others responded to you today?"
+  },
+  {
+    "id": 2,
+    "title": "Selfless Help (Nishkama Seva)",
+    "theme": "Selfless Action",
+    "task": "Help someone today (a classmate with studies, a family member with chores, or someone on the road) without expecting anything in return or bragging about it.",
+    "scripture_link": "Charity given out of duty to one who cannot repay is Sattvic. (Gita 17.20)",
+    "reflection_prompt": "How did giving unconditionally make your mind feel?"
+  },
+  {
+    "id": 3,
+    "title": "Spend 10 Minutes in Complete Silence (Mauna)",
+    "theme": "Inner Calm",
+    "task": "Sit in a comfortable position for 10 minutes without smartphone, talking, or music. Simply observe your breath.",
+    "scripture_link": "Silence of speech, self-restraint, and purity of mind are the discipline of mind. (Gita 17.16)",
+    "reflection_prompt": "What thoughts popped up when everything went quiet?"
+  },
+  {
+    "id": 4,
+    "title": "Express Heartfelt Gratitude to Parents / Elders",
+    "theme": "Gratitude & Respect",
+    "task": "Say a sincere 'Thank You' or touch the feet of your parents or mentors for their selfless sacrifices for your life.",
+    "scripture_link": "Matru Devo Bhava, Pitru Devo Bhava (Taittiriya Upanishad)",
+    "reflection_prompt": "What was their reaction and how did your relationship feel?"
+  },
+  {
+    "id": 5,
+    "title": "Conquer Anger: The 10-Second Pause",
+    "theme": "Emotional Discipline",
+    "task": "Whenever irritation or anger begins to rise today, take 10 deep breaths and do not reply until you have cooled down.",
+    "scripture_link": "From anger arises delusion, from delusion loss of memory and wisdom. (Gita 2.63)",
+    "reflection_prompt": "Did pausing prevent an unnecessary argument or regret?"
+  },
+  {
+    "id": 6,
+    "title": "Digital Fasting During Meal Time",
+    "theme": "Mindfulness",
+    "task": "Eat all your meals today with 100% awareness—no phones, no YouTube, no scrolling. Cherish each bite as Prasad.",
+    "scripture_link": "Food is Brahman when consumed with gratitude and moderation. (Maitri Upanishad)",
+    "reflection_prompt": "Did you enjoy your food more and feel more energized?"
+  },
+  {
+    "id": 7,
+    "title": "Compassion for Animals & Nature",
+    "theme": "Ahimsa & Care",
+    "task": "Feed a stray dog, water a plant, or place a bowl of fresh water for birds on your balcony or terrace.",
+    "scripture_link": "The wise look upon all living beings with an equal eye. (Gita 5.18)",
+    "reflection_prompt": "How did caring for another living creature brighten your day?"
+  }
+]

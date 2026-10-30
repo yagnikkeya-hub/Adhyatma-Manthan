@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Growth Dashboard - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard" class="active">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="db-hero-section">
+        <div class="db-hero-container">
+            <div>
+                <div class="db-eyebrow-pill">
+                    <span>✦</span> PERSONAL SANCTUARY <span>✦</span>
+                </div>
+                <div class="db-greeting-meta" id="heroGreetingTime">
+                    Today is {{ today }}
+                </div>
+                <h1 class="db-hero-title">Your Journey Within</h1>
+                <p class="db-hero-message">
+                    Small acts of awareness, kindness, and quiet reflection can shape the way you live each day. Take a gentle breath, honor where you are right now, and begin today&rsquo;s practice.
+                </p>
+                <a href="#dailyPracticesSection" class="db-hero-btn" onclick="scrollToPractices()">
+                    Begin Today&rsquo;s Practice &darr;
+                </a>
+            </div>
+
+            <div>
+                <div class="db-intention-card">
+                    <div class="db-intention-tag">
+                        <span>🪔</span> Daily Intention (Sankalpa)
+                    </div>
+                    <div class="db-intention-quote">
+                        &ldquo;{{ (shloka.meaning if shloka is defined and shloka and shloka.meaning else 'When you focus sincerely on honest effort without getting anxious about the outcome, inner peace naturally follows.') }}&rdquo;
+                    </div>
+                    <div class="db-intention-note">
+                        <strong>Practical Focus:</strong> Approach every task with calm attention, treating your work as a silent prayer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="db-main-content">
+
+        <section class="db-stats-grid" aria-label="Spiritual Progress Overview">
+            
+            <div class="db-stat-tile">
+                <div class="db-stat-icon-wrap">🔥</div>
+                <div class="db-stat-info">
+                    <div class="db-stat-value">{{ streak }}</div>
+                    <div class="db-stat-label">Day Streak</div>
+                    <div class="db-stat-desc">Consecutive days active</div>
+                </div>
+            </div>
+
+            <div class="db-stat-tile">
+                <div class="db-stat-icon-wrap">✨</div>
+                <div class="db-stat-info">
+                    <div class="db-stat-value" id="todayCompletedStat">{{ completed_today_count|default(0) }} / 4</div>
+                    <div class="db-stat-label">Today&rsquo;s Progress</div>
+                    <div class="db-mini-progress-track">
+                        <div class="db-mini-progress-fill" id="todayProgressFill" data-fill="{{ ((completed_today_count|default(0)) * 25) }}"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="db-stat-tile">
+                <div class="db-stat-icon-wrap">🤝</div>
+                <div class="db-stat-info">
+                    <div class="db-stat-value">{{ total_challenges_done|default(0) }}</div>
+                    <div class="db-stat-label">Dharma Challenges</div>
+                    <div class="db-stat-desc">Acts of kindness &amp; Seva</div>
+                </div>
+            </div>
+
+            <div class="db-stat-tile">
+                <div class="db-stat-icon-wrap">🌱</div>
+                <div class="db-stat-info">
+                    <div class="db-stat-value">{{ total_active_days|default(0) }}</div>
+                    <div class="db-stat-label">Total Active Days</div>
+                    <div class="db-stat-desc">Lifetime recorded journey</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="db-featured-challenge" id="featuredChallengeSection">
+            <div class="db-challenge-header">
+                <div class="db-challenge-header-left">
+                    <span class="db-challenge-badge">Module 11 &bull; Daily Dharma Challenge</span>
+                    <span class="db-challenge-theme">Theme: {{ challenge.theme }}</span>
+                </div>
+                <div style="font-size: 0.82rem; color: #E2B961;">
+                    <span>✦ Focus of the Day</span>
+                </div>
+            </div>
+
+            <div class="db-challenge-body">
+                <h2 class="db-challenge-title">{{ challenge.title }}</h2>
+
+                
+                <div class="db-action-card">
+                    <h4>Today&rsquo;s Action</h4>
+                    <p>{{ challenge.task }}</p>
+                </div>
+
+                <div class="db-challenge-grid">
+                    <div class="db-scripture-card">
+                        <strong>Scripture Wisdom</strong>
+                        &ldquo;{{ challenge.scripture_link }}&rdquo;
+                    </div>
+                    <div class="db-why-matters-card">
+                        <strong>Why It Matters</strong>
+                        Small acts of selfless giving quiet the ego and bring genuine warmth to your relationships and mind.
+                    </div>
+                </div>
+
+                <div class="db-challenge-refl-box">
+                    <label class="db-challenge-refl-label" for="challengeReflectionInput">
+                        {{ challenge.reflection_prompt }}
+                    </label>
+
+                    {% if today_challenge_reflection %}
+                    <div class="db-challenge-saved-banner">
+                        <div>
+                            <strong>✓ Completed Today:</strong> &ldquo;{{ today_challenge_reflection.reflection }}&rdquo;
+                        </div>
+                        <span style="font-size: 0.8rem; color: #2E7D32;">Recorded at {{ today_challenge_reflection.created_at }}</span>
+                    </div>
+                    {% else %}
+                    <textarea class="db-challenge-textarea" 
+                              id="challengeReflectionInput" 
+                              placeholder="Write a short, honest sentence reflecting on how this action felt..."></textarea>
+                    
+                    <div class="db-challenge-footer">
+                        <span style="font-size: 0.82rem; color: var(--db-text-muted);">
+                            Saved privately to your personal growth timeline.
+                        </span>
+                        <button type="button" 
+                                class="db-btn-complete-challenge" 
+                                data-id="{{ challenge.id }}" data-title="{{ challenge.title }}" onclick="submitChallengeReflection(this.dataset.id, this.dataset.title)">
+                            Complete Challenge &amp; Save Reflection &rarr;
+                        </button>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <div class="db-two-col-grid" id="dailyPracticesSection">
+
+            <section class="db-section-card">
+                <div class="db-card-header">
+                    <h3>Daily Spiritual Practices</h3>
+                    <span style="font-size: 0.82rem; color: var(--db-gold); font-weight: 600;">Quiet Habits</span>
+                </div>
+                <p class="db-card-subtitle">Complete these small practices to cultivate inner stillness and clarity.</p>
+
+                <div class="db-practice-list">
+                    <div class="db-practice-card {% if todays_acts.meditation %}is-completed{% endif %}" id="practice-card-meditation">
+                        <div class="db-practice-top">
+                            <div class="db-practice-title-group">
+                                <span class="db-practice-icon">🧘</span>
+                                <div>
+                                    <div class="db-practice-name">Meditation &amp; Pranayama</div>
+                                    <span class="db-practice-time">5–10 mins</span>
+                                </div>
+                            </div>
+                            <button type="button" 
+                                    class="db-btn-mark {% if todays_acts.meditation %}done{% endif %}" 
+                                    onclick="markPracticeDone('meditation', this)">
+                                {% if todays_acts.meditation %}✓ Completed Today{% else %}Mark Done{% endif %}
+                            </button>
+                        </div>
+                        <p class="db-practice-desc">Gentle mindful breathing or silent chanting to quiet mental chatter and reset your attention.</p>
+                        <div class="db-practice-actions">
+                            <button type="button" class="db-btn-subtle-tool" onclick="toggleBreathingGuide()">
+                                🌬 Open 4-Second Breathing Guide
+                            </button>
+                            <a href="/audio" class="yc-context-link" style="font-size: 0.78rem;">Play 432Hz Om &rarr;</a>
+                        </div>
+
+                        <div id="breathingBox" class="db-breathing-box">
+                            <div class="db-breath-status" id="breathStatus">Inhale slowly... (4s)</div>
+                            <div class="db-breath-bubble" id="breathBubble">Breathe</div>
+                            <span style="font-size: 0.76rem; color: var(--db-text-muted);">Sync your breath gently with the circle.</span>
+                        </div>
+                    </div>
+
+                    <div class="db-practice-card {% if todays_acts.shloka_read %}is-completed{% endif %}" id="practice-card-shloka_read">
+                        <div class="db-practice-top">
+                            <div class="db-practice-title-group">
+                                <span class="db-practice-icon">📖</span>
+                                <div>
+                                    <div class="db-practice-name">Read Daily Shloka</div>
+                                    <span class="db-practice-time">2 mins</span>
+                                </div>
+                            </div>
+                            <button type="button" 
+                                    class="db-btn-mark {% if todays_acts.shloka_read %}done{% endif %}" 
+                                    onclick="markPracticeDone('shloka_read', this)">
+                                {% if todays_acts.shloka_read %}✓ Completed Today{% else %}Mark Done{% endif %}
+                            </button>
+                        </div>
+                        <p class="db-practice-desc">Read and reflect on a sacred verse with Sanskrit meaning and one practical application.</p>
+                        <div class="db-practice-actions">
+                            <button type="button" class="db-btn-subtle-tool" onclick="toggleShlokaPreview()">
+                                📜 View Today&rsquo;s Verse
+                            </button>
+                            <a href="/daily-shloka" class="yc-context-link" style="font-size: 0.78rem;">Read Full Shloka Page &rarr;</a>
+                        </div>
+
+                        <div id="shlokaPreviewBox" class="db-shloka-preview-box">
+                            <div class="db-shloka-sanskrit">{{ shloka.sanskrit|default('कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।') }}</div>
+                            <div class="db-shloka-meaning">&ldquo;{{ shloka.meaning|default('You have a right to your duty, but not to the fruits of action.') }}&rdquo;</div>
+                        </div>
+                    </div>
+
+                    <div class="db-practice-card {% if todays_acts.dharma_challenge %}is-completed{% endif %}" id="practice-card-dharma_challenge">
+                        <div class="db-practice-top">
+                            <div class="db-practice-title-group">
+                                <span class="db-practice-icon">🤝</span>
+                                <div>
+                                    <div class="db-practice-name">Daily Dharma Challenge</div>
+                                    <span class="db-practice-time">Featured</span>
+                                </div>
+                            </div>
+                            <button type="button" 
+                                    class="db-btn-mark {% if todays_acts.dharma_challenge %}done{% endif %}" 
+                                    id="btn-practice-dharma"
+                                    onclick="document.getElementById('featuredChallengeSection').scrollIntoView({behavior:'smooth'})">
+                                {% if todays_acts.dharma_challenge %}✓ Completed Today{% else %}View Challenge &uarr;{% endif %}
+                            </button>
+                        </div>
+                        <p class="db-practice-desc">An active duty of kindness, silence, or selfless help connected directly to today&rsquo;s challenge above.</p>
+                    </div>
+
+                    <div class="db-practice-card {% if todays_acts.journal %}is-completed{% endif %}" id="practice-card-journal">
+                        <div class="db-practice-top">
+                            <div class="db-practice-title-group">
+                                <span class="db-practice-icon">📝</span>
+                                <div>
+                                    <div class="db-practice-name">Daily Check-in &amp; Journal</div>
+                                    <span class="db-practice-time">3 mins</span>
+                                </div>
+                            </div>
+                            <button type="button" 
+                                    class="db-btn-mark {% if todays_acts.journal %}done{% endif %}" 
+                                    id="btn-practice-journal"
+                                    onclick="document.getElementById('checkinSection').scrollIntoView({behavior:'smooth'})">
+                                {% if todays_acts.journal %}✓ Completed Today{% else %}Check In &rarr;{% endif %}
+                            </button>
+                        </div>
+                        <p class="db-practice-desc">A brief morning intention or evening reflection to observe your emotions honestly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="db-section-card" id="checkinSection">
+                <div class="db-card-header">
+                    <div>
+                        <span class="db-eyebrow-pill" style="margin-bottom: 4px; font-size: 0.72rem; padding: 4px 12px;">
+                            MODULE 4
+                        </span>
+                        <h3>Pause. Breathe. Check In.</h3>
+                    </div>
+                    <div class="db-checkin-tabs" role="tablist">
+                        <button type="button" class="db-tab-pill active" id="tabBtnMorning" onclick="switchCheckinTab('morning')" role="tab">☀️ Morning</button>
+                        <button type="button" class="db-tab-pill" id="tabBtnEvening" onclick="switchCheckinTab('evening')" role="tab">🌙 Evening</button>
+                    </div>
+                </div>
+                <p class="db-card-subtitle">An honest, private space to check on your state of mind and set peaceful intentions.</p>
+
+                
+                <div id="morningCheckinForm" data-selected-mood="{{ todays_morning_checkin.feeling|default('') }}">
+                    <div class="db-form-field">
+                        <label class="db-form-label">How are you feeling this morning?</label>
+                        <div class="db-mood-grid">
+                            <button type="button" class="db-mood-btn {% if todays_morning_checkin and todays_morning_checkin.feeling == 'Peaceful' %}selected{% endif %}" onclick="selectMood('Peaceful', this)">
+                                <span class="db-mood-emoji">🌸</span>
+                                <span class="db-mood-text">Peaceful</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_morning_checkin and todays_morning_checkin.feeling == 'Focused' %}selected{% endif %}" onclick="selectMood('Focused', this)">
+                                <span class="db-mood-emoji">🎯</span>
+                                <span class="db-mood-text">Focused</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_morning_checkin and todays_morning_checkin.feeling == 'Anxious' %}selected{% endif %}" onclick="selectMood('Anxious', this)">
+                                <span class="db-mood-emoji">🌊</span>
+                                <span class="db-mood-text">Anxious</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_morning_checkin and todays_morning_checkin.feeling == 'Tired' %}selected{% endif %}" onclick="selectMood('Tired', this)">
+                                <span class="db-mood-emoji">🍃</span>
+                                <span class="db-mood-text">Tired</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_morning_checkin and todays_morning_checkin.feeling == 'Grateful' %}selected{% endif %}" onclick="selectMood('Grateful', this)">
+                                <span class="db-mood-emoji">🤍</span>
+                                <span class="db-mood-text">Grateful</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="db-form-field">
+                        <label class="db-form-label" for="mGoalInput">What is your main duty or focus (Swadharma) today?</label>
+                        <input type="text" class="db-input-text" id="mGoalInput" placeholder="e.g. Study 3 hours with sincerity, speak kindly to family..." value="{{ todays_morning_checkin.goal|default('') }}">
+                    </div>
+
+                    <div class="db-form-field">
+                        <label class="db-form-label" for="mQualityInput">What quality would you like to carry into today?</label>
+                        <input type="text" class="db-input-text" id="mQualityInput" placeholder="e.g. Patience, courage, quiet focus, calm breathing..." value="{{ todays_morning_checkin.learned|default('') }}">
+                    </div>
+
+                    <button type="button" class="db-btn-save-checkin" onclick="submitMorningCheckin()">Save Morning Intention</button>
+                </div>
+
+                <div id="eveningCheckinForm" style="display: none;" data-selected-mood="{{ todays_evening_checkin.feeling|default('') }}">
+                    <div class="db-form-field">
+                        <label class="db-form-label">How are you ending your day?</label>
+                        <div class="db-mood-grid">
+                            <button type="button" class="db-mood-btn {% if todays_evening_checkin and todays_evening_checkin.feeling == 'Peaceful' %}selected{% endif %}" onclick="selectMood('Peaceful', this)">
+                                <span class="db-mood-emoji">🌙</span>
+                                <span class="db-mood-text">Peaceful</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_evening_checkin and todays_evening_checkin.feeling == 'Tired' %}selected{% endif %}" onclick="selectMood('Tired', this)">
+                                <span class="db-mood-emoji">😴</span>
+                                <span class="db-mood-text">Exhausted</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_evening_checkin and todays_evening_checkin.feeling == 'Grateful' %}selected{% endif %}" onclick="selectMood('Grateful', this)">
+                                <span class="db-mood-emoji">🙏</span>
+                                <span class="db-mood-text">Grateful</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_evening_checkin and todays_evening_checkin.feeling == 'Restless' %}selected{% endif %}" onclick="selectMood('Restless', this)">
+                                <span class="db-mood-emoji">⚡</span>
+                                <span class="db-mood-text">Restless</span>
+                            </button>
+                            <button type="button" class="db-mood-btn {% if todays_evening_checkin and todays_evening_checkin.feeling == 'Content' %}selected{% endif %}" onclick="selectMood('Content', this)">
+                                <span class="db-mood-emoji">✨</span>
+                                <span class="db-mood-text">Content</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="db-form-field">
+                        <label class="db-form-label" for="eGratitudeInput">What is one thing you are grateful for today?</label>
+                        <input type="text" class="db-input-text" id="eGratitudeInput" placeholder="e.g. A wholesome meal, supportive friend, good health..." value="{{ todays_evening_checkin.grateful|default('') }}">
+                    </div>
+
+                    <div class="db-form-field">
+                        <label class="db-form-label" for="eChallengeInput">What was challenging, and how did you respond?</label>
+                        <input type="text" class="db-input-text" id="eChallengeInput" placeholder="e.g. Felt irritated, but took 5 deep breaths..." value="{{ todays_evening_checkin.challenge|default('') }}">
+                    </div>
+
+                    <div class="db-form-field">
+                        <label class="db-form-label" for="eLearnedInput">What is one thing you learned about yourself today?</label>
+                        <input type="text" class="db-input-text" id="eLearnedInput" placeholder="e.g. Taking small breaks keeps my mind clearer..." value="{{ todays_evening_checkin.learned|default('') }}">
+                    </div>
+
+                    <button type="button" class="db-btn-save-checkin" onclick="submitEveningCheckin()">Save Evening Reflection</button>
+                </div>
+
+                <div id="checkinSummaryBanner" class="db-checkin-summary-banner">
+                    {% if todays_checkin %}
+                    ✓ Today&rsquo;s reflection saved: {{ todays_checkin.ai_recommendation|default('Practice mindfulness in your Swadharma.') }}
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+
+        <section class="db-history-section">
+            <div class="db-card-header">
+                <div>
+                    <span class="db-eyebrow-pill" style="margin-bottom: 4px; font-size: 0.72rem; padding: 4px 12px;">TIMELINE</span>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--db-teal);">Your Journey So Far</h3>
+                </div>
+                <span style="font-size: 0.82rem; color: var(--db-text-muted);">Real Saved Reflections</span>
+            </div>
+            <p class="db-card-subtitle" style="margin-bottom: 14px;">A calm record of your past acts of kindness, reflections, and check-ins over time.</p>
+
+            <div class="db-history-timeline">
+                {% if reflections %}
+                    {% for r in reflections %}
+                    <div class="db-timeline-item">
+                        <div class="db-timeline-top">
+                            <span class="db-timeline-title">🤝 Dharma Challenge: {{ r[3] }}</span>
+                            <span class="db-timeline-date">🗓 {{ r[1] }}</span>
+                        </div>
+                        <div class="db-timeline-quote">
+                            &ldquo;{{ r[4] }}&rdquo;
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="db-empty-state">
+                        <p>🌱 Your journey begins with one small step. Complete your first practice or Dharma Challenge to see it here.</p>
+                    </div>
+                {% endif %}
+
+                {% if checkins_history %}
+                    {% for chk in checkins_history[:3] %}
+                    <div class="db-timeline-item" style="border-left: 3px solid #7E6C88;">
+                        <div class="db-timeline-top">
+                            <span class="db-timeline-title">📝 Check-in: {{ chk.time_of_day|capitalize }} ({{ chk.feeling|default('Mindful') }})</span>
+                            <span class="db-timeline-date">🗓 {{ chk.date }}</span>
+                        </div>
+                        <div class="db-timeline-quote" style="font-style: normal;">
+                            {% if chk.goal %}<strong>Goal:</strong> {{ chk.goal }} &bull; {% endif %}
+                            {% if chk.grateful %}<strong>Grateful for:</strong> {{ chk.grateful }} &bull; {% endif %}
+                            <em>{{ chk.ai_recommendation|default('Steady effort brings peace.') }}</em>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </section>
+
+        <section class="db-weekly-section">
+            <div class="db-weekly-eyebrow">THIS WEEK WITHIN</div>
+            <h3 class="db-weekly-title">A Moment to Reflect on Your Week</h3>
+            <p class="db-weekly-p">
+                Take a quiet moment to notice your habits without judgment. What felt genuinely meaningful to you this week? What brought you quiet peace?
+            </p>
+            <textarea class="db-weekly-textarea" 
+                      id="weeklyReflectionText" 
+                      placeholder="Write a brief weekly note to yourself (saved privately in your browser)..."></textarea>
+            <div class="db-weekly-footer">
+                <span class="db-weekly-status" id="weeklyStatus">✓ Saved to your weekly journal</span>
+                <button type="button" class="db-weekly-btn" onclick="saveWeeklyReflection()">Save Weekly Note</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

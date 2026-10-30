@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shloka Library - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/library.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library" class="active">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    
+    <header class="lib-hero">
+        <div class="lib-hero-container">
+            <div class="lib-eyebrow-badge">
+                <span>✦</span> MODULE 03 &bull; EXPLORE SACRED WISDOM <span>✦</span>
+            </div>
+            <h1 class="lib-hero-title">The Shloka Library</h1>
+            <p class="lib-hero-subtitle">
+                Ancient wisdom for the moments that make us human.
+            </p>
+            <p class="lib-hero-desc">
+                Discover timeless verses and practical teachings categorized by your emotions, life challenges, and spiritual inquiries. From fear and courage to inner calm, explore wisdom you can use every day.
+            </p>
+
+            
+            <div class="lib-search-box">
+                <span class="lib-search-icon">🔍</span>
+                <input type="text" 
+                       id="libSearchInput" 
+                       class="lib-search-input" 
+                       placeholder="Search by emotion, topic, scripture (e.g. fear, anger, Gita 2.47, peace)..." 
+                       aria-label="Search Shloka Library"
+                       oninput="handleSearchInput()">
+                <button type="button" id="libSearchClear" class="lib-search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="lib-main-wrap">
+
+        
+        <section class="lib-featured-box" id="libFeaturedBox">
+            
+        </section>
+
+        
+        <section aria-label="Category Selection">
+            <div class="lib-categories-bar" id="libCategoryBar" role="tablist">
+                
+            </div>
+        </section>
+
+        
+        <div class="lib-status-row">
+            <div class="lib-status-info" id="libStatusInfo">
+                Showing <strong>all verses</strong>
+            </div>
+            <button type="button" class="lib-reset-filter-btn" onclick="resetAllFilters()">
+                Reset All Filters ✕
+            </button>
+        </div>
+
+        
+        <section class="lib-grid" id="libShlokasGrid" aria-label="Shloka Cards Grid">
+            <div class="loading-spinner">Loading sacred shlokas...</div>
+        </section>
+
+    </main>
+
+    
+    <div id="shlokaDetailModal" class="lib-modal-backdrop" role="dialog" aria-modal="true" aria-label="Shloka Detailed View">
+        <div class="lib-modal-dialog" id="shlokaModalContent">
+            
+        </div>
+    </div>
+
+    
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script type="application/json" id="shlokasPayload">
+        {{ shlokas | tojson | safe }}
+    </script>
+    <script>
+        var EMBEDDED_SHLOKAS = [];
+        try {
+            var raw = document.getElementById('shlokasPayload');
+            EMBEDDED_SHLOKAS = raw ? JSON.parse(raw.textContent || '[]') : [];
+        } catch (e) {
+            console.error('Failed to parse shlokas:', e);
+        }
+    </script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/library.js"></script>
+</body>
+</html>

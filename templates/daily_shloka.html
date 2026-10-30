@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Divine Shloka - Adhyatma Manthan</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ds-plum: #1E121E;
+            --ds-deep-plum: #140A14;
+            --ds-parchment: #FDFBF7;
+            --ds-parchment-card: #FFFFFF;
+            --ds-gold: #C49000;
+            --ds-gold-light: #E0BA55;
+            --ds-saffron: #D35400;
+            --ds-brown-text: #2C221E;
+            --ds-muted-brown: #5C4F47;
+            --ds-border-sacred: #E6DDD0;
+            --ds-card-shadow: 0 10px 35px rgba(30, 18, 30, 0.06);
+            --ds-font-scale: 1;
+        }
+
+        .ds-progress-bar-wrap {
+            position: fixed;
+            top: 82px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 999;
+        }
+
+        .ds-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--ds-gold) 0%, var(--ds-saffron) 100%);
+            transition: width 0.1s ease-out;
+        }
+
+        .ds-hero {
+            position: relative;
+            background: radial-gradient(circle at 50% 25%, #251624 0%, #170C16 60%, #0D060D 100%);
+            color: #FFFFFF;
+            padding: 85px 24px 75px;
+            text-align: center;
+            border-bottom: 3px solid var(--ds-gold);
+            overflow: hidden;
+        }
+
+        .ds-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(224, 186, 85, 0.12) 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .ds-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .ds-eyebrow-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 3px;
+            color: #E2B961;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: rgba(226, 185, 97, 0.12);
+            padding: 6px 18px;
+            border-radius: 25px;
+            border: 1px solid rgba(226, 185, 97, 0.3);
+            margin-bottom: 20px;
+        }
+
+    .ds-hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F5E8D0 75%, #D4AF37 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+        .ds-hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+            font-style: italic;
+            color: #E6DDD0;
+            line-height: 1.6;
+            max-width: 680px;
+            margin: 0 auto 24px;
+            font-weight: 400;
+        }
+
+        .ds-hero-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: var(--ds-gold);
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        .ds-hero-ornament::before,
+        .ds-hero-ornament::after {
+            content: '';
+            width: 70px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6));
+        }
+
+        .ds-hero-ornament::after {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.6), transparent);
+        }
+
+        .ds-toolbar {
+            max-width: 900px;
+            margin: -24px auto 35px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid var(--ds-border-sacred);
+            padding: 10px 22px;
+            border-radius: 30px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ds-toolbar-meta {
+            font-size: 0.84rem;
+            color: var(--ds-muted-brown);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ds-toolbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ds-tool-btn {
+            background: var(--ds-parchment);
+            border: 1px solid var(--ds-border-sacred);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.8rem;
+            color: var(--ds-brown-text);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .ds-tool-btn:hover {
+            border-color: var(--ds-gold);
+            background: #FFFDF8;
+        }
+
+        .ds-main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 70px;
+        }
+
+        .ds-scripture-altar {
+            background: #FFFFFF;
+            border-radius: 20px;
+            border: 2px solid var(--ds-border-sacred);
+            box-shadow: var(--ds-card-shadow);
+            padding: 48px 40px;
+            margin-bottom: 35px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .ds-scripture-altar {
+                padding: 34px 22px;
+            }
+        }
+
+        .ds-scripture-altar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #A83232 0%, #C49000 50%, #D35400 100%);
+        }
+
+        .ds-source-citation {
+            font-family: 'Cinzel', serif;
+            font-size: 0.92rem;
+            letter-spacing: 2px;
+            color: var(--ds-gold);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .ds-theme-tag {
+            font-size: 0.82rem;
+            background: #F8F4EC;
+            color: #7A5F35;
+            padding: 4px 14px;
+            border-radius: 15px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .ds-sanskrit-verse {
+            font-family: 'Playfair Display', serif;
+            font-size: calc(1.75rem * var(--ds-font-scale));
+            color: #1A121A;
+            line-height: 1.8;
+            margin: 0 auto 24px;
+            max-width: 760px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .ds-manuscript-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: var(--ds-gold);
+            margin: 24px auto;
+            max-width: 320px;
+        }
+
+        .ds-manuscript-divider::before,
+        .ds-manuscript-divider::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: #E0D6C6;
+        }
+
+        .ds-transliteration {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: calc(1.04rem * var(--ds-font-scale));
+            color: var(--ds-muted-brown);
+            line-height: 1.75;
+            max-width: 740px;
+            margin: 0 auto 10px;
+        }
+
+        .ds-translations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 768px) {
+            .ds-translations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ds-translation-card {
+            background: #FFFFFF;
+            border: 1px solid var(--ds-border-sacred);
+            border-radius: 16px;
+            padding: 26px 24px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ds-translation-card.english {
+            border-top: 3px solid var(--teal);
+        }
+
+        .ds-translation-card.hindi {
+            border-top: 3px solid var(--ds-saffron);
+        }
+
+        .ds-lang-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ds-translation-card.english .ds-lang-badge { color: var(--teal); }
+        .ds-translation-card.hindi .ds-lang-badge { color: var(--ds-saffron); }
+
+        .ds-translation-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.12rem;
+            color: var(--ds-brown-text);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+
+        .ds-translation-card.hindi .ds-translation-text {
+            font-style: normal;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .ds-editorial-section {
+            background: #FFFFFF;
+            border: 1px solid var(--ds-border-sacred);
+            border-radius: 18px;
+            padding: 36px 32px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (max-width: 768px) {
+            .ds-editorial-section {
+                padding: 26px 20px;
+            }
+        }
+
+        .ds-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--teal);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ds-section-sub {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            color: var(--ds-gold);
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .ds-beyond-quote {
+            background: #FAF7F0;
+            border-left: 4px solid var(--ds-gold);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--ds-brown-text);
+            line-height: 1.68;
+            font-style: italic;
+            margin-bottom: 26px;
+        }
+
+        .ds-meaning-body {
+            font-size: 0.98rem;
+            color: var(--ds-brown-text);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .ds-action-section {
+            background: linear-gradient(135deg, #FDFCF9 0%, #F8F5EE 100%);
+            border: 1.5px solid #E4D9C8;
+            border-radius: 18px;
+            padding: 34px 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        @media (max-width: 768px) {
+            .ds-action-section {
+                padding: 26px 20px;
+            }
+        }
+
+        .ds-action-prompt {
+            font-size: 1rem;
+            color: var(--ds-brown-text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .ds-checklist-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .ds-check-item {
+            background: #FFFFFF;
+            border: 1px solid var(--ds-border-sacred);
+            border-radius: 10px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: all 0.2s;
+        }
+
+        .ds-check-item:hover {
+            border-color: var(--ds-gold);
+        }
+
+        .ds-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--ds-gold);
+        }
+
+        .ds-task-input {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem;
+            color: var(--ds-brown-text);
+            outline: none;
+        }
+
+        .ds-task-input::placeholder {
+            color: #A39686;
+        }
+
+        .ds-checklist-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.84rem;
+            color: var(--ds-muted-brown);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ds-save-btn {
+            background: var(--teal);
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .ds-save-btn:hover {
+            background: var(--dark-slate);
+        }
+
+        .ds-reflection-section {
+            background: linear-gradient(135deg, #1C121C 0%, #120912 100%);
+            color: #FFFFFF;
+            border-radius: 18px;
+            padding: 40px 32px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .ds-reflection-section {
+                padding: 28px 20px;
+            }
+        }
+
+        .ds-reflection-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            color: #E2B961;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .ds-reflection-prompt-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+            font-style: italic;
+            color: #FFFFFF;
+            line-height: 1.45;
+            margin-bottom: 20px;
+        }
+
+        .ds-reflection-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem;
+            color: #FFFFFF;
+            resize: vertical;
+            min-height: 80px;
+            outline: none;
+            margin-bottom: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .ds-reflection-textarea:focus {
+            border-color: #E2B961;
+        }
+
+        .ds-reflection-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ds-reflection-status {
+            font-size: 0.8rem;
+            color: #A3D9A5;
+            display: none;
+        }
+
+        .ds-btn-reflection-save {
+            background: rgba(226, 185, 97, 0.22);
+            border: 1px solid #E2B961;
+            color: #E2B961;
+            padding: 8px 22px;
+            border-radius: 20px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ds-btn-reflection-save:hover {
+            background: #E2B961;
+            color: #140A14;
+        }
+
+        .ds-primary-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .ds-btn-read {
+            background: linear-gradient(135deg, var(--teal) 0%, #152929 100%);
+            color: #FFFFFF;
+            border: none;
+            padding: 14px 34px;
+            border-radius: 30px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(30, 61, 61, 0.25);
+        }
+
+        .ds-btn-read:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 61, 61, 0.4);
+        }
+
+        .ds-btn-read.completed {
+            background: #2E7D32;
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+            cursor: default;
+        }
+
+        .ds-btn-chat {
+            background: #FFFFFF;
+            color: var(--teal);
+            border: 1.5px solid var(--teal);
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ds-btn-chat:hover {
+            background: #F4EFE6;
+            transform: translateY(-2px);
+        }
+
+        .ds-closing-moment {
+            background: radial-gradient(circle at 50% 50%, #FAF6EE 0%, #F1E9DA 100%);
+            border-top: 1px solid var(--ds-border-sacred);
+            border-bottom: 1px solid var(--ds-border-sacred);
+            padding: 60px 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .ds-closing-container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .ds-closing-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            color: var(--ds-saffron);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .ds-closing-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+
+        .ds-closing-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--ds-muted-brown);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .ds-closing-links {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ds-progress-bar-wrap">
+        <div class="ds-progress-fill" id="dsReadingProgress"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/static/images/logo.svg" alt="Adhyatma Manthan - The Eternal Path" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Spiritual Guide</a></li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Daily Practices &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/daily-shloka" class="active">Daily Shloka</a></li>
+                        <li><a href="/audio">Meditation &amp; Audio</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button" onclick="toggleDropdown(this)">Wisdom Library &#9662;</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/scriptures">Explore Bhagavad Gita</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation">&#9776;</div>
+        </div>
+    </nav>
+
+    <header class="ds-hero">
+        <div class="ds-hero-container">
+            <div class="ds-eyebrow-badge">
+                <span>✦</span> DAILY WISDOM &bull; TODAY&rsquo;S REFLECTION <span>✦</span>
+            </div>
+            <h1 class="ds-hero-title">Today&rsquo;s Divine Shloka</h1>
+            <p class="ds-hero-subtitle">
+                One verse. A timeless teaching. A moment to understand yourself better.
+            </p>
+            <div class="ds-hero-ornament">
+                <span>ॐ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="ds-main-container">
+
+        <div class="ds-toolbar">
+            <div class="ds-toolbar-meta">
+                <span>📖 {{ shloka.source|default('Bhagavad Gita · Chapter 2, Verse 48') }}</span>
+                <span>&bull;</span>
+                <span>Theme: {{ shloka.theme|default('Overcoming Fear of Trying Again') }}</span>
+            </div>
+            <div class="ds-toolbar-actions">
+                <button type="button" class="ds-tool-btn" onclick="copyVerseText()" id="copyVerseBtn" title="Copy Sanskrit verse">
+                    <span>📋</span> Copy Verse
+                </button>
+                <button type="button" class="ds-tool-btn" onclick="adjustTextSize(-0.1)" title="Decrease reading text size">A-</button>
+                <button type="button" class="ds-tool-btn" onclick="adjustTextSize(0.1)" title="Increase reading text size">A+</button>
+            </div>
+        </div>
+
+        <section class="ds-scripture-altar" id="scriptureAltar" data-shloka-id="{{ shloka.id|default(28) }}">
+            <span class="ds-source-citation">
+                {{ shloka.source|default('Bhagavad Gita · Chapter 2, Verse 48') }}
+            </span>
+            <span class="ds-theme-tag">
+                Theme: {{ shloka.theme|default('Overcoming Fear of Trying Again') }}
+            </span>
+
+            <div class="ds-sanskrit-verse" id="sanskritVerseText">
+                {{ shloka.sanskrit }}
+            </div>
+
+            <div class="ds-manuscript-divider">
+                <span>✦ ॐ ✦</span>
+            </div>
+
+            <div class="ds-transliteration">
+                {{ shloka.pronunciation }}
+            </div>
+        </section>
+
+        <section class="ds-translations-grid">
+            <div class="ds-translation-card english">
+                <div>
+                    <span class="ds-lang-badge">
+                        <span>🇬🇧</span> English Meaning
+                    </span>
+                    <div class="ds-translation-text">
+                        &ldquo;{{ shloka.english_translation }}&rdquo;
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-translation-card hindi">
+                <div>
+                    <span class="ds-lang-badge">
+                        <span>🇮🇳</span> हिन्दी अर्थ
+                    </span>
+                    <div class="ds-translation-text">
+                        {{ shloka.hindi_translation }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ds-editorial-section">
+            <div style="margin-bottom: 28px;">
+                <span class="ds-section-sub">DEEPER INSIGHT</span>
+                <h2 class="ds-section-title">
+                    <span>📜</span> Beyond the Words
+                </h2>
+                <div class="ds-beyond-quote">
+                    &ldquo;{{ shloka.meaning }}&rdquo;
+                </div>
+            </div>
+
+            <div>
+                <span class="ds-section-sub">CONTEMPORARY APPLICATION</span>
+                <h3 class="ds-section-title">
+                    <span>💡</span> What This Means for You
+                </h3>
+                <p class="ds-meaning-body">
+                    {{ shloka.explanation }}
+                </p>
+            </div>
+        </section>
+
+        <section class="ds-action-section">
+            <span class="ds-section-sub">PRACTICAL STEP</span>
+            <h3 class="ds-section-title">
+                <span>🌱</span> Take This Wisdom Into Today
+            </h3>
+            <p class="ds-action-prompt">
+                {{ shloka.practical_application }}
+            </p>
+
+            <div class="ds-checklist-wrap">
+                <div class="ds-check-item">
+                    <input type="checkbox" class="ds-checkbox" id="taskCheck1" onchange="updateChecklistProgress()" aria-label="Task 1 status">
+                    <input type="text" class="ds-task-input" id="taskText1" placeholder="Task 1: Identify the opportunity or step you have been avoiding..." aria-label="Task 1 description">
+                </div>
+                <div class="ds-check-item">
+                    <input type="checkbox" class="ds-checkbox" id="taskCheck2" onchange="updateChecklistProgress()" aria-label="Task 2 status">
+                    <input type="text" class="ds-task-input" id="taskText2" placeholder="Task 2: Break down what is needed into a small, simple action..." aria-label="Task 2 description">
+                </div>
+                <div class="ds-check-item">
+                    <input type="checkbox" class="ds-checkbox" id="taskCheck3" onchange="updateChecklistProgress()" aria-label="Task 3 status">
+                    <input type="text" class="ds-task-input" id="taskText3" placeholder="Task 3: Spend 20 minutes taking that first action today with a steady mind..." aria-label="Task 3 description">
+                </div>
+            </div>
+
+            <div class="ds-checklist-status">
+                <span id="checklistProgressText">0 of 3 tasks checked</span>
+                <button type="button" class="ds-save-btn" onclick="saveChecklist()">Save Tasks</button>
+            </div>
+        </section>
+
+        <section class="ds-reflection-section">
+            <span class="ds-reflection-badge">CONTEMPLATION &bull; SWADHYAYA</span>
+            <h3 class="ds-reflection-prompt-text">
+                &ldquo;{{ shloka.reflection_question|default('What would you attempt today if you were entirely free from the fear of failing?') }}&rdquo;
+            </h3>
+
+            <textarea class="ds-reflection-textarea"
+                      id="shlokaReflectionInput"
+                      placeholder="Take a moment. What comes to mind? (Saved privately on your device)..."
+                      aria-label="Daily shloka reflection note"></textarea>
+
+            <div class="ds-reflection-footer">
+                <span class="ds-reflection-status" id="reflectionSavedStatus">✓ Saved to your personal reflections</span>
+                <button type="button" class="ds-btn-reflection-save" onclick="saveShlokaReflection()">Save Reflection</button>
+            </div>
+        </section>
+
+        <div class="ds-primary-actions">
+            <button type="button"
+                    class="ds-btn-read {{ 'completed' if is_read_today else '' }}"
+                    id="markReadBtn"
+                    onclick="handleMarkShlokaRead()">
+                <span>{{ '✓ Read Today' if is_read_today else '📖 Mark Shloka as Read Today' }}</span>
+            </button>
+            <a href="/chat" class="ds-btn-chat">
+                <span>💬</span> Discuss with Spiritual Guide &rarr;
+            </a>
+        </div>
+
+    </main>
+
+    <section class="ds-closing-moment">
+        <div class="ds-closing-container">
+            <div class="ds-closing-eyebrow">THE ETERNAL PATH &bull; SANATAN DHARMA</div>
+            <h2 class="ds-closing-heading">Carry the Teaching With You</h2>
+            <p class="ds-closing-quote">
+                &ldquo;Success and failure may change the outcome, but you can keep learning to meet both with a steadier mind.&rdquo;
+            </p>
+            <div class="ds-closing-links">
+                <a href="/library" class="btn btn-secondary" style="border-radius: 25px; padding: 10px 24px; font-size: 0.9rem;">Browse Shloka Library &rarr;</a>
+                <a href="/dashboard" class="btn btn-primary" style="border-radius: 25px; padding: 10px 24px; font-size: 0.9rem;">View Growth Dashboard &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="brand-footer-top">
+                <div class="footer-brand-col">
+                    <a href="/" class="footer-logo-link">
+                        <img src="/static/images/logo.svg" alt="Adhyatma Manthan Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-mission-text">
+                        Exploring timeless Sanatan Dharma wisdom through spiritual guidance, sacred teachings, and mindful daily practices.
+                    </p>
+                    <div class="footer-brand-badge">
+                        <span>✦ Pure Knowledge &bull; Timeless Peace</span>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/scriptures">Explore the Bhagavad Gita</a></li>
+                        <li><a href="/library">Shloka Library</a></li>
+                        <li><a href="/daily-shloka">Today's Daily Shloka</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Practices</h4>
+                    <ul>
+                        <li><a href="/audio">Audio &amp; Meditation</a></li>
+                        <li><a href="/youth">Youth Corner</a></li>
+                        <li><a href="/festivals">Festival Companion</a></li>
+                        <li><a href="/dashboard">Growth Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/chat">Spiritual Guide</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brand-footer-bottom">
+                <div class="footer-blessing-signature">
+                    Sarve Bhavantu Sukhinah &mdash; May all beings be happy.
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2026 Adhyatma Manthan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const bar = document.getElementById('dsReadingProgress');
+            if (bar) bar.style.width = scrolled + '%';
+        });
+
+        let currentScale = 1;
+        function adjustTextSize(delta) {
+            currentScale = Math.min(Math.max(0.85, currentScale + delta), 1.25);
+            document.documentElement.style.setProperty('--ds-font-scale', currentScale);
+        }
+
+        function copyVerseText() {
+            const verseEl = document.getElementById('sanskritVerseText');
+            if (!verseEl) return;
+            const text = verseEl.innerText.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyVerseBtn');
+                if (btn) {
+                    btn.innerHTML = '<span>✓</span> Copied!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<span>📋</span> Copy Verse';
+                    }, 2500);
+                }
+            }).catch(err => {
+                console.warn('Copy failed:', err);
+            });
+        }
+
+        function getShlokaKey() {
+            const altar = document.getElementById('scriptureAltar');
+            const shlokaId = altar ? altar.getAttribute('data-shloka-id') || '28' : '28';
+            return 'shloka_' + shlokaId;
+        }
+
+        function handleMarkShlokaRead() {
+            const btn = document.getElementById('markReadBtn');
+            if (!btn || btn.classList.contains('completed')) return;
+
+            fetch('/api/activity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ activity: 'shloka_read' })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    btn.classList.add('completed');
+                    btn.innerHTML = '<span>✓ Read Today</span>';
+                    showShlokaToast('✓ Marked as read in your Spiritual Dashboard. 🙏');
+                }
+            })
+            .catch(err => {
+                console.error('Error marking shloka:', err);
+            });
+        }
+
+        function updateChecklistProgress() {
+            let checked = 0;
+            for (let i = 1; i <= 3; i++) {
+                const cb = document.getElementById('taskCheck' + i);
+                if (cb && cb.checked) checked++;
+            }
+            const status = document.getElementById('checklistProgressText');
+            if (status) status.innerText = `${checked} of 3 tasks checked`;
+        }
+
+        function saveChecklist() {
+            const key = getShlokaKey();
+            const data = {
+                t1: (document.getElementById('taskText1') || {}).value || '',
+                c1: !!(document.getElementById('taskCheck1') || {}).checked,
+                t2: (document.getElementById('taskText2') || {}).value || '',
+                c2: !!(document.getElementById('taskCheck2') || {}).checked,
+                t3: (document.getElementById('taskText3') || {}).value || '',
+                c3: !!(document.getElementById('taskCheck3') || {}).checked
+            };
+            try {
+                localStorage.setItem('adhyatma_tasks_' + key, JSON.stringify(data));
+                showShlokaToast('✓ Tasks saved to your device.');
+            } catch (e) {}
+        }
+
+        function saveShlokaReflection() {
+            const textarea = document.getElementById('shlokaReflectionInput');
+            if (!textarea) return;
+            const text = textarea.value.trim();
+            const status = document.getElementById('reflectionSavedStatus');
+            const key = getShlokaKey();
+
+            try {
+                localStorage.setItem('adhyatma_shloka_reflection_' + key, text);
+                if (status) {
+                    status.style.display = 'inline-block';
+                    setTimeout(() => { status.style.display = 'none'; }, 3000);
+                }
+                showShlokaToast('✓ Reflection noted in your personal journal.');
+            } catch (e) {}
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const key = getShlokaKey();
+            try {
+                const savedTasks = localStorage.getItem('adhyatma_tasks_' + key);
+                if (savedTasks) {
+                    const data = JSON.parse(savedTasks);
+                    if (data.t1 && document.getElementById('taskText1')) document.getElementById('taskText1').value = data.t1;
+                    if (data.c1 && document.getElementById('taskCheck1')) document.getElementById('taskCheck1').checked = data.c1;
+                    if (data.t2 && document.getElementById('taskText2')) document.getElementById('taskText2').value = data.t2;
+                    if (data.c2 && document.getElementById('taskCheck2')) document.getElementById('taskCheck2').checked = data.c2;
+                    if (data.t3 && document.getElementById('taskText3')) document.getElementById('taskText3').value = data.t3;
+                    if (data.c3 && document.getElementById('taskCheck3')) document.getElementById('taskCheck3').checked = data.c3;
+                    updateChecklistProgress();
+                }
+
+                const savedRefl = localStorage.getItem('adhyatma_shloka_reflection_' + key);
+                if (savedRefl && document.getElementById('shlokaReflectionInput')) {
+                    document.getElementById('shlokaReflectionInput').value = savedRefl;
+                }
+            } catch (e) {}
+        });
+
+        function showShlokaToast(message) {
+            const toast = document.createElement('div');
+            toast.innerText = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #140A14;
+                color: #FAF6ED;
+                border: 1px solid rgba(212, 175, 55, 0.4);
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-size: 0.88rem;
+                font-family: 'Poppins', sans-serif;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+                z-index: 10000;
+                animation: fadeIn 0.25s ease;
+            `;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.4s ease';
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "id": "divine",
+      "name": "Understanding God",
+      "short_name": "God & Deities",
+      "tagline": "Who is God in Sanatan Dharma, and why do we pray to different deities?",
+      "icon": "✨",
+      "color": "#D48B17"
+    },
+    {
+      "id": "dharma",
+      "name": "Dharma & Karma Made Easy",
+      "short_name": "Dharma & Karma",
+      "tagline": "What does Dharma really mean, and how does Karma actually work?",
+      "icon": "🕉️",
+      "color": "#C49000"
+    },
+    {
+      "id": "prayer",
+      "name": "How to Pray & Connect",
+      "short_name": "Prayer & Meditation",
+      "tagline": "How to talk to God, start small habits, and quiet a busy mind",
+      "icon": "🪔",
+      "color": "#1E3D3D"
+    },
+    {
+      "id": "life",
+      "name": "Friendships & Feelings",
+      "short_name": "Feelings & Character",
+      "tagline": "Handling anger, jealousy, peer pressure, and staying true to yourself",
+      "icon": "🌿",
+      "color": "#2E7D32"
+    },
+    {
+      "id": "mind",
+      "name": "Questions & Modern Life",
+      "short_name": "Questions & Logic",
+      "tagline": "Why asking questions is good, science vs spirituality, and phone balance",
+      "icon": "💡",
+      "color": "#2A5C7A"
+    },
+    {
+      "id": "student",
+      "name": "Studies & Exam Stress",
+      "short_name": "Studies & Growth",
+      "tagline": "Studying with focus, handling exam panic, and dealing with failure",
+      "icon": "📚",
+      "color": "#E05A1B"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "divine",
+      "question": "Who is God in Hinduism? Why are there so many different gods and goddesses?",
+      "short_answer": "In Sanatan Dharma, God is One Supreme energy that is present everywhere in the universe. We worship different forms of God because every person feels connected to God in their own unique way.",
+      "meaning": "Think of God like water. Water has no shape of its own, but when you freeze it into ice trays, it can take the shape of a star, a cube, or a sphere. The shape looks different on the outside, but inside it is still pure water. In the same way, the Supreme Reality is one, but expresses itself in different loving forms so we can relate to it easily: Krishna as a warm friend and guide, Shiva as silent peace and meditation, Saraswati as knowledge and arts, Durga as brave protective motherly strength, and Hanuman as selfless loyalty. Having many forms doesn't mean there are competing gods; it means everyone is free to connect with God through whatever quality they love the most.",
+      "everyday_practice": "You don't have to pray to every deity at once. Choose one form whose qualities inspire you the most (like Krishna's cheerful smile or Hanuman's courage), and treat them like a caring guide in your life.",
+      "scripture_quote": "Truth is one, but the wise express it in many ways. (Rigveda 1.164.46)",
+      "related_link": "/festivals",
+      "related_link_text": "Read Festival Stories & Deities"
+    },
+    {
+      "id": 2,
+      "category": "divine",
+      "question": "What do the forms and symbols of deities actually teach us?",
+      "short_answer": "Deity forms are not just statues; every symbol they carry is a visual life lesson about how to live a peaceful, strong, and honest life.",
+      "meaning": "In ancient times before books were common, our ancestors used visual symbols to teach profound truths. When you look closely at Lord Ganesha, his large ears teach us to listen carefully, his small mouth teaches us to speak less and think before talking, and his little mouse reminds us to keep our restless desires under control. Lord Shiva's crescent moon represents a cool, calm mind, and his third eye represents seeing truth beyond appearances. Maa Durga riding a lion shows that when you master your wild anger, courage becomes your greatest ally. When we pray in front of an idol (Murti), we are looking into a mirror that reminds us of the best qualities we need to build in ourselves.",
+      "everyday_practice": "Next time you look at a temple idol or a picture at home, pick one symbol (like a lotus flower rising clean out of muddy water) and remind yourself: 'I will keep my mind clean, no matter what drama is happening around me.'",
+      "scripture_quote": "Those who meditate on the Divine with love and a pure heart find that divine peace reflecting right within themselves. (Bhagavad Gita 12.2)",
+      "related_link": "/library",
+      "related_link_text": "Explore Inspiring Shlokas"
+    },
+    {
+      "id": 3,
+      "category": "dharma",
+      "question": "What does 'Dharma' actually mean? Is it just another word for religion?",
+      "short_answer": "No. Dharma is much deeper than religion. It means doing what is right, honest, and helpful in every situation you face.",
+      "meaning": "The word Dharma comes from the Sanskrit root 'Dhri', which means 'to uphold or support'. Dharma is whatever action holds life and society together in harmony. For fire, its dharma is to give warmth and light. For water, its dharma is to quench thirst. For you as a student right now, your Dharma is to study honestly and treat people with respect. Tomorrow, when you work a job, your Dharma will be to do your work with integrity without cheating anyone. Dharma is your inner moral compass telling you: 'Choose kindness over selfishness, and truth over shortcuts.' When people protect Dharma, Dharma protects them with peace of mind and self-respect.",
+      "everyday_practice": "Whenever you are stuck in a dilemma, ask yourself: 'If everyone in the world did what I am about to do, would it make the world better or worse?' That answer is your Dharma.",
+      "scripture_quote": "Dharma protects those who stand up for Dharma. (Mahabharata, Vana Parva 313.128)",
+      "related_link": "/scriptures",
+      "related_link_text": "Learn Dharma in the Bhagavad Gita"
+    },
+    {
+      "id": 4,
+      "category": "dharma",
+      "question": "What is Karma? Does it mean bad luck or punishment?",
+      "short_answer": "Karma is NOT punishment or bad luck. Karma simply means 'action'. It is the natural law of cause and effect: what you put out into the world comes back to you.",
+      "meaning": "If you plant a mango seed, you grow a mango tree. If you never water the plant, it dries up. Karma works the exact same way with our habits, choices, and words. If you treat classmates with rudeness, they will distance themselves from you; if you treat people with genuine kindness, trust naturally grows around you. Karma is not an angry god waiting to punish you. In fact, Karma gives you great hope: it means your future is not locked by bad luck! Whatever mistakes you made in the past, you have the full power to plant better seeds starting today through honest effort and good deeds.",
+      "everyday_practice": "Focus on what you can control right now: give 100% effort to your preparation, studies, and kindness today, and stop wasting your mental energy panicking about outcomes you cannot predict.",
+      "scripture_quote": "You have the right to do your duty, but you are not the master of the final results. Never let the fruits of action be your only motive. (Bhagavad Gita 2.47)",
+      "related_link": "/scriptures",
+      "related_link_text": "Read Chapter 2 on Karma Yoga"
+    },
+    {
+      "id": 5,
+      "category": "prayer",
+      "question": "Why should I pray if God already knows what is in my heart?",
+      "short_answer": "Prayer is not to give God information; it is to give your own mind rest, clarity, and peace.",
+      "meaning": "When you talk to a loving parent or a best friend about a tough day, they probably already know you are stressed. But talking it out makes your chest feel lighter, doesn't it? Prayer works like that. During the day, our minds get cluttered with comparison, fear of exams, and overthinking. When you sit quietly in prayer, you take a deep breath, hand over your heavy worries to God, and remind yourself that you are not facing life alone. It keeps you humble when you succeed, and gives you quiet strength when things go wrong.",
+      "everyday_practice": "Take 2 minutes in the morning. Instead of asking for a long wishlist, just say: 'Thank you for this new day and my family. Please give me a calm mind and the courage to do my best today.'",
+      "scripture_quote": "Those who fix their mind on Me with sincere devotion find their worries dissolving into steady peace. (Bhagavad Gita 12.2)",
+      "related_link": "/audio",
+      "related_link_text": "Listen to 2-Min Calming Audio"
+    },
+    {
+      "id": 6,
+      "category": "prayer",
+      "question": "How do I start praying if I don't know Sanskrit or complicated rituals?",
+      "short_answer": "God does not care about fancy Sanskrit pronunciation; God cares about what is in your heart. You can speak to God in Hindi, English, Gujarati, or whatever language you speak with your family.",
+      "meaning": "A lot of young people feel shy because they don't know difficult mantras or the exact steps of a puja. But in the Bhagavad Gita, Lord Krishna makes this completely clear: 'If someone offers Me even a single leaf, a flower, a piece of fruit, or a little clean water with a loving and sincere heart, I accept it happily.' Spirituality is a relationship of love and trust, not an exam where you lose marks for making a grammatical mistake. A two-minute silent prayer filled with gratitude is worth more than hours of reciting words you do not understand.",
+      "everyday_practice": "Find a quiet corner at home. Light a small diya or simply close your eyes, take 3 deep breaths, and speak to God from your heart just like you would talk to your wisest, kindest friend.",
+      "scripture_quote": "Whoever offers Me with love even a leaf, a flower, a fruit, or water—I accept that heartfelt offering. (Bhagavad Gita 9.26)",
+      "related_link": "/daily-shloka",
+      "related_link_text": "Hear Today's Shloka with Meaning"
+    },
+    {
+      "id": 7,
+      "category": "life",
+      "question": "How do I deal with anger, jealousy, and comparing myself to others?",
+      "short_answer": "Anger and jealousy burn you from the inside before touching anyone else. The secret is to stop comparing your everyday life with someone else's social media highlights.",
+      "meaning": "Lord Buddha and ancient sages often said: 'Holding onto anger is like drinking poison and expecting the other person to get sick.' When you get angry, your pulse races, your head aches, and you often say hurtful words that ruin relationships in seconds. Jealousy comes from the mistaken belief that someone else's success takes away from your own worth. In truth, life is not a small cake with limited slices. Someone else doing well does not stop you from working hard and finding your own success.",
+      "everyday_practice": "When anger rushes in, use the '10-Second Rule': don't speak or type a message immediately. Take 5 slow, deep breaths, drink a glass of water, and reply only after your head cools down. You will never regret waiting.",
+      "scripture_quote": "From anger arises confusion of mind; from confusion, loss of memory; and when memory is lost, wisdom is ruined. (Bhagavad Gita 2.63)",
+      "related_link": "/dashboard",
+      "related_link_text": "Write a Daily Reset Note"
+    },
+    {
+      "id": 8,
+      "category": "life",
+      "question": "How do I handle negative peer pressure without losing my friends?",
+      "short_answer": "Real friends will always respect your personal boundaries. True confidence is the quiet courage to say: 'That's not for me.'",
+      "meaning": "Many young people pick up harmful habits—like lying, smoking, skipping classes, or bullying others online—simply because they are afraid of being laughed at or left out. In the Mahabharata, Prince Duryodhana had everything, but because he was surrounded by toxic friends and couldn't say 'No' to bad ideas, his entire family suffered. Remember: being popular in college might last for a few months, but your health, character, and self-respect are what stay with you for life. Anyone who pressures you to do something that makes you feel dirty or guilty inside is not your real friend.",
+      "everyday_practice": "Practice a calm, polite refusal: 'You guys go ahead, but I prefer not to do that.' Say it with a smile, without acting preachy or scared. People secretly respect someone who has the backbone to stand on their own principles.",
+      "scripture_quote": "Lift yourself up by your own mind; do not let yourself be dragged down. Your own mind can be your greatest friend or your worst enemy. (Bhagavad Gita 6.5)",
+      "related_link": "/library",
+      "related_link_text": "Find Verses on Courage & Integrity"
+    },
+    {
+      "id": 9,
+      "category": "mind",
+      "question": "Can I question religious beliefs? Does asking questions mean I lack faith?",
+      "short_answer": "Not at all! Sanatan Dharma loves honest questions. Asking questions is the very foundation of understanding truth.",
+      "meaning": "Unlike religions that tell people to obey without questioning, our sacred books are almost entirely made of question-and-answer dialogues! The Bhagavad Gita happened because Arjuna stood in front of Krishna and asked dozens of blunt, hard questions about fear, duty, war, and life. Krishna never got angry with Arjuna for doubting; he patiently answered every question one by one. Only after 18 chapters of discussion did Krishna say: 'Now think about everything I told you, analyze it with your own mind, and do what you feel is right.' Sincere questioning helps you replace blind superstition with genuine understanding.",
+      "everyday_practice": "Never accept any ritual, superstition, or viral forward blindly just because 'someone said so'. Ask elders or teachers respectfully: 'What is the real meaning behind this?' Learn the story and purpose.",
+      "scripture_quote": "I have explained this profound wisdom to you. Reflect on it deeply, and then act according to your own understanding. (Bhagavad Gita 18.63)",
+      "related_link": "/scriptures",
+      "related_link_text": "Explore Gita's Questions & Answers"
+    },
+    {
+      "id": 10,
+      "category": "mind",
+      "question": "How can I balance social media and mobile distractions with mental peace?",
+      "short_answer": "Make your phone your servant, not your master. Learn to step away from screens so your mind can recharge.",
+      "meaning": "Smartphones and apps are built to keep our eyes glued to the screen for hours, feeding us constant comparison, gossip, and outrage. Ancient yogis talked about 'Indriya Nigraha'—which simply means training your senses so they don't drag you wherever they want like wild horses. When your mind is bombarded with notifications all day, you feel tired even without doing physical work. Taking short breaks from screens is not giving up modern life; it is simply protecting your brain so you can sleep well, focus, and feel happy.",
+      "everyday_practice": "Try the 'First 30 & Last 30' habit: keep your phone in another room for the first 30 minutes after waking up and the last 30 minutes before sleep. Use that time to drink water, stretch, or read a book.",
+      "scripture_quote": "For someone who is balanced in eating, sleeping, work, and recreation, spiritual wisdom destroys all mental pain. (Bhagavad Gita 6.17)",
+      "related_link": "/audio",
+      "related_link_text": "Play Calming Om for Mental Focus"
+    },
+    {
+      "id": 11,
+      "category": "student",
+      "question": "How can I stay spiritual when I am overwhelmed with college studies and assignments?",
+      "short_answer": "Studying with honest focus IS your spirituality. You don't need to leave your books to find God.",
+      "meaning": "Many students think being spiritual means lighting incense for hours or visiting faraway temples. But Lord Krishna introduced a revolutionary idea called 'Karma Yoga': whatever honest duty you have in front of you right now, do it with full concentration and dedication, and that itself is pure worship. When you study to become an engineer, a doctor, an artist, or an entrepreneur so you can help your family and serve society, your study table is your temple. Sincere study is not separate from spirituality; it is spirituality in action.",
+      "everyday_practice": "Before starting a study session, clean your desk, take 3 slow breaths, and tell yourself: 'I will give my honest attention to this chapter for the next 40 minutes.' Treat your learning as a positive contribution to the world.",
+      "scripture_quote": "Yoga is excellence and mindfulness in action. (Bhagavad Gita 2.50)",
+      "related_link": "/dashboard",
+      "related_link_text": "Track Daily Spiritual Habits"
+    },
+    {
+      "id": 12,
+      "category": "student",
+      "question": "How do I overcome exam fear, panic, and the fear of failure?",
+      "short_answer": "Exam fear happens when your mind jumps ahead into imaginary horror stories about marks. Bring your mind back to the single topic in front of you right now.",
+      "meaning": "Most students are not actually scared of books; they are scared of what parents, relatives, or friends will say if they get low marks. Krishna gave Arjuna the best anti-anxiety medicine in history: 'Focus on your preparation, not on the score.' When you worry about marks while studying, 50% of your brain's processing power is wasted on fear instead of understanding the concept. Also remember: an exam tests how well you wrote a 3-hour paper on one day; it does NOT measure your value, character, or future as a human being.",
+      "everyday_practice": "Whenever your chest feels tight with anxiety, put your hand on your heart, take three slow breaths (inhale for 4 seconds, exhale for 6 seconds), and say: 'I will prepare honestly today. One step at a time is enough.'",
+      "scripture_quote": "On this path of sincere effort, no step is ever wasted. Even a little steady effort protects you from great fear. (Bhagavad Gita 2.40)",
+      "related_link": "/library",
+      "related_link_text": "Read Shlokas for Inner Peace"
+    }
+  ],
+  "daily_reflections": [
+    {
+      "id": "r1",
+      "question": "Can true faith exist alongside doubts and questions?",
+      "summary": "Yes, absolutely! Sincere questions are not a sin; they are the doorway to real understanding.",
+      "insight": "In Indian philosophy, asking questions is encouraged. When you ask with genuine curiosity, your doubts help you remove blind superstitions and discover real peace. Arjuna questioned Krishna through 18 chapters of the Gita before feeling confident."
+    },
+    {
+      "id": "r2",
+      "question": "What is the difference between doing something out of fear vs understanding?",
+      "summary": "Fear makes you feel guilty and tense; understanding makes you free, joyful, and peaceful.",
+      "insight": "If you pray only because you are afraid of getting bad marks or falling sick, your mind stays anxious. But when you understand that prayer calms your thoughts and lighting a diya reminds you to be kind, the exact same practice fills you with joy."
+    },
+    {
+      "id": "r3",
+      "question": "What does 'surrendering to God' mean? Does it mean being lazy?",
+      "summary": "Never! Surrender means giving your 100% honest effort, and then letting go of the panic about results.",
+      "insight": "Surrendering to God (Sharanagati) doesn't mean you stop studying for exams. It means you work hard with honesty, and surrender the nervous overthinking about what might happen next. You control your sincere effort; you trust God with the outcome."
+    },
+    {
+      "id": "r4",
+      "question": "How do I know if a decision is coming from my ego or from Dharma?",
+      "summary": "Ego is loud, selfish, and desperate to prove others wrong. Dharma is calm, fair, and thinks of everyone's well-being.",
+      "insight": "When a choice comes from ego, you feel rushed, proud, and defensive. When a choice is rooted in Dharma, your heart feels quiet, honest, and clean, even if the decision requires patience."
+    }
+  ]
+}
